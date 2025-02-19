@@ -120,6 +120,32 @@ export default function AboutUs() {
                 <p className="text-lg">Alto Saxophone</p>
               </div>
 
+                            {/* Band Member 7 */}
+                            <div className="text-center">
+                <Image
+                  src="/band_members/Richien.JPG" 
+                  alt="Jack Flanagan"
+                  className="w-48 h-48 object-cover rounded-full mx-auto"
+                  width={500}
+                  height={500}
+                />
+                <h3 className="mt-4 text-xl font-bold">Jack Flanagan</h3>
+                <p className="text-lg">Keyboard</p>
+              </div>
+
+                                          {/* Band Member 8 */}
+                                          <div className="text-center">
+                <Image
+                  src="/band_members/Liam.JPG" // Replace with the actual image path for member 6
+                  alt="Liam Glennon"
+                  className="w-48 h-48 object-cover rounded-full mx-auto"
+                  width={500}
+                  height={500}
+                />
+                <h3 className="mt-4 text-xl font-bold">Liam Glennon</h3>
+                <p className="text-lg">Tambourine</p>
+              </div>
+
 
 
             </div>
