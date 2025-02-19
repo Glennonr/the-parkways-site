@@ -1,4 +1,5 @@
 "use client";  // Add this line to mark the component as a client-side component
+import Image from 'next/image'
 
 import { useState } from "react";
 import Link from "next/link";
@@ -19,7 +20,7 @@ export default function Navbar() {
       {/* Left side - Band Logo */}
       <div className="flex items-center space-x-2">
         <Link href="/">
-          <img src="/logo.png" alt="Band Logo" className="w-25 h-12" />
+          <Image src="/logo.png" alt="Band Logo" className="w-25 h-12" width={140} height={25}/>
         </Link>
       </div>
 

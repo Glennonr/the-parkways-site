@@ -82,7 +82,7 @@ export default function Songs() {
 
           {/* The Beatles Collection */}
           <div className="mb-6">
-            <h3 className="text-2xl font-bold text-white">'50s & '60s Classics</h3>
+            <h3 className="text-2xl font-bold text-white">50s & 60s Classics</h3>
             <ul className="list-disc pl-5">
               <li>Come Together – The Beatles</li>
               <li>Got to Get You Into My Life – The Beatles</li>

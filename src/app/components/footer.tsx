@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaSpotify, FaInstagram, FaTiktok, FaFacebook, FaYoutube } from "react-icons/fa";
-import { SiApplemusic } from "react-icons/si";
+import { FaInstagram, FaTiktok, FaFacebook, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (

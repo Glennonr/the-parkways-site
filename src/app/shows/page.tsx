@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const shows = [
   {
     date: "February 26, 2025",
@@ -46,10 +48,12 @@ export default function Shows() {
           <li key={index} className="bg-gray-800 p-4 rounded-lg flex flex-col text-left">
             {/* Show Image */}
             <div className="mb-4 w-full">
-              <img
+              <Image
                 src={show.image}
                 alt={`Image for ${show.venue}`}
                 className="w-auto h-48 object-contain rounded-lg" // Ensures image is left aligned and scales to fit within container
+                width={500}
+                height={500}
               />
             </div>
             

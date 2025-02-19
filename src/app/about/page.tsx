@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function AboutUs() {
     return (
       <main className="min-h-screen bg-yellow-50">
@@ -12,10 +14,12 @@ export default function AboutUs() {
             {/* Text Section */}
                         {/* Image Section */}
                         <div className="flex justify-center items-center">
-              <img
+              <Image
                 src="/Group.JPG" 
                 alt="The Parkways Band"
                 className="w-full rounded-lg shadow-lg"
+                width={50000}
+                height={50000}
               />
             </div>
             <div className="space-y-6">
@@ -39,10 +43,12 @@ export default function AboutUs() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
               {/* Band Member 1 */}
               <div className="text-center">
-                <img
+                <Image
                   src="/band_members/John.JPG" // Replace with the actual image path for member 1
                   alt="Band Member 1"
                   className="w-48 h-48 object-cover rounded-full mx-auto"
+                  width={500}
+                  height={500}
                 />
                 <h3 className="mt-4 text-xl font-bold">John Dwyer</h3>
                 <p className="text-lg">Lead Vocals and Guitar</p>
@@ -50,10 +56,12 @@ export default function AboutUs() {
   
               {/* Band Member 2 */}
               <div className="text-center">
-                <img
+                <Image
                   src="/band_members/Jimmy.jpg" // Replace with the actual image path for member 2
                   alt="Band Member 2"
                   className="w-48 h-48 object-cover rounded-full mx-auto"
+                  width={500}
+                  height={500}
                 />
                 <h3 className="mt-4 text-xl font-bold">Jimmy Peterman</h3>
                 <p className="text-lg">Bassist</p>
@@ -61,10 +69,12 @@ export default function AboutUs() {
   
               {/* Band Member 3 */}
               <div className="text-center">
-                <img
+                <Image
                   src="/band_members/sam.png" // Replace with the actual image path for member 3
                   alt="Band Member 3"
                   className="w-48 h-48 object-cover rounded-full mx-auto"
+                  width={500}
+                  height={500}
                 />
                 <h3 className="mt-4 text-xl font-bold">Sam Decencio</h3>
                 <p className="text-lg">Guitarist</p>
@@ -73,10 +83,12 @@ export default function AboutUs() {
 
               {/* Band Member 4 */}
               <div className="text-center">
-                <img
+                <Image
                   src="/band_members/Greg.jpg" // Replace with the actual image path for member 4
                   alt="Band Member 4"
                   className="w-48 h-48 object-cover rounded-full mx-auto"
+                  width={500}
+                  height={500}
                 />
                 <h3 className="mt-4 text-xl font-bold">Greg Eisenhower</h3>
                 <p className="text-lg">Drums</p>
@@ -84,10 +96,12 @@ export default function AboutUs() {
   
               {/* Band Member 5 */}
               <div className="text-center">
-                <img
+                <Image
                   src="/band_members/Alison.png" // Replace with the actual image path for member 5
                   alt="Band Member 5"
                   className="w-48 h-48 object-cover rounded-full mx-auto"
+                  width={500}
+                  height={500}
                 />
                 <h3 className="mt-4 text-xl font-bold">Alison Nicolosi</h3>
                 <p className="text-lg">Tenor Saxophone</p>
@@ -95,10 +109,12 @@ export default function AboutUs() {
   
               {/* Band Member 6 */}
               <div className="text-center">
-                <img
+                <Image
                   src="/band_members/Richie.JPG" // Replace with the actual image path for member 6
                   alt="Band Member 3"
                   className="w-48 h-48 object-cover rounded-full mx-auto"
+                  width={500}
+                  height={500}
                 />
                 <h3 className="mt-4 text-xl font-bold">Richie Glennon</h3>
                 <p className="text-lg">Alto Saxophone</p>
