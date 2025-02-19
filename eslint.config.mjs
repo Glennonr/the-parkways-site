@@ -1,3 +1,8 @@
-import next from "eslint-plugin-next/configs/core-web-vitals.js";
+import next from 'eslint-plugin-next';
 
-export default [next];
+export default [
+  {
+    plugins: { next },
+    extends: ['plugin:next/recommended'],
+  },
+];
