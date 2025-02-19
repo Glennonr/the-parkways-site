@@ -1,8 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  basePath: '',
-    images: {
+  // basePath: '',
+  output: "standalone",  
+  images: {
       remotePatterns: [
         {
           protocol: 'https',
