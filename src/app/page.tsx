@@ -13,12 +13,12 @@ export default function Home() {
       </div>
 
       {/* Upcoming Shows Button */}
-      <a href="/shows" className="mt-4 px-6 py-3 border-2 border-white bg-green-500 text-white text-lg font-bold rounded-full shadow-lg hover:scale-105 transform transition duration-300">
+      <a href="/shows" className="mt-4 px-6 py-3 border-2 border-white bg-green-500 text-white text-lg font-bold rounded-full shadow-lg hover:scale-105 transform transition duration-300" style={{ backgroundColor: '#50b147' }}>
         Upcoming Shows
       </a>
 
       {/* Social Media Buttons */}
-      <div className="mt-8 space-x-4 flex flex-wrap justify-center">
+      <div className="mt-8 flex flex-wrap justify-center gap-4">
         {[
           { name: "Instagram", link: "https://www.instagram.com/theparkways" },
           { name: "Spotify", link: "https://open.spotify.com/artist/xxxxxxx" },
