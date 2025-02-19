@@ -70,7 +70,7 @@ export default function AboutUs() {
               {/* Band Member 3 */}
               <div className="text-center">
                 <Image
-                  src="/band_members/sam.jpg" // Replace with the actual image path for member 3
+                  src="/band_members/Sam.jpg" // Replace with the actual image path for member 3
                   alt="Band Member 3"
                   className="w-48 h-48 object-cover rounded-full mx-auto"
                   width={500}
