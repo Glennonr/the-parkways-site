@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen text-white pt-16" style={{ backgroundColor: '#123456' }}>
+    <main className="flex flex-col items-center justify-center min-h-screen text-white pt-16" >
       {/* Hero Section with Parallax */}
       <div className="relative w-full h-screen overflow-hidden">
         <div
@@ -33,7 +33,7 @@ export default function Home() {
       </a> */}
 
       {/* Social Media Buttons */}
-      <div className=" py-7 flex flex-wrap justify-center gap-4">
+      <div className=" py-7 flex flex-wrap justify-center gap-4" >
         {[
           { name: "Instagram", link: "https://www.instagram.com/theparkways" },
           { name: "Spotify", link: "https://open.spotify.com/artist/xxxxxxx" },
