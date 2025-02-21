@@ -47,7 +47,7 @@ export default function AboutUs() {
               {/* Band Member 1 */}
               <div className="text-center">
                 <Image
-                  src="/band_members/John.JPG" // Replace with the actual image path for member 1
+                  src="/band_members/John2.jpeg" // Replace with the actual image path for member 1
                   alt="Band Member 1"
                   className="w-48 h-48 object-cover rounded-full mx-auto"
                   width={500}
@@ -126,7 +126,7 @@ export default function AboutUs() {
                             {/* Band Member 7 */}
                             <div className="text-center">
                 <Image
-                  src="/band_members/Richien.JPG" 
+                  src="/band_members/Jack.JPG" 
                   alt="Jack Flanagan"
                   className="w-48 h-48 object-cover rounded-full mx-auto"
                   width={500}
@@ -158,8 +158,8 @@ export default function AboutUs() {
         {/* Contact Section */}
         <section className="bg-yellow-100 py-12">
           <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-3xl font-semibold">Want to Contact Us?</h2>
-            <p className="mt-4 text-lg">Want to learn more or book us for your next event? Reach out to us!</p>
+            <h2 className="text-3xl font-semibold">Want to Learn More?</h2>
+            <p className="mt-4 text-lg">Inquire about booking us for your next event or just say hello!</p>
             <a
               href="/book-us"
               className="mt-6 border-2 border-white inline-block px-6 py-3 bg-green-500 text-white text-lg font-semibold rounded-lg hover:bg-green-400 transition duration-300"
