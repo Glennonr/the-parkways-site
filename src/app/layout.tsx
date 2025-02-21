@@ -33,6 +33,7 @@ export default function RootLayout({
       >
 <Head>
           <link rel="icon" href="/favicon.ico" />
+          <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
           {/* Optional: For other favicon sizes/formats */}
           {/* <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" /> */}
         </Head>
