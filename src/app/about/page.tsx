@@ -25,12 +25,15 @@ export default function AboutUs() {
             <div className="space-y-6">
               <h2 className="text-3xl font-semibold">Our Story</h2>
               <p className="text-lg">
-                This is where we write something nice about The Parkways and what we play and what we do. I will do that later
-                because I am not a copywriter or a web designer and I need all of my brain to pretend that I know one thing at a time.
-                Parkways are great we love the Parkways wow such a great group of people look at their pictures in little circles below.
+                Think of The Parkways as Springsteen + The Strokes + Oasis + Pork Roll + Egg + Cheese. 
+                We are a rock band with strong New Jersey roots that can put on a show. Our setlists 
+                span a wide variety of material—check out our songs page to see for yourself. 
+                Plus, our debut 5-song EP is recorded and dropping soon!
               </p>
               <p className="text-lg">
-                Here is the second section with a call to action and something about how booking us is a homerun
+              We love playing bars and venues that know how to have a good time. If you’re looking for a band 
+              to bring the energy and keep the crowd engaged, The Parkways are ready to take the stage. 
+              Let’s make it a night to remember!
               </p>
             </div>
           </div>
