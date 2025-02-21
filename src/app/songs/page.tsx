@@ -1,6 +1,6 @@
 export default function Songs() {
   return (
-    <main className="min-h-screen p-6 bg-gray-900 text-white font-highway">
+    <main className="min-h-screen p-6 bg-gray-900 text-white font-highway pt-24">
       {/* <h1 className="text-4xl font-bold text-yellow mb-6">Our Songs</h1> */}
       
           {/* EP Announcement */}
@@ -21,7 +21,7 @@ export default function Songs() {
 
       {/* Covers List */}
       <section>
-        <h2 className="text-3xl font-bold text-yellow mb-4">Covers We Perform</h2>
+        <h2 className="text-3xl font-bold text-yellow mb-4 pt-5">Covers We Perform</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Classic Rock & Oldies */}
@@ -93,6 +93,13 @@ export default function Songs() {
             </ul>
           </div>
         </div>
+      </section>
+
+            {/* Request Message */}
+            <section className="text-center mb-6">
+        <p className="text-lg text-yellow font-bold">
+          We’re always open to learning new songs and taking requests to match your venue's vibe!
+        </p>
       </section>
 
 

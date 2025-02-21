@@ -5,7 +5,7 @@ const images = [
   { src: '/gallery/Keenans.jpeg', aspect_ratio: 6 / 4 },
   { src: '/gallery/Ortliebs.jpeg', aspect_ratio: 9 / 12 },
   { src: '/gallery/Saxy.jpeg', aspect_ratio: 9 / 16 },
-  { src: '/gallery/CrowdFromStage.jpeg', aspect_ratio: 5 / 7 },
+  { src: '/gallery/CrowdFromStage.jpeg', aspect_ratio: 3 / 4 },
   { src: '/gallery/X.jpeg', aspect_ratio: 16 / 9 },
   { src: '/gallery/Bowery.jpg', aspect_ratio: 6 / 7 },
   { src: '/gallery/Gazing.jpeg', aspect_ratio: 3 / 4 },
@@ -30,7 +30,7 @@ export default function Photos() {
   const ratios = [ 2.2, 4, 6, 8 ]
 
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-10 pt-16">
     <Gallery {...{ widths, ratios, images }} lastRowBehavior="match-previous" />
 </div>
   );

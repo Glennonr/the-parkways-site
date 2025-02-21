@@ -1,6 +1,6 @@
 export default function Merch() {
     return (
-      <main className="min-h-screen p-6 bg-gray-900 text-white font-highway text-center">
+      <main className="min-h-screen p-6 bg-gray-900 text-white font-highway text-center pt-24">
         <h1 className="text-4xl font-bold text-yellow mb-6">Merch</h1>
         <p className="text-lg mb-10">Come to one of our shows to take home a piece of The Parkways!</p>
         

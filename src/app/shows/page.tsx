@@ -35,13 +35,13 @@ const shows = [
     date: "April 12, 2025",
     venue: "Ortleib's, Philadelphia, PA",
     ticketLink: "https://example.com/tickets/april-12",
-    image: "/show_images/show.jpg",  
+    image: "/show_images/Ortliebs.jpg",  
   },
 ];
 
 export default function Shows() {
   return (
-    <main className="min-h-screen p-6 bg-black text-white">
+    <main className="min-h-screen p-6 bg-black text-white pt-24">
       <h1 className="text-3xl font-bold">Upcoming Shows</h1>
       <ul className="mt-4 space-y-4">
         {shows.map((show, index) => (

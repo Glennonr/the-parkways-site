@@ -1,24 +1,39 @@
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen text-white" style={{ backgroundColor: '#123456' }}>
-      {/* Hero Section */}
-      <div
-        className="w-full h-96 bg-cover bg-center mt-0 pt-0"
-        style={{ backgroundImage: "url('/Parkways Film.jpg')" }}
-      >
-        <div className="flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50">
-          <h1 className="text-4xl font-bold">The Parkways</h1>
-          <p className="mt-2 text-lg">New Jersey Rock and Roll</p>
+    <main className="flex flex-col items-center justify-center min-h-screen text-white pt-16" style={{ backgroundColor: '#123456' }}>
+      {/* Hero Section with Parallax */}
+      <div className="relative w-full h-screen overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            // backgroundImage: "url('/Parkways Film.jpg')",
+            backgroundImage: "url('/gallery/Bowery.jpg')",
+            transform: "translateY(calc(var(--scroll) * 0.5px))",
+            transition: "transform 0.1s linear",
+          }}
+        />
+        <div className="relative flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 text-center">
+          <h1 className="text-5xl font-bold">
+            We are <span className="text-green-500" style={{ color: '#50b147', fontWeight:'bold' }}>The Parkways</span>
+          </h1>
+          <p className="mt-2 text-xl">South Jersey Rock and Roll</p>
+          <a 
+            href="/shows" 
+            className="mt-4 px-6 py-3 border-2 border-white bg-green-500 text-white text-lg font-bold rounded-full shadow-lg hover:scale-105 transform transition duration-300" 
+            style={{ backgroundColor: '#50b147' }}
+          >
+            Come see us
+          </a>
         </div>
       </div>
 
-      {/* Upcoming Shows Button */}
+      {/* Upcoming Shows Button
       <a href="/shows" className="mt-4 px-6 py-3 border-2 border-white bg-green-500 text-white text-lg font-bold rounded-full shadow-lg hover:scale-105 transform transition duration-300" style={{ backgroundColor: '#50b147' }}>
         Upcoming Shows
-      </a>
+      </a> */}
 
       {/* Social Media Buttons */}
-      <div className="mt-8 flex flex-wrap justify-center gap-4">
+      <div className=" py-7 flex flex-wrap justify-center gap-4">
         {[
           { name: "Instagram", link: "https://www.instagram.com/theparkways" },
           { name: "Spotify", link: "https://open.spotify.com/artist/xxxxxxx" },
@@ -39,6 +54,15 @@ export default function Home() {
           </a>
         ))}
       </div>
+
+      {/* Parallax Script */}
+      <script>
+        {`
+          document.addEventListener('scroll', () => {
+            document.documentElement.style.setProperty('--scroll', window.scrollY);
+          });
+        `}
+      </script>
     </main>
   );
 }

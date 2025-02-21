@@ -2,9 +2,9 @@ import Image from 'next/image'
 
 export default function AboutUs() {
     return (
-      <main className="min-h-screen bg-yellow-50">
+      <main className="min-h-screen bg-yellow-50 pt-16">
         {/* Hero Section */}
-        <div className="flex justify-center items-center bg-yellow-100 py-16">
+        <div className="flex justify-center items-center bg-yellow-100 pt-8">
           <h1 className="text-4xl font-bold text-center">Get to Know the Parkways</h1>
         </div>
   
@@ -64,7 +64,7 @@ export default function AboutUs() {
                   height={500}
                 />
                 <h3 className="mt-4 text-xl font-bold">Jimmy Peterman</h3>
-                <p className="text-lg">Bassist</p>
+                <p className="text-lg">Bass</p>
               </div>
   
               {/* Band Member 3 */}
@@ -77,7 +77,7 @@ export default function AboutUs() {
                   height={500}
                 />
                 <h3 className="mt-4 text-xl font-bold">Sam Decencio</h3>
-                <p className="text-lg">Guitarist</p>
+                <p className="text-lg">Guitar</p>
               </div>
 
 
@@ -133,8 +133,8 @@ export default function AboutUs() {
                 <p className="text-lg">Keyboard</p>
               </div>
 
-                                          {/* Band Member 8 */}
-                                          <div className="text-center">
+                {/* Band Member 8 */}
+                <div className="text-center">
                 <Image
                   src="/band_members/Liam.JPG" // Replace with the actual image path for member 6
                   alt="Liam Glennon"

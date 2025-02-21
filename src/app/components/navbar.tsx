@@ -16,7 +16,7 @@ export default function Navbar() {
 
 
   return (
-    <nav className="flex justify-between items-center p-4 bg-black text-white">
+<nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center p-4 bg-black text-white">
       {/* Left side - Band Logo */}
       <div className="flex items-center space-x-2">
         <Link href="/">
@@ -25,7 +25,7 @@ export default function Navbar() {
       </div>
 
       {/* Right side - Desktop Navigation Links */}
-      <div className="hidden md:flex space-x-6 ml-auto">
+      <div className="hidden md:flex space-x-6 ml-auto pr-9">
         <Link href="/about" className="hover:text-yellow font-highway">About us</Link>
         <Link href="/shows" className="hover:text-yellow font-highway">Shows</Link>
         <Link href="/songs" className="hover:text-yellow">Songs</Link>
