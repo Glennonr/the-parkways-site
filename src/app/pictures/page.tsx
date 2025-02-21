@@ -16,11 +16,15 @@ const images = [
   { src: '/gallery/Post Recording.jpeg', aspect_ratio: 12 / 9 },
   { src: '/gallery/Brewers2.jpeg', aspect_ratio: 6 / 4 },
   { src: '/Parkways Film.jpg', aspect_ratio: 16 / 9 },  
-  // { src: 'https://picsum.photos/id/1026/1920/1080/', aspect_ratio: 16 / 9 },
-  // { src: 'https://picsum.photos/id/1027/1440/1080/', aspect_ratio: 4 / 3 },
-  // { src: 'https://picsum.photos/id/1028/1440/1080/', aspect_ratio: 4 / 3 },
-  // { src: 'https://picsum.photos/id/1029/1920/1080/', aspect_ratio: 16 / 9 },
+  { src: '/gallery/Cheers.jpeg', aspect_ratio: 16 / 9 },
+  { src: '/gallery/Bowery2.JPEG', aspect_ratio: 3 / 4 },
+  { src: '/gallery/Ortliebs2.JPEG', aspect_ratio: 3 / 4 },
+  { src: '/gallery/GregPoint.jpeg', aspect_ratio: 3 / 4 },
 ]
+
+
+
+
 
 
 
