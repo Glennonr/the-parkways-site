@@ -11,7 +11,7 @@ const images = [
   { src: '/gallery/Gazing.jpeg', aspect_ratio: 3 / 4 },
   { src: '/gallery/BeatlesRooftop.jpeg', aspect_ratio: 6 / 4 },
   { src: '/gallery/Brewers1.jpeg', aspect_ratio: 6 / 4 },
-  { src: '/gallery/waves.jpeg', aspect_ratio: 7 / 5 },
+  { src: '/gallery/Waves.jpeg', aspect_ratio: 7 / 5 },
   { src: '/gallery/BackToBack.jpeg', aspect_ratio: 5 / 7 },
   { src: '/gallery/Post Recording.jpeg', aspect_ratio: 12 / 9 },
   { src: '/gallery/Brewers2.jpeg', aspect_ratio: 6 / 4 },

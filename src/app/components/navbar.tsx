@@ -48,7 +48,7 @@ export default function Navbar() {
       <div
         className={`${
           isMenuOpen ? "block" : "hidden"
-        } absolute top-16 left-0 w-full bg-black text-white md:hidden`}
+        } absolute top-16 left-0 w-full bg-black text-white md:hidden z-50`}
       >
         <div className="flex flex-col items-center py-4 space-y-4">
           <Link href="/about" onClick={closeMenu} className="hover:text-yellow font-highway">About us</Link>
