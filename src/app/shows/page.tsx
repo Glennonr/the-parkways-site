@@ -43,6 +43,9 @@ export default function Shows() {
   return (
     <main className="min-h-screen p-6 bg-black text-white pt-24">
       <h1 className="text-3xl font-bold">Upcoming Shows</h1>
+      <p className="mt-2 text-lg text-gray-300">
+        New shows are always being added—check back soon for more dates!
+      </p>
       <ul className="mt-4 space-y-4">
         {shows.map((show, index) => (
           <li key={index} className="bg-gray-800 p-4 rounded-lg flex flex-col text-left">
@@ -51,12 +54,12 @@ export default function Shows() {
               <Image
                 src={show.image}
                 alt={`Image for ${show.venue}`}
-                className="w-auto h-48 object-contain rounded-lg" // Ensures image is left aligned and scales to fit within container
+                className="w-auto h-48 object-contain rounded-lg"
                 width={500}
                 height={500}
               />
             </div>
-            
+
             {/* Show Date and Venue */}
             <div>
               <strong>{show.date}</strong> - {show.venue}
@@ -78,3 +81,4 @@ export default function Shows() {
     </main>
   );
 }
+
