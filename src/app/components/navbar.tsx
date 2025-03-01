@@ -17,9 +17,11 @@ export default function Navbar() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false); // Closes menu when a link is clicked
 
-  const handleComingSoon = (event, platform) => {
+  const handleComingSoon = (event: React.MouseEvent<HTMLButtonElement>, platform: string) => {
+    const target = event.target as HTMLElement; // Type assertion
+    const rect = target.getBoundingClientRect();
+
     setMessage(`${platform} coming soon!`);
-    const rect = event.target.getBoundingClientRect();
     setMessagePosition({ x: rect.left + rect.width / 2, y: rect.top + window.scrollY + rect.height });
     setShowMessage(true);
     setTimeout(() => setShowMessage(false), 2000);
