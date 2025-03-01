@@ -1,18 +1,18 @@
 import Image from 'next/image'
 
 const shows = [
-  {
-    date: "February 26, 2025",
-    venue: "Pianos, New York, NY",
-    ticketLink: "https://dice.fm/event/dkwgmq-the-parkways-the-fictionals-the-blackouts-26th-feb-pianos-showroom-new-york-tickets?lng=en-US",
-    image: "/show_images/pianos_feb_26.avif",  
-  },
-  {
-    date: "March 8, 2025",
-    venue: "Pianos, New York, NY",
-    ticketLink: "https://example.com/tickets/march-8",
-    image: "/show_images/pianos.jpg",  
-  },
+  // {
+  //   date: "February 26, 2025",
+  //   venue: "Pianos, New York, NY",
+  //   ticketLink: "https://dice.fm/event/dkwgmq-the-parkways-the-fictionals-the-blackouts-26th-feb-pianos-showroom-new-york-tickets?lng=en-US",
+  //   image: "/show_images/pianos_feb_26.avif",  
+  // },
+  // {
+  //   date: "March 8, 2025",
+  //   venue: "Pianos, New York, NY",
+  //   ticketLink: "https://example.com/tickets/march-8",
+  //   image: "/show_images/pianos.jpg",  
+  // },
   {
     date: "March 9, 2025",
     venue: "Gold Sound, Brooklyn, NY",
@@ -25,12 +25,12 @@ const shows = [
     ticketLink: "https://example.com/tickets/march-15",
     image: "/show_images/kings_road.jpeg",  
   },
-  {
-    date: "March 21, 2025",
-    venue: "The Stone Pony, Asbury Park, NJ",
-    ticketLink: "https://example.com/tickets/march-21",
-    image: "/show_images/stone_pony.jpg",  
-  },
+  // {
+  //   date: "March 21, 2025",
+  //   venue: "The Stone Pony, Asbury Park, NJ",
+  //   ticketLink: "https://example.com/tickets/march-21",
+  //   image: "/show_images/stone_pony.jpg",  
+  // },
   {
     date: "April 12, 2025",
     venue: "Ortleib's, Philadelphia, PA",
