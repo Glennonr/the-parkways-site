@@ -16,7 +16,7 @@ const shows = [
   {
     date: "March 9, 2025",
     venue: "Gold Sound, Brooklyn, NY",
-    ticketLink: "https://example.com/tickets/march-9",
+    ticketLink: "https://dice.fm/event/7dndp9-mary-hail-the-parkways-metasin-9th-mar-gold-sounds-new-york-tickets?lng=en-US",
     image: "/show_images/gold_march_9.avif",  
   },
   {
