@@ -126,7 +126,7 @@ export default function AboutUs() {
                             {/* Band Member 7 */}
                             <div className="text-center">
                 <Image
-                  src="/band_members/Jack.JPG" 
+                  src="/band_members/Flan.png" 
                   alt="Jack Flanagan"
                   className="w-48 h-48 object-cover rounded-full mx-auto"
                   width={500}
@@ -137,7 +137,7 @@ export default function AboutUs() {
               </div>
 
                 {/* Band Member 8 */}
-                <div className="text-center">
+                {/* <div className="text-center">
                 <Image
                   src="/band_members/Liam.JPG" // Replace with the actual image path for member 6
                   alt="Liam Glennon"
@@ -147,7 +147,7 @@ export default function AboutUs() {
                 />
                 <h3 className="mt-4 text-xl font-bold">Liam Glennon</h3>
                 <p className="text-lg">Tambourine</p>
-              </div>
+              </div> */}
 
 
 
