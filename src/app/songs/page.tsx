@@ -12,12 +12,21 @@ export default function Songs() {
             </p>
           </section>
 
-            {/* Live Performances Section */}
-            <section className="bg-black text-white p-6 rounded-lg shadow-lg mt-10 text-center">
-        <h2 className="text-3xl font-bold text-yellow">See Videos of Our Live Performances</h2>
-        <p className="text-lg mt-2">Check out our YouTube channel for live recordings of our shows!</p>
-        <a href="https://www.youtube.com/channel/UCC8OzABpYTa1goeiMBcf6lQ" target="_blank" rel="noopener noreferrer" className="inline-block bg-yellow text-black px-6 py-3 mt-4 text-lg font-bold rounded-lg shadow-lg hover:bg-white">Watch on YouTube</a>
-      </section>
+          {/* Embedded YouTube Videos */}
+          <section className="mt-10">
+            <h2 className="text-3xl font-bold text-yellow mb-4">Watch Us Perform</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <iframe className="w-full h-64 rounded-lg" src="https://www.youtube.com/embed/TN1OLbCLbrI" title="Live Performance Avaline" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <iframe className="w-full h-64 rounded-lg" src="https://www.youtube.com/embed/Cwyavufm07Y" title="Live Performance Beach Boy" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+            </div>
+          </section>
+
+          {/* Live Performances Section */}
+          <section className="bg-black text-white p-6 rounded-lg shadow-lg mt-10 text-center">
+            <h2 className="text-3xl font-bold text-yellow">Want to see more?</h2>
+            <p className="text-lg mt-2">Check out our YouTube channel for live recordings of our shows!</p>
+            <a href="https://www.youtube.com/channel/UCC8OzABpYTa1goeiMBcf6lQ" target="_blank" rel="noopener noreferrer" className="inline-block bg-yellow text-black px-6 py-3 mt-4 text-lg font-bold rounded-lg shadow-lg hover:bg-white">Watch on YouTube</a>
+          </section>
 
       {/* Covers List */}
       <section>
@@ -75,8 +84,6 @@ export default function Songs() {
             <li>All Apologies – Nirvana</li>
             {/* Find a better place for Bad Habit */}
             <li>Bad Habit - Steve Lacy</li>
-              
-              
             </ul>
           </div>
 
@@ -95,13 +102,12 @@ export default function Songs() {
         </div>
       </section>
 
-            {/* Request Message */}
-            <section className="text-center mb-6">
+      {/* Request Message */}
+      <section className="text-center mb-6">
         <p className="text-lg text-yellow font-bold">
           We’re always open to learning new songs and taking requests to match your venue's vibe!
         </p>
       </section>
-
 
     </main>
   );
