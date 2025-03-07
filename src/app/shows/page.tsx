@@ -13,7 +13,7 @@ const shows = [
     venue: "Kings Road Brewery, Haddonfield, NJ",
     ticketLink: "",
     image: "/show_images/kingsRoad.jpeg",
-    headline: "Kings Road St Paddy's Day",
+    headline: "Kings Road St Patrick's Day",
   },
   // {
   //   date: "March 29th, 2025",
