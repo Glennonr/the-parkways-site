@@ -43,12 +43,13 @@ export default function Songs() {
               <li>Gimme Three Steps – Lynyrd Skynyrd</li>
               <li>The Boys Are Back in Town – Thin Lizzy</li>
               <li>Lido Shuffle – Boz Skaggs</li>
+              <li>Talk to Me - Southside Johnny</li>
             </ul>
           </div>
 
           {/* British Rock & Britpop */}
           <div className="mb-6">
-            <h3 className="text-2xl font-bold text-white">Indie Rock Favorites Favorites</h3>
+            <h3 className="text-2xl font-bold text-white">Indie & Alternative Favorites</h3>
             <ul className="list-disc pl-5">
               <li>Don’t Look Back in Anger – Oasis</li>
               <li>She’s Electric – Oasis</li>
@@ -58,12 +59,13 @@ export default function Songs() {
               <li>There She Goes – The La’s</li>
               <li>Take Me Out – Franz Ferdinand</li>
               <li>Boys Don’t Cry – The Cure</li>
+              <li>My Type - Saint Motel</li>
             </ul>
           </div>
 
           {/* Indie & Alternative Rock */}
           <div className="mb-6">
-            <h3 className="text-2xl font-bold text-white">High-Energy Party Songs</h3>
+            <h3 className="text-2xl font-bold text-white">High-Energy Party Starters</h3>
             <ul className="list-disc pl-5">
               <li>Valerie – Amy Winehouse</li>
               <li>Everybody Talks – Neon Trees</li>
@@ -73,17 +75,8 @@ export default function Songs() {
               <li>I Wanna Be Sedated – The Ramones</li>
               <li>Scotty Doesn’t Know – Lustra</li>
               <li>Chelsea Dagger – The Fratellis</li>
-
-            </ul>
-          </div>
-
-          {/* Punk & New Wave */}
-          <div className="mb-6">
-            <h3 className="text-2xl font-bold text-white">Alternative & Grunge</h3>
-            <ul className="list-disc pl-5">
-            <li>All Apologies – Nirvana</li>
-            {/* Find a better place for Bad Habit */}
-            <li>Bad Habit - Steve Lacy</li>
+              <li>All Apologies – Nirvana</li>
+              <li>Bad Habit - Steve Lacy</li>
             </ul>
           </div>
 
@@ -95,6 +88,7 @@ export default function Songs() {
               <li>Got to Get You Into My Life – The Beatles</li>
               <li>Saw Her Standing There – The Beatles</li>
               <li>Twist and Shout – The Beatles</li>
+              <li>Blackbird - The Beatles</li>
               <li>Lucille - Little Richard</li>
               <li>Runaround Sue - Dion</li>
             </ul>

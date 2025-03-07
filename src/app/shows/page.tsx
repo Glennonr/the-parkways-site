@@ -1,41 +1,40 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
 const shows = [
-  // {
-  //   date: "February 26, 2025",
-  //   venue: "Pianos, New York, NY",
-  //   ticketLink: "https://dice.fm/event/dkwgmq-the-parkways-the-fictionals-the-blackouts-26th-feb-pianos-showroom-new-york-tickets?lng=en-US",
-  //   image: "/show_images/pianos_feb_26.avif",  
-  // },
-  // {
-  //   date: "March 8, 2025",
-  //   venue: "Pianos, New York, NY",
-  //   ticketLink: "https://example.com/tickets/march-8",
-  //   image: "/show_images/pianos.jpg",  
-  // },
   {
     date: "March 9, 2025",
-    venue: "Gold Sound, Brooklyn, NY",
+    venue: "Gold Sounds, Brooklyn, NY",
     ticketLink: "https://dice.fm/event/7dndp9-mary-hail-the-parkways-metasin-9th-mar-gold-sounds-new-york-tickets?lng=en-US",
-    image: "/show_images/gold_march_9.avif",  
+    image: "/show_images/gold_march_9.avif",
+    headline: "Gold Sounds",
   },
   {
     date: "March 15, 2025",
     venue: "Kings Road Brewery, Haddonfield, NJ",
-    ticketLink: "https://example.com/tickets/march-15",
-    image: "/show_images/kings_road.jpeg",  
+    ticketLink: "",
+    image: "/show_images/kingsRoad.jpeg",
+    headline: "Kings Road St Paddy's Day",
   },
   // {
-  //   date: "March 21, 2025",
-  //   venue: "The Stone Pony, Asbury Park, NJ",
-  //   ticketLink: "https://example.com/tickets/march-21",
-  //   image: "/show_images/stone_pony.jpg",  
+  //   date: "March 29th, 2025",
+  //   venue: "Fat Lady Brewing, Manayunk",
+  //   ticketLink: "",
+  //   image: "/show_images/fatLady.jpeg",
+  //   headline: "Fat Lady Brewing in Manayunk",
   // },
   {
     date: "April 12, 2025",
     venue: "Ortleib's, Philadelphia, PA",
     ticketLink: "https://example.com/tickets/april-12",
-    image: "/show_images/Ortliebs.jpg",  
+    image: "/show_images/Ortliebs.jpg",
+    headline: "Ortlieb's",
+  },
+  {
+    date: "6pm August 2, 2025",
+    venue: "Musikfest (Plaza Tropical), Bethlehem, PA",
+    ticketLink: "",
+    image: "/show_images/musikfest.jpeg",
+    headline: "Plaza Tropical at Musikfest",
   },
 ];
 
@@ -46,9 +45,12 @@ export default function Shows() {
       <p className="mt-2 text-lg text-gray-300">
         New shows are always being added—check back soon for more dates!
       </p>
-      <ul className="mt-4 space-y-4">
+      <ul className="mt-4 space-y-8">
         {shows.map((show, index) => (
-          <li key={index} className="bg-gray-800 p-4 rounded-lg flex flex-col text-left">
+          <li key={index} className="bg-gray-800 p-6 rounded-lg flex flex-col text-left">
+            {/* Headline */}
+            <h2 className="text-2xl font-bold text-yellow-400 mb-4">{show.headline}</h2>
+
             {/* Show Image */}
             <div className="mb-4 w-full">
               <Image
@@ -65,15 +67,17 @@ export default function Shows() {
               <strong>{show.date}</strong> - {show.venue}
             </div>
 
-            {/* Ticket Link */}
-            <a
-              href={show.ticketLink}
-              className="text-yellow-400 hover:text-yellow-300 mt-2 inline-block"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Get Tickets
-            </a>
+            {/* Ticket Link (Only if present) */}
+            {show.ticketLink && (
+              <a
+                href={show.ticketLink}
+                className="text-yellow-400 hover:text-yellow-300 mt-2 inline-block"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get Tickets
+              </a>
+            )}
           </li>
         ))}
       </ul>
@@ -81,4 +85,3 @@ export default function Shows() {
     </main>
   );
 }
-
