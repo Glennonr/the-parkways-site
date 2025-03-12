@@ -12,6 +12,23 @@ export default function Songs() {
             </p>
           </section>
 
+                {/* Covers List */}
+      <section>        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Classic Rock & Oldies */}
+          <div className="mt-6">
+            <h3 className="text-2xl font-bold text-white">EP Songs</h3>
+            <ul className="list-disc pl-5">
+              <li>Waiting Again</li>
+              <li>Middle Distance Baby</li>
+              <li>Any Other Way (Spin)</li>
+              <li>Avaline</li>
+              <li>Zynnie</li>
+            </ul>
+          </div>
+          </div>
+          </section>
+
           {/* Embedded YouTube Videos */}
           <section className="mt-10">
             <h2 className="text-3xl font-bold text-yellow mb-4">Watch Us Perform</h2>
@@ -30,7 +47,7 @@ export default function Songs() {
 
       {/* Covers List */}
       <section>
-        <h2 className="text-3xl font-bold text-yellow mb-4 pt-5">Covers We Perform</h2>
+        <h2 className="text-3xl font-bold text-yellow mb-4 pt-5">Some of the Covers We Perform</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Classic Rock & Oldies */}
