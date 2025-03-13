@@ -20,7 +20,7 @@ export default function BookUs() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-  
+
       if (response.ok) {
         alert("Booking request sent!");
         setFormData({ name: "", email: "", message: "" });
@@ -32,17 +32,25 @@ export default function BookUs() {
       alert("Something went wrong. Please try again.");
     }
   };
-  
 
   return (
-    <main className="min-h-screen p-6 bg-black text-white flex justify-center items-center">
-      <div className="max-w-lg w-full bg-gray-800 p-6 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-yellow-400 mb-4">Book The Parkways</h1>
-        <p className="mb-4">Fill out the form below to send us a message!</p>
+    <main className="h-screen flex items-center justify-center bg-black text-white p-4">
+      <div className="w-full max-w-md bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center">
+        <h1 className="text-2xl font-bold text-yellow-400 mb-2 text-center">Book The Parkways</h1>
         
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <p className="text-center text-sm mb-4">Check out our Electronic Press Kit for more details.</p>
+        <a
+          href="/EPK"
+          className="w-full text-center py-2 px-4 rounded-lg bg-green text-black font-bold text-md shadow-md hover:bg-yellow-300 transition"
+        >
+          View Our EPK
+        </a>
+
+        <p className="text-center text-sm mt-4 mb-2">Fill out the form below to send us a message!</p>
+
+        <form onSubmit={handleSubmit} className="w-full space-y-3">
           <div>
-            <label className="block text-sm font-medium">Your Name</label>
+            <label className="block text-sm font-medium mb-1">Your Name</label>
             <input
               type="text"
               name="name"
@@ -52,9 +60,9 @@ export default function BookUs() {
               className="w-full p-2 rounded bg-gray-700 text-white border border-gray-600"
             />
           </div>
-          
+
           <div>
-            <label className="block text-sm font-medium">Your Email</label>
+            <label className="block text-sm font-medium mb-1">Your Email</label>
             <input
               type="email"
               name="email"
@@ -64,20 +72,23 @@ export default function BookUs() {
               className="w-full p-2 rounded bg-gray-700 text-white border border-gray-600"
             />
           </div>
-          
+
           <div>
-            <label className="block text-sm font-medium">Message</label>
+            <label className="block text-sm font-medium mb-1">Message</label>
             <textarea
               name="message"
               value={formData.message}
               onChange={handleChange}
               required
-              rows={4}
+              rows={3}
               className="w-full p-2 rounded bg-gray-700 text-white border border-gray-600"
             />
           </div>
 
-          <button type="submit" className="w-full p-2 border-2 border-white bg-green-600 hover:bg-green-500 rounded text-white font-bold">
+          <button
+            type="submit"
+            className="w-full py-2 bg-green hover:bg-green-400 rounded text-black font-bold transition"
+          >
             Send
           </button>
         </form>

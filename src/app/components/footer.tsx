@@ -17,22 +17,30 @@ const Footer = () => {
           />
           <div className="mt-4 md:mt-0 text-center md:text-left">
             <p className="text-lg mb-2 font-semibold">Contact Us:</p>
-            <p>Email: <Link href="mailto:theparkwaysband@gmail.com" className="text-yellow-400 hover:text-yellow">theparkwaysband@gmail.com</Link></p>
-            <p>Phone: <a href="tel:+18562989855" className="text-yellow-400 hover:text-yellow">(856) 298-9855</a></p>
+            <p>Email: <Link href="mailto:theparkwaysband@gmail.com" className="text-white hover:text-yellow">theparkwaysband@gmail.com</Link></p>
+            <p>Phone: <a href="tel:+18562989855" className="text-white hover:text-yellow">(856) 298-9855</a></p>
             <p className="mt-2">Follow us on social media!</p>
-            <div className="flex justify-center md:justify-start space-x-4 mt-2">
+            <div className="flex justify-center md:justify-start space-x-4 mt-2 ">
+              <div className="hover:text-yellow">
               <Link href="https://www.instagram.com/theparkwaysband/" target="_blank">
                 <FaInstagram size={24} />
               </Link>
+              </div>
+              <div className="hover:text-yellow">
               <Link href="https://www.tiktok.com/@the_parkways?is_from_webapp=1&sender_device=pc" target="_blank">
                 <FaTiktok size={24} />
               </Link>
+              </div>
+              <div className="hover:text-yellow">
               <Link href="https://www.facebook.com/theparkways" target="_blank">
                 <FaFacebook size={24} />
               </Link>
+              </div>
+              <div className="hover:text-yellow">
               <Link href="https://www.youtube.com/channel/UCXoZkvWQVQuXDviev4ZEHFQ" target="_blank">
                 <FaYoutube size={24} />
               </Link>
+              </div>
             </div>
           </div>
         </div>

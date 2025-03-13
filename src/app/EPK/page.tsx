@@ -19,7 +19,7 @@ export default function EPK() {
                 <h2 className="text-3xl font-bold text-yellow-400">About The Parkways</h2>
                 <p className="mt-4 text-lg">
                     The Parkways are a rock band from Haddonfield, NJ, with a seven-piece lineup—two guitars,
-                    bass, alto and tenor sax, piano, and drums. We play a mix of originals and covers,
+                    bass, drums, piano and often alto and tenor sax. We play a mix of originals and covers from the 50's to 2020's
                     bringing a big sound and a lot of energy to every show.
                     Our debut 5-song EP is recorded and coming out soon!
                 </p>
@@ -54,12 +54,12 @@ export default function EPK() {
                         modules={[Navigation]}
                         className="w-full"
                     >
-                        {["/gallery/Keenans.jpeg", "/gallery/Bowery.jpg", "/gallery/Ortliebs.jpeg"].map((src, index) => (
+                        {["/gallery/BeatlesRooftop.jpeg", "/gallery/Bowery.jpg", "/gallery/Bowery2.jpg", "/gallery/DOTF.JPG"].map((src, index) => (
                             <SwiperSlide key={index} className="flex justify-center">
                                 <img
                                     src={src}
                                     alt="The Parkways"
-                                    className="w-full h-[500px] object-cover rounded-lg shadow-lg"
+                                    className="w-full h-[300px] object-cover rounded-lg shadow-lg"
                                 />
                             </SwiperSlide>
                         ))}
@@ -71,11 +71,9 @@ export default function EPK() {
             <section className="mb-12">
                 <h2 className="text-3xl font-bold text-yellow-400">Live Performances</h2>
                 <div className="mt-4 flex flex-wrap justify-center gap-6">
-                    <iframe
-                        className="w-80 h-44"
-                        src="https://www.youtube.com/embed/Cwyavufm07Y"
-                        allowFullScreen
-                    ></iframe>
+                    <iframe src="https://drive.google.com/file/d/1ZT-KYzJhwCZnovBF-x6cTePsf17y058f/preview" allow="autoplay"></iframe>
+                    <iframe src="https://www.youtube.com/embed/Cwyavufm07Y" allowFullScreen></iframe>
+                    <iframe src="https://drive.google.com/file/d/11dHE4k8bzHBRkdXKvB8fpyXznj_9e6Ww/preview" allow="autoplay"></iframe>
 
                 </div>
             </section>
@@ -102,61 +100,76 @@ export default function EPK() {
                 <a href="/shows" className="mt-4 block text-green-400 hover:text-green">View All Shows</a>
             </section>
 
-{/* Technical Requirements Section */}
-<section className="mb-16 max-w-4xl mx-auto bg-gray-900 p-8 rounded-lg shadow-lg">
-    <h2 className="text-4xl font-bold text-yellow-400 border-b-2 border-yellow-500 pb-2">
-        Technical Requirements
-    </h2>
-    
-    <p className="mt-6 text-lg text-gray-300">
-        Below is our preferred stage setup and input list for sound engineers and venues. 
-        Please contact us with any questions.
+                        {/* Setlist & Songs Section */}
+<section className="mb-12">
+    <h2 className="text-3xl font-bold text-yellow-400">What Songs Do We Play?</h2>
+    <p className="mt-4 text-lg">
+        Our setlist includes a mix of classic covers and original songs. Check out the full list of what we can play at your event.
     </p>
-
-    {/* Input List Grid */}
-    <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 text-left text-lg">
-        <div>
-            <h3 className="text-xl font-semibold text-green-400 border-b border-green-500 pb-1">
-                Vocals & Instruments
-            </h3>
-            <ul className="mt-3 space-y-2 text-gray-300">
-                <li><span className="font-semibold text-white">Lead Vocals:</span> 2x Vocal Mics </li>
-                <li><span className="font-semibold text-white">Guitar 1:</span> Amp Mic</li>
-                <li><span className="font-semibold text-white">Guitar 2:</span> Amp Mic</li>
-                <li><span className="font-semibold text-white">Keyboard:</span> DI </li>
-                <li><span className="font-semibold text-white">Bass:</span> DI Box preferred</li>
-            </ul>
-        </div>
-
-        <div>
-            <h3 className="text-xl font-semibold text-green-400 border-b border-green-500 pb-1">
-                Horns & Drums
-            </h3>
-            <ul className="mt-3 space-y-2 text-gray-300">
-                <li><span className="font-semibold text-white">Alto Sax:</span> Clip-on Condenser Mic or Mic on stand</li>
-                <li><span className="font-semibold text-white">Tenor Sax:</span> Clip-on Condenser Mic or Mic on stand</li>
-                <li><span className="font-semibold text-white">Drums:</span> Kick, Snare, OH </li>
-            </ul>
-        </div>
-    </div>
-
-    {/* Download Section */}
-    <div className="mt-8 text-center">
-        <a href="/Stage Plot.pdf" target="_blank"
-           className="inline-block bg-yellow-500 font-bold py-3 px-6 rounded-lg shadow-md 
-                      hover:text-yellow transition duration-200">
-            Download Stage Plot
-        </a>
-    </div>
+    <a href="/songs" className="mt-4 inline-block bg-green font-bold py-3 px-6 rounded-lg shadow-md 
+       hover:bg-green transition duration-200">
+        View Our Setlist
+    </a>
 </section>
+
+
+                        
+            {/* Technical Requirements Section */}
+            <section className="mb-16 max-w-4xl mx-auto bg-gray-900 p-8 rounded-lg shadow-lg">
+                <h2 className="text-4xl font-bold text-yellow-400 border-b-2 border-yellow-500 pb-2">
+                    Technical Requirements
+                </h2>
+
+                <p className="mt-6 text-lg text-gray-300">
+                    Below is our preferred stage setup and input list for sound engineers and venues.
+                    Please contact us with any questions.
+                </p>
+
+                {/* Input List Grid */}
+                <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 text-left text-lg">
+                    <div>
+                        <h3 className="text-xl font-semibold text-green-400 border-b border-green-500 pb-1">
+                            Vocals & Instruments
+                        </h3>
+                        <ul className="mt-3 space-y-2 text-gray-300">
+                            <li><span className="font-semibold text-white">Lead Vocals:</span> 2x Vocal Mics </li>
+                            <li><span className="font-semibold text-white">Guitar 1:</span> Amp Mic</li>
+                            <li><span className="font-semibold text-white">Guitar 2:</span> Amp Mic</li>
+                            <li><span className="font-semibold text-white">Keyboard:</span> DI </li>
+                            <li><span className="font-semibold text-white">Bass:</span> DI Box preferred</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 className="text-xl font-semibold text-green-400 border-b border-green-500 pb-1">
+                            Horns & Drums
+                        </h3>
+                        <ul className="mt-3 space-y-2 text-gray-300">
+                            <li><span className="font-semibold text-white">Alto Sax:</span> Clip-on Condenser Mic or Mic on stand</li>
+                            <li><span className="font-semibold text-white">Tenor Sax:</span> Clip-on Condenser Mic or Mic on stand</li>
+                            <li><span className="font-semibold text-white">Drums:</span> Kick, Snare, OH </li>
+                        </ul>
+                    </div>
+                </div>
+
+                {/* Download Section */}
+                <div className="mt-8 text-center">
+                    <a href="/Stage Plot.pdf" target="_blank"
+                        className="inline-block bg-green text-white font-bold py-3 px-6 rounded-lg shadow-md 
+                       transition duration-200">
+                        Open Stage Plot
+                    </a>
+                </div>
+            </section>
 
 
 
             {/* Contact Section */}
             <section className="mb-12">
                 <h2 className="text-3xl font-bold text-yellow-400">Booking & Contact</h2>
-                <p className="mt-4 text-lg">For booking inquiries, contact us at:</p>
+                <p className="mt-4 text-lg">For booking inquiries, fill out the form on our booking page or contact us at:</p>
                 <p className="text-xl font-bold text-green-500">theparkwaysband@gmail.com</p>
+
                 <div className="mt-4 flex justify-center gap-4">
                     <a href="https://www.instagram.com/theparkwaysband" target="_blank" className="text-yellow-400 hover:text-yellow">Instagram</a>
                     <a href="https://www.facebook.com/theparkways" target="_blank" className="text-yellow-400 hover:text-yellow">Facebook</a>
