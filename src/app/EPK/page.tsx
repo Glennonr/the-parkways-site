@@ -1,7 +1,8 @@
 "use client"; // Ensure this is a client component
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
+import Link from 'next/link';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
@@ -51,10 +52,11 @@ export default function EPK() {
                         navigation={true}
                         loop={true}
                         slidesPerView={1}
-                        modules={[Navigation]}
+                        autoplay={{ delay: 5000, disableOnInteraction: false }}
+                        modules={[Navigation, Autoplay]}
                         className="w-full"
                     >
-                        {["/gallery/BeatlesRooftop.jpeg", "/gallery/Bowery.jpg", "/gallery/Bowery2.jpg", "/gallery/DOTF.JPG"].map((src, index) => (
+                        {["/gallery/BeatlesRooftop.jpeg", "/gallery/KingsRoad.jpeg", "/gallery/Waves.jpeg", "/gallery/Bowery.jpg", "/gallery/Bowery2.jpg", "/gallery/DOTF.JPG"].map((src, index) => (
                             <SwiperSlide key={index} className="flex justify-center">
                                 <img
                                     src={src}
@@ -97,23 +99,30 @@ export default function EPK() {
                     <li>March 15, 2025 - Kings Road Brewery, Haddonfield, NJ</li>
                     <li>August 2, 2025 - Musikest, Bethlehem, PA </li>
                 </ul>
-                <a href="/shows" className="mt-4 block text-green-400 hover:text-green">View All Shows</a>
+                <Link
+                    href="/shows"
+                    className="mt-4 block text-green-400 hover:text-green"
+                    >
+                    View All Shows
+                </Link>
             </section>
 
-                        {/* Setlist & Songs Section */}
-<section className="mb-12">
-    <h2 className="text-3xl font-bold text-yellow-400">What Songs Do We Play?</h2>
-    <p className="mt-4 text-lg">
-        Our setlist includes a mix of classic covers and original songs. Check out the full list of what we can play at your event.
-    </p>
-    <a href="/songs" className="mt-4 inline-block bg-green font-bold py-3 px-6 rounded-lg shadow-md 
-       hover:bg-green transition duration-200">
-        View Our Setlist
-    </a>
-</section>
+            {/* Setlist & Songs Section */}
+            <section className="mb-12">
+                <h2 className="text-3xl font-bold text-yellow-400">What Songs Do We Play?</h2>
+                <p className="mt-4 text-lg">
+                    Our setlist includes a mix of classic covers and original songs. Check out the full list of what we can play at your event.
+                </p>
+                <Link
+                    href="/songs"
+                    className="mt-4 inline-block bg-green font-bold py-3 px-6 rounded-lg shadow-md hover:bg-green transition duration-200"
+                    >
+                    View Our Setlist
+                </Link>
+            </section>
 
 
-                        
+
             {/* Technical Requirements Section */}
             <section className="mb-16 max-w-4xl mx-auto bg-gray-900 p-8 rounded-lg shadow-lg">
                 <h2 className="text-4xl font-bold text-yellow-400 border-b-2 border-yellow-500 pb-2">
@@ -167,7 +176,9 @@ export default function EPK() {
             {/* Contact Section */}
             <section className="mb-12">
                 <h2 className="text-3xl font-bold text-yellow-400">Booking & Contact</h2>
-                <p className="mt-4 text-lg">For booking inquiries, fill out the form on our booking page or contact us at:</p>
+                <p className="mt-4 text-lg">
+    For booking inquiries, fill out the form on our <Link href="/book-us" className="text-green-400 hover:text-green-300 underline">booking page</Link> or contact us at:
+</p>
                 <p className="text-xl font-bold text-green-500">theparkwaysband@gmail.com</p>
 
                 <div className="mt-4 flex justify-center gap-4">
