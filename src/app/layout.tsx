@@ -1,24 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
-import Head from "next/head";
+import Header from "@/common/components/layout/components/header";
+import Footer from "@/common/components/layout/components/footer";
 
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+// Load Geist as secondary font
+const geist = Geist({ 
+  subsets: ['latin'],
+  variable: '--font-geist',
 });
 
 export const metadata: Metadata = {
-  title: "The Parkways",
-  description: "South Jersey Rock and Roll",
+  title: "The Parkways | South Jersey Rock and Roll",
+  description: "The Parkways - South Jersey's premier rock and alternative cover band. Check out our upcoming shows and original music.",
+  keywords: "The Parkways, South Jersey, Rock Band, Live Music, Cover Band, Original Music",
 };
 
 export default function RootLayout({
@@ -27,19 +22,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
+        className={`font-display ${geist.variable} bg-background text-foreground antialiased`}
       >
-<Head>
-          <link rel="icon" href="/favicon.ico" />
-          <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-          {/* Optional: For other favicon sizes/formats */}
-          {/* <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" /> */}
-        </Head>
-        <Navbar />
+        <Header />
         {children}
-        <Footer /> {/* Footer added here */}
+        <Footer />
       </body>
     </html>
   );
