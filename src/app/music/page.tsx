@@ -105,13 +105,13 @@ export default function Songs() {
     {
       id: 3,
       title: "Any Other Way (Spin)",
-      length: "3:58",
+      length: "2:16",
       audioPreview: "/audio/Spin-Demo.mp3"
     },
     {
       id: 4,
       title: "Avaline",
-      length: "3:36",
+      length: "2:50",
       audioPreview: "/audio/Avaline-Demo.mp3"
     },
     {
