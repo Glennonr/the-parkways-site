@@ -169,7 +169,7 @@ export default function AboutUs() {
                 <div className="space-y-4">
                   <p className="text-lg text-gray-300 leading-relaxed">
                     Think of The Parkways as <span className="text-primary font-medium">Springsteen + The Strokes + Oasis + Pork Roll + Egg + Cheese</span>. 
-                    We are a rock band with strong New Jersey roots that can put on a show. Our setlists 
+                    A little Strokesy and a little oasish. Our setlists 
                     span a wide variety of material—check out our songs page to see for yourself. 
                     Plus, our debut 5-song EP is recorded and dropping soon!
                   </p>
@@ -247,9 +247,9 @@ export default function AboutUs() {
               The Team
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Meet The Band</h2>
-            <p className="max-w-2xl mx-auto text-gray-400 text-lg">
+            {/* <p className="max-w-2xl mx-auto text-gray-400 text-lg">
               Each member brings their unique talent and passion to create our distinctive South Jersey sound.
-            </p>
+            </p> */}
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
@@ -269,13 +269,13 @@ export default function AboutUs() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent group-hover:opacity-80 transition-opacity duration-300"></div>
                   
                   {/* Member quote on hover */}
-                  {member.quote && (
+                  {/* {member.quote && (
                     <div className="absolute inset-0 flex items-center justify-center px-4 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <p className="text-center text-white italic font-medium">
                         "{member.quote}"
                       </p>
                     </div>
-                  )}
+                  )} */}
                 </div>
                 
                 <CardContent className="p-4">

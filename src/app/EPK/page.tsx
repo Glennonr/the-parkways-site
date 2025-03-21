@@ -225,8 +225,8 @@ export default function EPK() {
               <Badge variant="outline" className="mb-3 border-secondary/40 text-secondary">ABOUT US</Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Who Are <span className="text-primary">The Parkways</span>?</h2>
               <p className="text-lg text-gray-300 leading-relaxed">
-                The Parkways are a rock band from Haddonfield, NJ, with a seven-piece lineup—two guitars,
-                bass, drums, piano and often alto and tenor sax. 
+                The Parkways are a rock band from Haddonfield, NJ, the core 4 of two guitars,
+                bass, drums and often colaborate with an alto and tenor sax and piano. 
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
                 We play a mix of originals and covers from the 50's to 2020's
@@ -354,6 +354,19 @@ export default function EPK() {
               );
             })}
           </div>
+          <div className="mt-12 text-center">
+            <Button
+              asChild
+              variant="default"
+              size="lg"
+              className="bg-secondary hover:bg-secondary/90 text-black"
+            >
+              <Link href="/music">
+                <Music className="mr-2 h-5 w-5" />
+                Explore Our Full Catalog
+              </Link>
+            </Button>
+          </div>
         </section>
 
         {/* Photos Section */}
@@ -408,9 +421,9 @@ export default function EPK() {
           
           <Tabs defaultValue="video1" className="max-w-4xl mx-auto">
             <TabsList className="grid w-full grid-cols-3 mb-6">
-              <TabsTrigger value="video1">Performance 1</TabsTrigger>
-              <TabsTrigger value="video2">Performance 2</TabsTrigger>
-              <TabsTrigger value="video3">Performance 3</TabsTrigger>
+              <TabsTrigger value="video1">Take Me Out</TabsTrigger>
+              <TabsTrigger value="video2">Beach Boy</TabsTrigger>
+              <TabsTrigger value="video3">Dancing in the Dark</TabsTrigger>
             </TabsList>
             
             <TabsContent value="video1" className="relative aspect-video rounded-lg overflow-hidden">

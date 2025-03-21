@@ -174,8 +174,8 @@ export default function Header() {
                   </div>
                 </div>
 
-                <nav className="flex-1 px-3 py-6 space-y-1.5 overflow-y-auto">
-                  {routes.map((route) => (
+                <nav className="flex-1 px-3 pt-1 pb-6 space-y-1.5 overflow-y-auto">
+                {routes.map((route) => (
                     <Link
                       key={route.name}
                       href={route.href}
@@ -210,11 +210,11 @@ export default function Header() {
                   </Link>
                 </nav>
 
-                <div className="p-6 border-t border-white/10">
+                {/* <div className="p-6 border-t border-white/10">
                   <p className="text-sm text-gray-500 text-center">
                     © {new Date().getFullYear()} The Parkways
                   </p>
-                </div>
+                </div> */}
               </div>
             </SheetContent>
           </Sheet>

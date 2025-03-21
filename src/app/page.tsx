@@ -225,7 +225,7 @@ export default function Home() {
       id: 3,
       name: "Parkways Sticker",
       image: "/merch/Stickers.webp",
-      price: "Free with Shirt"
+      price: "Free with Purchase"
     }
   ];
 
@@ -597,7 +597,7 @@ export default function Home() {
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-3">Take The Parkways Home</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Show your support with official Parkways merchandise, available at shows or online
+              Show your support with official Parkways merchandise, available at shows
             </p>
           </div>
           
@@ -667,9 +667,10 @@ export default function Home() {
               </Badge>
               <h2 className="text-3xl md:text-5xl font-bold mb-4">Ready to Rock Your Event?</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                The Parkways are available for bars, breweries, private events, and festivals throughout New Jersey, Pennsylvania, and New York.
+                The Parkways are available for bars, breweries, private events, festivals, roadside attractions and Bar Mitzvahs throughout New Jersey, Pennsylvania, and New York.
               </p>
-              
+
+{/*               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
                 <div className="bg-black/30 rounded-lg p-6 backdrop-blur-sm">
                   <Calendar className="h-8 w-8 text-primary mb-3 mx-auto" />
@@ -688,7 +689,7 @@ export default function Home() {
                   <h3 className="font-bold text-lg mb-2">Professional Experience</h3>
                   <p className="text-gray-400 text-sm">High-energy performances that engage your crowd</p>
                 </div>
-              </div>
+              </div> */}
               
               <Button 
                 asChild

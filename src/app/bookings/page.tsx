@@ -183,7 +183,7 @@ export default function BookUs() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">We're Ready to Rock Your Event</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">We're Ready for Your Event</h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
                 The Parkways are available for booking at venues throughout New Jersey, Pennsylvania, and New York. 
                 Our high-energy performances and versatile setlist make us perfect for bars, breweries, 
@@ -192,7 +192,7 @@ export default function BookUs() {
             </div>
             
             {/* Booking options grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
               <Card className="bg-zinc-900/50 border-white/5 hover:border-primary/30 transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
@@ -259,7 +259,7 @@ export default function BookUs() {
                 </CardContent>
               </Card>
             </div>
-            
+             */}
             {/* EPK Promotional Section */}
             <div className="bg-gradient-to-r from-primary/5 to-secondary/5 border border-white/10 rounded-xl p-6 md:p-8 mb-16 relative overflow-hidden">
               <div className="absolute -bottom-16 -right-16 w-48 h-48 rounded-full bg-primary/10 blur-3xl"></div>
@@ -370,7 +370,7 @@ export default function BookUs() {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
-                    <h3 className="text-xl font-bold mb-4">Booking Inquiry Form</h3>
+                    <h3 className="text-xl font-bold mb-4">Contact Form</h3>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
@@ -443,7 +443,7 @@ export default function BookUs() {
                     </div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="space-y-2">
+                      {/* <div className="space-y-2">
                         <label htmlFor="eventType" className="text-sm font-medium text-gray-300">Event Type</label>
                         <Select 
                           name="eventType" 
@@ -461,7 +461,7 @@ export default function BookUs() {
                             <SelectItem value="other">Other</SelectItem>
                           </SelectContent>
                         </Select>
-                      </div>
+                      </div> */}
                       
                       <div className="space-y-2">
                         <label htmlFor="date" className="text-sm font-medium text-gray-300">Preferred Date (Optional)</label>
@@ -489,7 +489,7 @@ export default function BookUs() {
                           value={formData.message}
                           onChange={handleChange}
                           required
-                          placeholder="Tell us about your event and what you're looking for..."
+                          placeholder="Tell us what you're looking for..."
                           className="pl-10 min-h-[120px] bg-zinc-800/50 border-white/10 text-white placeholder:text-gray-500"
                         />
                       </div>

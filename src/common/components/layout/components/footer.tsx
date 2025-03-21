@@ -77,10 +77,10 @@ export default function Footer() {
               </Link>
               
               {/* Description */}
-              <p className="text-gray-300 leading-relaxed">
+              {/* <p className="text-gray-300 leading-relaxed">
                 South Jersey's premier rock and alternative cover band bringing energy and passion to every performance. 
                 Available for bookings at venues, private events, and festivals throughout the region.
-              </p>
+              </p> */}
               
               {/* Social icons */}
               <div className="flex flex-wrap gap-4">
@@ -138,6 +138,24 @@ export default function Footer() {
                 </h3>
                 
                 <ul className="space-y-6">
+                <li className="flex text-gray-300 group">
+                    <div className="mt-0.5 mr-4">
+                      <div className="p-2 rounded-full bg-zinc-900 text-primary group-hover:bg-primary/10 transition-colors">
+                        <Mail className="h-5 w-5" />
+                      </div>
+                    </div>
+                    <div>
+                      <p className="font-medium text-white text-lg mb-1">Email</p>
+                      <a 
+                        href="mailto:theparkwaysband@gmail.com" 
+                        className="hover:text-primary transition-colors duration-200 flex items-center group"
+                      >
+                        theparkwaysband@gmail.com
+                        <ArrowUpRight className="h-3 w-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </a>
+                    </div>
+                  </li>
+
                   <li className="flex text-gray-300 group">
                     <div className="mt-0.5 mr-4">
                       <div className="p-2 rounded-full bg-zinc-900 text-primary group-hover:bg-primary/10 transition-colors">
@@ -159,30 +177,12 @@ export default function Footer() {
                   <li className="flex text-gray-300 group">
                     <div className="mt-0.5 mr-4">
                       <div className="p-2 rounded-full bg-zinc-900 text-primary group-hover:bg-primary/10 transition-colors">
-                        <Mail className="h-5 w-5" />
-                      </div>
-                    </div>
-                    <div>
-                      <p className="font-medium text-white text-lg mb-1">Email</p>
-                      <a 
-                        href="mailto:theparkwaysband@gmail.com" 
-                        className="hover:text-primary transition-colors duration-200 flex items-center group"
-                      >
-                        theparkwaysband@gmail.com
-                        <ArrowUpRight className="h-3 w-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      </a>
-                    </div>
-                  </li>
-                  
-                  <li className="flex text-gray-300 group">
-                    <div className="mt-0.5 mr-4">
-                      <div className="p-2 rounded-full bg-zinc-900 text-primary group-hover:bg-primary/10 transition-colors">
                         <MapPin className="h-5 w-5" />
                       </div>
                     </div>
                     <div>
                       <p className="font-medium text-white text-lg mb-1">Location</p>
-                      <p>South New Jersey</p>
+                      <p>Haddonfield, NJ / Philadelphia, PA</p>
                     </div>
                   </li>
                 </ul>
@@ -212,19 +212,6 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400">
               © {currentYear} The Parkways. All rights reserved.
-            </p>
-            
-            <p className="flex items-center text-gray-500 text-sm">
-              <span className="mr-1">Designed & Developed by</span>
-              <a 
-                href="https://saadk.me" 
-                target="_blank" 
-                rel="noopener"
-                className="text-primary/90 hover:text-primary transition-colors flex items-center group"
-              >
-                Saad Khan
-                <ArrowUpRight className="h-3 w-3 ml-0.5 -mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </a>
             </p>
           </div>
         </div>

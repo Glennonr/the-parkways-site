@@ -106,23 +106,26 @@ export default function Songs() {
       id: 3,
       title: "Any Other Way (Spin)",
       length: "3:58",
+      audioPreview: "/audio/Spin-Demo.mp3"
     },
     {
       id: 4,
       title: "Avaline",
       length: "3:36",
+      audioPreview: "/audio/Avaline-Demo.mp3"
     },
     {
       id: 5,
       title: "Zynnie",
-      length: "4:12",
+      length: "3:33",
+      audioPreview: "/audio/Zynnie-Demo.mp3"
     },
-    {
-      id: 6,
-      title: "Gotta Be Taken",
-      length: "2:59",
-      audioPreview: "/audio/Gotta-Be-Taken-Demo.mp3"
-    }
+    // {
+    //   id: 6,
+    //   title: "Gotta Be Taken",
+    //   length: "2:59",
+    //   audioPreview: "/audio/Gotta-Be-Taken-Demo.mp3"
+    // }
   ];
 
   // YouTube videos
@@ -266,7 +269,7 @@ export default function Songs() {
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-3">EP Tracks</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Preview our upcoming EP tracks with exclusive demos
+              Preview demos for our upcoming EP tracks
             </p>
           </div>
           
@@ -444,11 +447,11 @@ export default function Songs() {
               variant="outline" 
               className="mb-2 border-primary/40 text-primary"
             >
-              OUR REPERTOIRE
+              OTHER PEOPLE'S SONGS
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-3">Cover Songs</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Our extensive set list of cover songs spans decades of rock and alternative hits
+              We play a little bit of everything, try to find your favorites below
             </p>
           </div>
           

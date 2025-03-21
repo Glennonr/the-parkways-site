@@ -2,7 +2,6 @@
   "name": "the-parkways-website",
   "version": "0.1.0",
   "private": true,
-  "author": "https://saadk.me",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

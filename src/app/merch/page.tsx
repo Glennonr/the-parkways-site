@@ -29,7 +29,7 @@ export default function Merch() {
     {
       id: 1,
       name: "Original Shirt",
-      description: "Classic black tee with The Parkways logo on the front",
+      description: "",
       price: "$20",
       image: "/merch/tour shirt.webp",
     },
@@ -43,8 +43,8 @@ export default function Merch() {
     {
       id: 3,
       name: "Parkways Sticker",
-      description: "Show your support with The Parkways sticker",
-      price: "Free with Shirt",
+      description: "",
+      price: "Free with Purchase",
       image: "/merch/Stickers.webp",
     }
   ];
@@ -190,7 +190,7 @@ export default function Merch() {
                   variant="default"
                   className="w-full bg-primary hover:bg-primary/90 text-black"
                 >
-                  <Link href="/shows">
+                  <Link href="/bookings">
                     <CalendarDays className="mr-2 h-4 w-4" />
                     View Upcoming Shows
                   </Link>
