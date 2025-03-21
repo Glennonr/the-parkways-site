@@ -31,6 +31,7 @@ import {
   Share2,
   X,
 } from "lucide-react";
+import { FaTiktok } from "react-icons/fa";
 
 // Images data with additional metadata for filtering
 const images = [
@@ -410,7 +411,7 @@ export default function Photos() {
 
           <div className="mt-8">
             <Gallery
-              {...{ widths, ratios, images: filteredImages }}
+              {...{ widths, ratios, images: images }}
               lastRowBehavior="fill"
             />
           </div>
@@ -430,11 +431,10 @@ export default function Photos() {
               SPREAD THE WORD
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Share Our Moments
+              Have a Good Shot?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Follow us on social media to stay updated with our latest photos
-              and performances
+              Share it with us on socials
             </p>
 
             <div className="flex flex-wrap gap-4 gap-y-6 justify-center">
@@ -467,6 +467,22 @@ export default function Photos() {
                 >
                   <Instagram className="mr-2 h-5 w-5 group-hover:text-primary" />
                   Instagram
+                </a>
+              </Button>
+
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-white/20 hover:bg-white/5 hover:border-primary/40 group"
+                asChild
+              >
+                <a
+                  href="https://www.tiktok.com/@the_parkways?is_from_webapp=1&sender_device=pc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaTiktok className="mr-2 h-5 w-5 group-hover:text-primary" />
+                  TikTok
                 </a>
               </Button>
 
