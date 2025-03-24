@@ -35,20 +35,20 @@ type Show = {
 
 // Shows data array
 const shows: Show[] = [
-  {
-    date: "March 9, 2025",
-    venue: "Gold Sounds, Brooklyn, NY",
-    ticketLink: "https://dice.fm/event/7dndp9-mary-hail-the-parkways-metasin-9th-mar-gold-sounds-new-york-tickets?lng=en-US",
-    image: "/show_images/gold_march_9.avif",
-    headline: "Gold Sounds",
-  },
-  {
-    date: "March 15, 2025",
-    venue: "Kings Road Brewery, Haddonfield, NJ",
-    ticketLink: "",
-    image: "/show_images/kingsRoad.jpeg",
-    headline: "Kings Road St Patrick's Day",
-  },
+  // {
+  //   date: "March 9, 2025",
+  //   venue: "Gold Sounds, Brooklyn, NY",
+  //   ticketLink: "https://dice.fm/event/7dndp9-mary-hail-the-parkways-metasin-9th-mar-gold-sounds-new-york-tickets?lng=en-US",
+  //   image: "/show_images/gold_march_9.avif",
+  //   headline: "Gold Sounds",
+  // },
+  // {
+  //   date: "March 15, 2025",
+  //   venue: "Kings Road Brewery, Haddonfield, NJ",
+  //   ticketLink: "",
+  //   image: "/show_images/kingsRoad.jpeg",
+  //   headline: "Kings Road St Patrick's Day",
+  // },
   // {
   //   date: "March 29th, 2025",
   //   venue: "Fat Lady Brewing, Manayunk",

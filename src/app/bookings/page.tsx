@@ -344,7 +344,7 @@ export default function BookUs() {
                     </div>
                     <div>
                       <h3 className="font-medium text-white">Based In</h3>
-                      <p className="text-gray-400">South New Jersey</p>
+                      <p className="text-gray-400">Haddonfield, NJ</p>
                     </div>
                   </div>
                 </div>

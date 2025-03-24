@@ -140,21 +140,21 @@ export default function Home() {
 
   // Upcoming shows data
   const upcomingShows: UpcomingShow[] = [
-    {
-      id: 1,
-      date: "March 9, 2025",
-      venue: "Gold Sounds",
-      location: "Brooklyn, NY",
-      image: "/show_images/gold_march_9.avif",
-      ticketLink: "https://dice.fm/event/7dndp9-mary-hail-the-parkways-metasin-9th-mar-gold-sounds-new-york-tickets?lng=en-US"
-    },
-    {
-      id: 2,
-      date: "March 15, 2025",
-      venue: "Kings Road Brewery",
-      location: "Haddonfield, NJ", 
-      image: "/show_images/kingsRoad.jpeg"
-    },
+    // {
+    //   id: 1,
+    //   date: "March 9, 2025",
+    //   venue: "Gold Sounds",
+    //   location: "Brooklyn, NY",
+    //   image: "/show_images/gold_march_9.avif",
+    //   ticketLink: "https://dice.fm/event/7dndp9-mary-hail-the-parkways-metasin-9th-mar-gold-sounds-new-york-tickets?lng=en-US"
+    // },
+    // {
+    //   id: 2,
+    //   date: "March 15, 2025",
+    //   venue: "Kings Road Brewery",
+    //   location: "Haddonfield, NJ", 
+    //   image: "/show_images/kingsRoad.jpeg"
+    // },
     {
       id: 3,
       date: "April 12, 2025",
@@ -163,6 +163,14 @@ export default function Home() {
       image: "/show_images/Ortliebs.jpg",
       ticketLink: "https://example.com/tickets/april-12"
     },
+    {
+      id: 4,
+      date: "August 2, 2025",
+      venue: "Musikfest",
+      location: "Bethlehem, PA",
+      image: "/show_images/musikfest.jpeg",
+      ticketLink: ""
+    }
   ];
 
   // Get initials from track title for placeholder

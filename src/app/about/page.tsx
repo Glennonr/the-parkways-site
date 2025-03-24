@@ -168,9 +168,9 @@ export default function AboutUs() {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">The Parkways Story</h2>
                 <div className="space-y-4">
                   <p className="text-lg text-gray-300 leading-relaxed">
-                    Think of The Parkways as <span className="text-primary font-medium">Springsteen + The Strokes + Oasis + Pork Roll + Egg + Cheese</span>. 
-                    A little Strokesy and a little oasish. Our setlists 
-                    span a wide variety of material—check out our songs page to see for yourself. 
+                    Think of The Parkways as <span className="text-primary font-medium">Springsteen + The Killers + Pork Roll + Egg + Cheese</span>. 
+                    A little Strokesy and a little Oasish. Our setlists 
+                    span all decades of rock from the 50s to today—check out our songs page to see for yourself. 
                     Plus, our debut 5-song EP is recorded and dropping soon!
                   </p>
                   <p className="text-lg text-gray-300 leading-relaxed">
@@ -189,7 +189,7 @@ export default function AboutUs() {
                   </div>
                   <div>
                     <h3 className="text-sm font-medium text-gray-400">Based in</h3>
-                    <p className="text-base font-medium">South New Jersey</p>
+                    <p className="text-base font-medium">Haddonfield, NJ</p>
                   </div>
                 </div>
                 
@@ -199,7 +199,7 @@ export default function AboutUs() {
                   </div>
                   <div>
                     <h3 className="text-sm font-medium text-gray-400">Genre</h3>
-                    <p className="text-base font-medium">Rock & Alternative</p>
+                    <p className="text-base font-medium">Rock & Roll</p>
                   </div>
                 </div>
               </div>
