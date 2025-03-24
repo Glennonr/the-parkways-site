@@ -547,25 +547,25 @@ export default function BookUs() {
                     What is your typical set length?
                   </AccordionTrigger>
                   <AccordionContent className="text-gray-400">
-                    Our standard performance is two 45-minute sets with a short break in between, but we're flexible and can adjust to fit your event's schedule. For private events, we can also offer shorter performance options.
+                    We have played shows that are an hour long, and we have played three hour shows. We're flexible and can adjust to fit your schedule.
                   </AccordionContent>
                 </AccordionItem>
                 
-                <AccordionItem value="item-4" className="border-white/10">
+                {/* <AccordionItem value="item-4" className="border-white/10">
                   <AccordionTrigger className="text-gray-200 hover:text-primary">
                     Do you provide your own sound equipment?
                   </AccordionTrigger>
                   <AccordionContent className="text-gray-400">
                     We bring our own instruments and backline equipment. For smaller venues and private events, we can provide a basic PA system. For larger venues, we typically work with the house sound system or can recommend sound rental options.
                   </AccordionContent>
-                </AccordionItem>
+                </AccordionItem> */}
                 
                 <AccordionItem value="item-5" className="border-white/10">
                   <AccordionTrigger className="text-gray-200 hover:text-primary">
                     Can you learn specific songs for our event?
                   </AccordionTrigger>
                   <AccordionContent className="text-gray-400">
-                    Yes! For private events, we're happy to learn 1-2 special request songs with advance notice (typically 3-4 weeks). Please let us know your requests when booking so we can prepare accordingly.
+                    Yes! For private events, we're happy to learn 1-2 special request songs with advance notice. Please let us know your requests when booking so we can prepare accordingly.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
