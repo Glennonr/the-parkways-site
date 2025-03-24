@@ -93,11 +93,11 @@ export default function BookUs() {
     
     try {
       // Simulated API call - replace with your actual booking API endpoint
-      // const response = await fetch("/api/book", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify(formData),
-      // });
+      const response = await fetch("/api/book", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
       
       // Simulate server response time
       await new Promise(resolve => setTimeout(resolve, 1500));
