@@ -233,7 +233,7 @@ export default function EPK() {
                 bringing a big sound and a lot of energy to every show.
               </p>
               <p className="text-lg text-primary font-semibold mt-4">
-                Our debut 5-song EP is recorded and coming out soon!
+                Our debut 5-song EP is recorded and coming out in the end of April!
               </p>
             </div>
             <div className="md:w-1/2 w-full relative group">

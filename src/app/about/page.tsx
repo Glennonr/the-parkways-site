@@ -148,7 +148,7 @@ export default function AboutUs() {
               </div>
               
               {/* Tags overlaying the image */}
-              <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
+              {/* <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
                 <span className="bg-black/70 backdrop-blur-sm text-primary px-3 py-1 rounded-full text-sm font-medium">
                   Rock
                 </span>
@@ -158,19 +158,21 @@ export default function AboutUs() {
                 <span className="bg-black/70 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">
                   South Jersey
                 </span>
-              </div>
+              </div> */}
             </div>
             
             {/* Text Section */}
             <div className="space-y-8">
               <div>
-                <Badge variant="outline" className="mb-2 border-primary/40 text-primary">Our Identity</Badge>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">The Parkways Story</h2>
+                {/* <Badge variant="outline" className="mb-2 border-primary/40 text-primary">Our Identity</Badge> */}
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">About The Parkways</h2>
                 <div className="space-y-4">
                   <p className="text-lg text-gray-300 leading-relaxed">
-                    Think of The Parkways as <span className="text-primary font-medium">Springsteen + The Killers + Pork Roll + Egg + Cheese</span>. 
-                    A little Strokesy and a little Oasish. Our setlists 
-                    span all decades of rock from the 50s to today—check out our songs page to see for yourself. 
+                    Think of The Parkways as <span className="text-primary font-medium">Springsteen + The Killers + Pork Roll + Egg + Cheese.
+                    A little Strokesy and a little Oasish.</span> 
+                    </p>
+                    <p className="text-lg text-gray-300 leading-relaxed">
+                    Our setlists span all decades of rock from the 50s to today—check out our songs page to see for yourself. 
                     Plus, our debut 5-song EP is recorded and dropping soon!
                   </p>
                   <p className="text-lg text-gray-300 leading-relaxed">

@@ -160,7 +160,7 @@ export default function Home() {
       date: "April 12, 2025",
       venue: "Ortlieb's",
       location: "Philadelphia, PA",
-      image: "/show_images/Ortliebs.jpg",
+      image: "/show_images/Ortliebs2.jpeg",
       ticketLink: "https://example.com/tickets/april-12"
     },
     {

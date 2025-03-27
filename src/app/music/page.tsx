@@ -250,10 +250,10 @@ export default function Songs() {
             <div className="relative z-10 text-center">
               <Badge className="bg-secondary text-black mb-4">Coming Soon</Badge>
               <h2 className="text-4xl md:text-5xl font-bold mb-4">Our EP (Name Pending)</h2>
-              <p className="text-xl text-gray-200 mb-6">Coming Out (Date Pending)</p>
+              <p className="text-xl text-gray-200 mb-6">Coming Out End of April?</p>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
                 Check back in to see it here and on all streaming platforms! Our debut EP features five original songs
-                that capture the essence of The Parkways sound.
+                that capture variety in The Parkways sound.
               </p>
             </div>
           </div>
@@ -447,9 +447,9 @@ export default function Songs() {
               variant="outline" 
               className="mb-2 border-primary/40 text-primary"
             >
-              OTHER PEOPLE'S SONGS
+              Cover Songs
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">Cover Songs</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">OTHER PEOPLE'S SONGS</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               We play a little bit of everything, try to find your favorites below
             </p>
