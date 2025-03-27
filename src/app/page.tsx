@@ -1,4 +1,5 @@
 "use client";
+import Head from 'next/head';
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
@@ -238,6 +239,39 @@ export default function Home() {
   ];
 
   return (
+    <>
+    <Head>
+    <title>The Parkways Band - New Jersey Cover Band</title>
+    <meta name="description" content="The Parkways is a classic New Jersey cover band. Check out our upcoming shows, music, and more!" />
+    <meta name="keywords" content="The Parkways band, New Jersey cover band, live music, NJ band" />
+    <meta name="author" content="The Parkways" />
+
+    {/* Open Graph Meta Tags */}
+    <meta property="og:title" content="The Parkways Band - New Jersey Cover Band" />
+    <meta property="og:description" content="The Parkways is a classic New Jersey cover band playing your favorite hits. Join us for an unforgettable live experience!" />
+    <meta property="og:image" content="/images/band-photo.jpg" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta property="og:type" content="website" />
+
+    {/* Twitter Meta Tags */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The Parkways Band - New Jersey Cover Band" />
+    <meta name="twitter:description" content="Join The Parkways band for an unforgettable night of live music!" />
+    <meta name="twitter:image" content="/images/band-photo.jpg" />
+
+    {/* Structured Data */}
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "The Parkways",
+      "description": "A classic New Jersey cover band.",
+      "url": "https://yourwebsite.com",
+      "sameAs": [
+        "https://instagram.com/theparkwaysband",
+        "https://facebook.com/theparkwaysband"
+      ]
+    }` }} />
+  </Head>
     <main className="flex flex-col items-center justify-center min-h-screen">
       {/* Hero Section with Parallax Effect */}
       <section className="relative w-full h-screen overflow-hidden">
@@ -759,6 +793,7 @@ export default function Home() {
         </div>
       </section>
     </main>
+    </>
   );
 }
 
