@@ -134,7 +134,7 @@ export default function BookUs() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/gallery/Ortliebs.jpeg')",
+            backgroundImage: "url('/gallery/Ortliebs.webp')",
             transform: "translateY(calc(var(--scroll) * 0.3px))",
             filter: "brightness(0.4) contrast(1.1)"
           }}
@@ -144,7 +144,7 @@ export default function BookUs() {
         <div 
           className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: "url('/noise.jpg')",
+            backgroundImage: "url('/noise.webp')",
             backgroundRepeat: "repeat"
           }}
         />

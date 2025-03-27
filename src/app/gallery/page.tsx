@@ -36,7 +36,7 @@ import { FaTiktok } from "react-icons/fa";
 // Images data with additional metadata for filtering
 const images = [
   {
-    src: "/gallery/Ortliebs.jpeg",
+    src: "/gallery/Ortliebs.webp",
     aspect_ratio: 9 / 12,
     category: "venues",
     title: "Ortlieb's",
@@ -60,13 +60,13 @@ const images = [
     title: "Greg Point",
   },
   {
-    src: "/gallery/Smiles.JPG",
+    src: "/gallery/smiles.webp",
     aspect_ratio: 3 / 2,
     category: "candid",
     title: "Smiles",
   },
   {
-    src: "/gallery/Looking.JPG",
+    src: "/gallery/Looking.webp",
     aspect_ratio: 3 / 2,
     category: "candid",
     title: "Looking",
@@ -78,7 +78,7 @@ const images = [
     title: "Brewers",
   },
   {
-    src: "/gallery/Waves.jpeg",
+    src: "/gallery/Waves.webp",
     aspect_ratio: 7 / 5,
     category: "candid",
     title: "Waves",
@@ -90,19 +90,19 @@ const images = [
     title: "Parkways Film",
   },
   {
-    src: "/gallery/DOTF.JPG",
+    src: "/gallery/DOTF.webp",
     aspect_ratio: 3 / 2,
     category: "performances",
     title: "DOTF",
   },
   {
-    src: "/gallery/PointingUp.JPG",
+    src: "/gallery/PointingUp.webp",
     aspect_ratio: 3 / 2,
     category: "performances",
     title: "Pointing Up",
   },
   {
-    src: "/gallery/BackToBack.jpeg",
+    src: "/gallery/BackToBack.webp",
     aspect_ratio: 5 / 7,
     category: "performances",
     title: "Back to Back",
@@ -126,7 +126,7 @@ const images = [
     title: "Bowery Stage",
   },
   {
-    src: "/gallery/Ortliebs2.JPEG",
+    src: "/gallery/Ortliebs2.webp",
     aspect_ratio: 3 / 4,
     category: "venues",
     title: "Ortliebs Night",
@@ -138,37 +138,37 @@ const images = [
     title: "Gazing",
   },
   {
-    src: "/gallery/KingsRoad2.jpeg",
+    src: "/gallery/KingsRoad2.webp",
     aspect_ratio: 4 / 3,
     category: "venues",
     title: "Kings Road 2",
   },
   {
-    src: "/gallery/eyes.JPG",
+    src: "/gallery/eyes.webp",
     aspect_ratio: 3 / 2,
     category: "candid",
     title: "Eyes",
   },
   {
-    src: "/gallery/BeatlesRooftop.jpeg",
+    src: "/gallery/BeatlesRooftop.webp",
     aspect_ratio: 6 / 4,
     category: "promotional",
     title: "Beatles Rooftop",
   },
   {
-    src: "/gallery/KingsRoad.jpeg",
+    src: "/gallery/KingsRoad.webp",
     aspect_ratio: 4 / 3,
     category: "venues",
     title: "Kings Road",
   },
   {
-    src: "/gallery/Post Recording.jpeg",
+    src: "/gallery/Post Recording.webp",
     aspect_ratio: 12 / 9,
     category: "studio",
     title: "Post Recording",
   },
   {
-    src: "/gallery/CrowdFromStage.jpeg",
+    src: "/gallery/CrowdFromStage.webp",
     aspect_ratio: 3 / 4,
     category: "performances",
     title: "Crowd From Stage",
@@ -180,7 +180,7 @@ const images = [
     title: "X",
   },
   {
-    src: "/gallery/Saxy.jpeg",
+    src: "/gallery/Saxy.webp",
     aspect_ratio: 9 / 16,
     category: "performances",
     title: "Saxy",
@@ -247,7 +247,7 @@ export default function Photos() {
         <div
           className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: "url('/noise.jpg')",
+            backgroundImage: "url('/noise.webp')",
             backgroundRepeat: "repeat",
           }}
         />

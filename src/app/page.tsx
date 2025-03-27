@@ -153,7 +153,7 @@ export default function Home() {
     //   date: "March 15, 2025",
     //   venue: "Kings Road Brewery",
     //   location: "Haddonfield, NJ", 
-    //   image: "/show_images/kingsRoad.jpeg"
+    //   image: "/show_images/kingsRoad.webp"
     // },
     {
       id: 3,
@@ -208,11 +208,11 @@ export default function Home() {
   // Gallery preview images
   const galleryPreviews = [
     "/gallery/Bowery.jpg",
-    "/gallery/Ortliebs.jpeg",
+    "/gallery/Ortliebs2.jpeg",
     "/gallery/Cheers.jpeg",
-    "/gallery/Smiles.JPG",
+    "/gallery/smiles.webp",
     "/gallery/Brewers2.jpeg",
-    "/gallery/BackToBack.jpeg"
+    "/gallery/BackToBack.webp"
   ];
 
   // Merchandise items data
@@ -255,7 +255,7 @@ export default function Home() {
         <div 
           className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: "url('/noise.jpg')",
+            backgroundImage: "url('/noise.webp')",
             backgroundRepeat: "repeat"
           }}
         />
@@ -656,7 +656,7 @@ export default function Home() {
         <div 
           className="absolute inset-0 opacity-5 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/gallery/Smiles.JPG')",
+            backgroundImage: "url('/gallery/smiles.webp')",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",

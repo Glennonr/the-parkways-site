@@ -94,7 +94,7 @@ export default function AboutUs() {
         <div 
           className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: "url('/noise.jpg')",
+            backgroundImage: "url('/noise.webp')",
             backgroundRepeat: "repeat"
           }}
         />

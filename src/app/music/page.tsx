@@ -216,7 +216,7 @@ export default function Songs() {
           }}
         />
         
-        <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "url('/noise.jpg')", backgroundRepeat: "repeat" }} />
+        <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "url('/noise.webp')", backgroundRepeat: "repeat" }} />
         <div className="absolute inset-0 opacity-30 bg-gradient-to-b from-black via-transparent to-black"></div>
         <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent"></div>
         

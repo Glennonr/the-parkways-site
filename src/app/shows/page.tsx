@@ -46,7 +46,7 @@ const shows: Show[] = [
   //   date: "March 15, 2025",
   //   venue: "Kings Road Brewery, Haddonfield, NJ",
   //   ticketLink: "",
-  //   image: "/show_images/kingsRoad.jpeg",
+  //   image: "/show_images/KingsRoad.webp",
   //   headline: "Kings Road St Patrick's Day",
   // },
   // {
@@ -142,7 +142,7 @@ export default function Shows() {
         <div 
           className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: "url('/noise.jpg')",
+            backgroundImage: "url('/noise.webp')",
             backgroundRepeat: "repeat"
           }}
         />
