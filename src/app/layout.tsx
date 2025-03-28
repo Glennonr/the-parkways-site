@@ -11,7 +11,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "The Parkways | South Jersey Rock and Roll",
+  title: "The Parkways Band | South Jersey Rock & Roll",
   description: "The Parkways - South Jersey's premier rock and alternative cover band. Check out our upcoming shows and original music.",
   keywords: "The Parkways, South Jersey, Rock Band, Live Music, Cover Band, Original Music",
 };
