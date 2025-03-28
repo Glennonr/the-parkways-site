@@ -249,7 +249,7 @@ export default function Home() {
     {/* Open Graph Meta Tags */}
     <meta property="og:title" content="The Parkways Band - New Jersey Cover Band" />
     <meta property="og:description" content="The Parkways is a classic New Jersey cover band playing your favorite hits. Join us for an unforgettable live experience!" />
-    <meta property="og:image" content="/images/band-photo.jpg" />
+    <meta property="og:image" content="/logo.png" />
     <meta property="og:url" content="https://yourwebsite.com" />
     <meta property="og:type" content="website" />
 
