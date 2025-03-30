@@ -9,44 +9,48 @@ import { Tabs, TabsList, TabsTrigger } from "@/common/components/ui/tabs";
 import { Dialog, DialogContent, DialogTitle } from "@/common/components/ui/dialog";
 import { Camera, ChevronDown, ChevronRight, Expand, Facebook, Instagram } from "lucide-react";
 import { FaTiktok } from "react-icons/fa";
+// import { X } from "lucide-react";
+// import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+
+
 
 
 // Image data (without hardcoded categories)
 const images = [
-  "/gallery/Ortlieb's/Ortliebs.webp",
-  "/gallery/Other/Cheers.jpeg",
-  "/gallery/Bowery Electric/Bowery.jpg",
-  "/gallery/Ortlieb's/GregPoint.jpeg",
-  "/gallery/DOTF/smiles.webp",
-  "/gallery/DOTF/Looking.webp",
-  "/gallery/Brewers/Brewers2.jpeg",
-  "/gallery/Ortlieb's/Waves.webp",
-  // "/Parkways Film.jpg",
-  "/gallery/DOTF/DOTF.webp",
-  "/gallery/DOTF/PointingUp.webp",
+  '/gallery/Kings Road/BeatlesRooftop.webp',
+  '/gallery/Pianos/Greg.webp',
+  '/gallery/DOTF/DOTF.webp',
+  '/gallery/Bowery Electric/Bowery2.jpg',
+  '/gallery/Kings Road/Group.webp',
+  '/gallery/Kings Road/KingsRoad.webp',
+  '/gallery/DOTF/Looking.webp',
   "/gallery/Ortlieb's/BackToBack.webp",
-  "/gallery/Brewers/Brewers1.jpeg",
-  "/gallery/Other/Keenans.jpeg",
-  "/gallery/Bowery Electric/Bowery2.jpg",
+  '/gallery/Other/Cheers.jpeg',
+  "/gallery/Ortlieb's/GregPoint.jpeg",
+  '/gallery/Kings Road/Group2.webp',
+  '/gallery/Pianos/CenterShot.webp',
+  '/gallery/Kings Road/KingsRoad2.webp',
+  '/gallery/Brewers/Brewers1.jpeg',
+  '/gallery/Bowery Electric/Bowery.jpg',
+  "/gallery/Ortlieb's/Ortliebs.webp",
+  '/gallery/Brewers/Brewers2.jpeg',
+  "/gallery/Ortlieb's/Waves.webp",
+  '/gallery/DOTF/PointingUp.webp',
+  '/gallery/Other/Post Recording.webp',
+  '/gallery/Other/X.jpeg',
+  '/gallery/DOTF/smiles.webp',
+  '/gallery/Other/Keenans.jpeg',
+  '/gallery/Pianos/Jimmy.webp',
+  '/gallery/Kings Road/Greg2.webp',
   "/gallery/Ortlieb's/Ortliebs2.webp",
-  "/gallery/Kings Road/Gazing.jpeg",
-  "/gallery/Kings Road/KingsRoad2.webp",
-  "/gallery/DOTF/eyes.webp",
-  "/gallery/Kings Road/BeatlesRooftop.webp",
-  "/gallery/Kings Road/KingsRoad.webp",
-  "/gallery/Other/Post Recording.webp",
+  '/gallery/Kings Road/Gazing.jpeg',
+  '/gallery/Kings Road/Mask.webp',
+  '/gallery/DOTF/Saxy.webp',
   "/gallery/Ortlieb's/CrowdFromStage.webp",
-  "/gallery/Other/X.jpeg",
-  "/gallery/DOTF/Saxy.webp",
-  "/gallery/Pianos/CenterShot.webp",
-  "/gallery/Pianos/Greg.webp",
-  "/gallery/Kings Road/Greg2.webp",
-  "/gallery/Kings Road/Group.webp",
-  "/gallery/Kings Road/Group2.webp",
-  "/gallery/Pianos/Jimmy.webp",
-  "/gallery/Kings Road/Mask.webp",
-  "/gallery/Pianos/Sam.webp",
+  '/gallery/DOTF/eyes.webp',
+  '/gallery/Pianos/Sam.webp',
 ];
+
 
 // Extract categories dynamically
 const extractCategory = (path: string) => {
@@ -177,7 +181,7 @@ export default function Photos() {
         </div>
       </section>
 
-      {/* Gallery Grid Section */}
+      {/* Gallery Grid */}
       <section className="py-8 bg-black min-h-[60vh]">
         <div className="container mx-auto px-4">
           <AnimatePresence mode="wait">
@@ -199,6 +203,24 @@ export default function Photos() {
           </AnimatePresence>
         </div>
       </section>
+
+      {/* Modal */}
+      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+        <DialogContent className="max-w-5xl bg-black border border-white/10 rounded-lg">
+          <button onClick={() => setSelectedImage(null)} className="absolute top-3 right-3 bg-black p-2 rounded-full hover:bg-white/20">
+            {/* <X className="w-6 h-6 text-white" /> */}
+          </button>
+          {/* <VisuallyHidden> */}
+            <DialogTitle>Gallery Image</DialogTitle>
+          {/* </VisuallyHidden> */}
+          {selectedImage && (
+            <div className="relative w-full h-[60vh]">
+              <Image src={selectedImage.src} alt="Enlarged Image" fill className="object-contain" />
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
+
     </main>
   );
 }
