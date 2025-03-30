@@ -208,12 +208,12 @@ export default function Home() {
 
   // Gallery preview images
   const galleryPreviews = [
-    { src: "/gallery/Bowery.jpg", rotate: 0 },
+    { src: "/gallery/Bowery Electric/Bowery.jpg", rotate: 0 },
     { src: "/gallery/Ortliebs.webp", rotate: 90 },
     { src: "/gallery/Cheers.jpeg", rotate: 0 },
     { src: "/gallery/BeatlesRooftop.webp", rotate: 0 },
-    { src: "/gallery/Brewers1.jpeg", rotate: 0 },
-    { src: "/gallery/BackToBack.webp", rotate: 90 },
+    { src: "/gallery/Brewers/Brewers1.jpeg", rotate: 0 },
+    { src: "/gallery/Ortlieb's/BackToBack.webp", rotate: 90 },
   ];
   
 
@@ -279,7 +279,7 @@ export default function Home() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-fixed"
           style={{
-            backgroundImage: "url('/gallery/Bowery.jpg')",
+            backgroundImage: "url('/gallery/Bowery Electric/Bowery.jpg')",
             transform: "translateY(calc(var(--scroll) * 0.5px))",
             transition: "transform 0.1s linear",
             filter: "brightness(0.6) contrast(1.1)"
@@ -692,7 +692,7 @@ export default function Home() {
         <div 
           className="absolute inset-0 opacity-5 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/gallery/smiles.webp')",
+            backgroundImage: "url('/gallery/DOTF/smiles.webp')",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",

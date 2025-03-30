@@ -141,14 +141,14 @@ export default function EPK() {
 
   // Promo photos
   const promoPhotos = [
-    "/gallery/BeatlesRooftop.webp", 
-    "/gallery/KingsRoad.webp", 
-    "/gallery/Waves.webp", 
-    "/gallery/Bowery.jpg", 
-    "/gallery/Bowery2.jpg", 
-    "/gallery/DOTF.webp",
-    "/gallery/BackToBack.webp",
-    "/gallery/smiles.webp"
+    "/gallery/Kings Road/BeatlesRooftop.webp", 
+    "/gallery/Kings Road/KingsRoad.webp", 
+    "/gallery/Ortlieb's/Waves.webp", 
+    "/gallery/Bowery Electric/Bowery.jpg", 
+    "/gallery/Bowery Electric/Bowery2.jpg", 
+    "/gallery/DOTF/DOTF.webp",
+    "/gallery/Ortlieb's/BackToBack.webp",
+    "/gallery/DOTF/smiles.webp"
   ];
 
   // Upcoming shows
@@ -174,7 +174,7 @@ export default function EPK() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/gallery/Bowery.jpg')", 
+            backgroundImage: "url('/gallery/Bowery Electric/Bowery.jpg')", 
             transform: `translateY(calc(${scrollY * 0.3}px))`,
             filter: "brightness(0.4) contrast(1.1)"
           }}
