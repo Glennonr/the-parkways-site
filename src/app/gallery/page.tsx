@@ -10,7 +10,7 @@ import { Dialog, DialogContent, DialogTitle } from "@/common/components/ui/dialo
 import { Camera, ChevronDown, ChevronRight, Expand, Facebook, Instagram } from "lucide-react";
 import { FaTiktok } from "react-icons/fa";
 // import { X } from "lucide-react";
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+// import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 
 
@@ -210,9 +210,9 @@ export default function Photos() {
           <button onClick={() => setSelectedImage(null)} className="absolute top-3 right-3 bg-black p-2 rounded-full hover:bg-white/20">
             {/* <X className="w-6 h-6 text-white" /> */}
           </button>
-          <VisuallyHidden>
+          {/* <VisuallyHidden> */}
             <DialogTitle>Gallery Image</DialogTitle>
-          </VisuallyHidden>
+          {/* </VisuallyHidden> */}
           {selectedImage && (
             <div className="relative w-full h-[60vh]">
               <Image src={selectedImage.src} alt="Enlarged Image" fill className="object-contain" />
