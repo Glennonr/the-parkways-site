@@ -350,7 +350,7 @@ export default function Photos() {
 
                     {/* Overlay on hover */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                      <h3 className="font-medium text-lg">{image.title}</h3>
+                      {/* <h3 className="font-medium text-lg">{image.title}</h3> */}
                       <Badge
                         variant="outline"
                         className="mt-2 w-fit border-primary/40 text-primary"

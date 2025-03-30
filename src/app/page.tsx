@@ -208,13 +208,14 @@ export default function Home() {
 
   // Gallery preview images
   const galleryPreviews = [
-    "/gallery/Bowery.jpg",
-    "/gallery/Ortliebs2.jpeg",
-    "/gallery/Cheers.jpeg",
-    "/gallery/smiles.webp",
-    "/gallery/Brewers2.jpeg",
-    "/gallery/BackToBack.webp"
+    { src: "/gallery/Bowery.jpg", rotate: 0 },
+    { src: "/gallery/Ortliebs.webp", rotate: 90 },
+    { src: "/gallery/Cheers.jpeg", rotate: 0 },
+    { src: "/gallery/BeatlesRooftop.webp", rotate: 0 },
+    { src: "/gallery/Brewers1.jpeg", rotate: 0 },
+    { src: "/gallery/BackToBack.webp", rotate: 90 },
   ];
+  
 
   // Merchandise items data
   const merchItems = [
@@ -588,24 +589,25 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-3">
-            {galleryPreviews.map((image, index) => (
-              <div 
-                key={index}
-                className="relative aspect-square overflow-hidden group cursor-pointer"
-              >
-                <Image
-                  src={image}
-                  alt={`Gallery preview ${index + 1}`}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  sizes="(max-width: 768px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                  {/* <Camera className="h-8 w-8 text-white" /> */}
-                </div>
-              </div>
-            ))}
+      {galleryPreviews.map((image, index) => (
+        <div 
+          key={index}
+          className="relative aspect-square overflow-hidden group cursor-pointer"
+        >
+          <Image
+            src={image.src}
+            alt={`Gallery preview ${index + 1}`}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
+            sizes="(max-width: 768px) 50vw, 33vw"
+            style={{ transform: `rotate(${image.rotate}deg)` }} // Apply inline rotation
+          />
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+            {/* Overlay effect */}
           </div>
+        </div>
+      ))}
+    </div>
           
           <div className="text-center mt-12">
             <Button
