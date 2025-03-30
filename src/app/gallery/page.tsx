@@ -2,14 +2,11 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Gallery } from "next-gallery";
 import { motion, AnimatePresence } from "framer-motion";
 import { Badge } from "@/common/components/ui/badge";
 import { Button } from "@/common/components/ui/button";
-import { Card, CardContent } from "@/common/components/ui/card";
 import {
   Tabs,
-  TabsContent,
   TabsList,
   TabsTrigger,
 } from "@/common/components/ui/tabs";
@@ -17,174 +14,52 @@ import {
   Dialog,
   DialogContent,
   DialogTitle,
-  DialogTrigger,
 } from "@/common/components/ui/dialog";
-import { Separator } from "@/common/components/ui/separator";
 import {
   Camera,
   ChevronDown,
   ChevronRight,
-  Download,
   Expand,
   Facebook,
   Instagram,
-  Share2,
-  X,
 } from "lucide-react";
 import { FaTiktok } from "react-icons/fa";
 
 // Images data with additional metadata for filtering
 const images = [
-  {
-    src: "/gallery/Ortliebs.webp",
-    aspect_ratio: 9 / 12,
-    category: "venues",
-    title: "Ortlieb's",
-  },
-  {
-    src: "/gallery/Cheers.jpeg",
-    aspect_ratio: 3 / 2,
-    category: "performances",
-    title: "Cheers",
-  },
-  {
-    src: "/gallery/Bowery.jpg",
-    aspect_ratio: 6 / 7,
-    category: "venues",
-    title: "The Bowery",
-  },
-  {
-    src: "/gallery/GregPoint.jpeg",
-    aspect_ratio: 9 / 16,
-    category: "performances",
-    title: "Greg Point",
-  },
-  {
-    src: "/gallery/smiles.webp",
-    aspect_ratio: 3 / 2,
-    category: "candid",
-    title: "Smiles",
-  },
-  {
-    src: "/gallery/Looking.webp",
-    aspect_ratio: 3 / 2,
-    category: "candid",
-    title: "Looking",
-  },
-  {
-    src: "/gallery/Brewers2.jpeg",
-    aspect_ratio: 6 / 4,
-    category: "venues",
-    title: "Brewers",
-  },
-  {
-    src: "/gallery/Waves.webp",
-    aspect_ratio: 7 / 5,
-    category: "candid",
-    title: "Waves",
-  },
-  {
-    src: "/Parkways Film.jpg",
-    aspect_ratio: 16 / 9,
-    category: "promotional",
-    title: "Parkways Film",
-  },
-  {
-    src: "/gallery/DOTF.webp",
-    aspect_ratio: 3 / 2,
-    category: "performances",
-    title: "DOTF",
-  },
-  {
-    src: "/gallery/PointingUp.webp",
-    aspect_ratio: 3 / 2,
-    category: "performances",
-    title: "Pointing Up",
-  },
-  {
-    src: "/gallery/BackToBack.webp",
-    aspect_ratio: 5 / 7,
-    category: "performances",
-    title: "Back to Back",
-  },
-  {
-    src: "/gallery/Brewers1.jpeg",
-    aspect_ratio: 6 / 4,
-    category: "venues",
-    title: "Brewers Alternate",
-  },
-  {
-    src: "/gallery/Keenans.jpeg",
-    aspect_ratio: 6 / 4,
-    category: "venues",
-    title: "Keenans",
-  },
-  {
-    src: "/gallery/Bowery2.jpg",
-    aspect_ratio: 3 / 2,
-    category: "venues",
-    title: "Bowery Stage",
-  },
-  {
-    src: "/gallery/Ortliebs2.webp",
-    aspect_ratio: 3 / 4,
-    category: "venues",
-    title: "Ortliebs Night",
-  },
-  {
-    src: "/gallery/Gazing.jpeg",
-    aspect_ratio: 3 / 4,
-    category: "candid",
-    title: "Gazing",
-  },
-  {
-    src: "/gallery/KingsRoad2.webp",
-    aspect_ratio: 4 / 3,
-    category: "venues",
-    title: "Kings Road 2",
-  },
-  {
-    src: "/gallery/eyes.webp",
-    aspect_ratio: 3 / 2,
-    category: "candid",
-    title: "Eyes",
-  },
-  {
-    src: "/gallery/BeatlesRooftop.webp",
-    aspect_ratio: 6 / 4,
-    category: "promotional",
-    title: "Beatles Rooftop",
-  },
-  {
-    src: "/gallery/KingsRoad.webp",
-    aspect_ratio: 4 / 3,
-    category: "venues",
-    title: "Kings Road",
-  },
-  {
-    src: "/gallery/Post Recording.webp",
-    aspect_ratio: 12 / 9,
-    category: "studio",
-    title: "Post Recording",
-  },
-  {
-    src: "/gallery/CrowdFromStage.webp",
-    aspect_ratio: 3 / 4,
-    category: "performances",
-    title: "Crowd From Stage",
-  },
-  {
-    src: "/gallery/X.jpeg",
-    aspect_ratio: 16 / 9,
-    category: "promotional",
-    title: "X",
-  },
-  {
-    src: "/gallery/Saxy.webp",
-    aspect_ratio: 9 / 16,
-    category: "performances",
-    title: "Saxy",
-  },
+  { src: "/gallery/Ortliebs.webp", category: "venues" },
+  { src: "/gallery/Cheers.jpeg", category: "performances" },
+  { src: "/gallery/Bowery.jpg", category: "venues" },
+  { src: "/gallery/GregPoint.jpeg", category: "performances" },
+  { src: "/gallery/smiles.webp", category: "candid" },
+  { src: "/gallery/Looking.webp", category: "candid" },
+  { src: "/gallery/Brewers2.jpeg", category: "venues" },
+  { src: "/gallery/Waves.webp", category: "candid" },
+  { src: "/Parkways Film.jpg", category: "promotional" },
+  { src: "/gallery/DOTF.webp", category: "performances" },
+  { src: "/gallery/PointingUp.webp", category: "performances" },
+  { src: "/gallery/BackToBack.webp", category: "performances" },
+  { src: "/gallery/Brewers1.jpeg", category: "venues" },
+  { src: "/gallery/Keenans.jpeg", category: "venues" },
+  { src: "/gallery/Bowery2.jpg", category: "venues" },
+  { src: "/gallery/Ortliebs2.webp", category: "venues" },
+  { src: "/gallery/Gazing.jpeg", category: "candid" },
+  { src: "/gallery/KingsRoad2.webp", category: "venues" },
+  { src: "/gallery/eyes.webp", category: "candid" },
+  { src: "/gallery/BeatlesRooftop.webp", category: "promotional" },
+  { src: "/gallery/KingsRoad.webp", category: "venues" },
+  { src: "/gallery/Post Recording.webp", category: "studio" },
+  { src: "/gallery/CrowdFromStage.webp", category: "performances" },
+  { src: "/gallery/X.jpeg", category: "promotional" },
+  { src: "/gallery/Saxy.webp", category: "performances" },
+  { src: "/gallery/CenterShot.webp", category: "band" },
+  { src: "/gallery/Greg.webp", category: "members" },
+  { src: "/gallery/Greg2.webp", category: "members" },
+  { src: "/gallery/Group.webp", category: "band" },
+  { src: "/gallery/Group2.webp", category: "band" },
+  { src: "/gallery/Jimmy.webp", category: "members" },
+  { src: "/gallery/Mask.webp", category: "misc" },
+  { src: "/gallery/Sam.webp", category: "members" },
 ];
 
 // Define gallery categories
@@ -342,7 +217,7 @@ export default function Photos() {
                   <div className="relative overflow-hidden rounded-lg aspect-square bg-zinc-900">
                     <Image
                       src={image.src}
-                      alt={image.title}
+                      alt="Band Gallery Image"
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -388,33 +263,6 @@ export default function Photos() {
               </Button>
             </div>
           )}
-        </div>
-      </section>
-
-      {/* Classic Gallery for users who want the original layout */}
-      <section className="py-12 bg-zinc-950 relative">
-        <Separator className="mb-12 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <Badge
-              variant="outline"
-              className="mb-4 border-secondary/40 text-secondary"
-            >
-              CLASSIC VIEW
-            </Badge>
-            <h2 className="text-3xl font-bold mb-2">Full Gallery</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              View our complete photo collection in a classic gallery layout
-            </p>
-          </div>
-
-          <div className="mt-8">
-            <Gallery
-              {...{ widths, ratios, images: images }}
-              lastRowBehavior="fill"
-            />
-          </div>
         </div>
       </section>
 
@@ -505,7 +353,7 @@ export default function Photos() {
       {/* Image Modal */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
         <DialogContent className="sm:max-w-[90vw] h-[90vh] max-h-[90vh] p-0 bg-black/95 border-zinc-800">
-        <DialogTitle>Title</DialogTitle>
+          <DialogTitle>Title</DialogTitle>
           <div className="relative w-full h-full flex items-center justify-center">
             {selectedImage && (
               <>
@@ -514,10 +362,10 @@ export default function Photos() {
                   <div className="relative max-w-full max-h-full">
                     <Image
                       src={selectedImage.src}
-                      alt={selectedImage.title || "Gallery image"}
+                      alt="Gallery image"
                       className="object-contain max-h-[80vh] rounded-md"
                       width={1600}
-                      height={1600 / selectedImage.aspect_ratio}
+                      height={1600}
                     />
                   </div>
                 </div>
@@ -526,9 +374,6 @@ export default function Photos() {
                 <div className="absolute bottom-0 left-0 right-0 bg-black/80 backdrop-blur-sm p-4">
                   <div className="flex items-center justify-between">
                     <div>
-                      <h3 className="font-medium text-lg">
-                        {selectedImage.title}
-                      </h3>
                       <Badge
                         variant="outline"
                         className="mt-1 border-primary/40 text-primary"
