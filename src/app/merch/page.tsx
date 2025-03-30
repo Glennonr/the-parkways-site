@@ -56,7 +56,7 @@ export default function Merch() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/gallery/Cheers.jpeg')",
+            backgroundImage: "url('/gallery/Other/Post RecordingCrop.webp')",
             transform: "translateY(calc(var(--scroll) * 0.3px))",
             filter: "brightness(0.4) contrast(1.1)"
           }}
@@ -105,7 +105,7 @@ export default function Merch() {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto mb-12 text-center">
             <p className="text-lg text-gray-300">
-              Show your support for The Parkways with our official merchandise. 
+              Show your support for The Parkways. 
               All items are available at our live shows, or you can contact us directly to purchase.
             </p>
           </div>
@@ -153,7 +153,7 @@ export default function Merch() {
           <div className="max-w-4xl mx-auto mt-20">
             <div className="text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold">How to Get Your Parkways Merch</h2>
-              <p className="text-gray-400 mt-2">Rock our official merchandise at our shows</p>
+              {/* <p className="text-gray-400 mt-2">Rock our official merchandise at our shows</p> */}
             </div>
             
             <div>
