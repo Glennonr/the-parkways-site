@@ -84,7 +84,7 @@ export default function AboutUs() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/gallery/Bowery.jpg')",
+            backgroundImage: "url('/gallery/Bowery Electric/Bowery.jpg')",
             transform: "translateY(calc(var(--scroll) * 0.3px))",
             filter: "brightness(0.4) contrast(1.1)"
           }}

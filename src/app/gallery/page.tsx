@@ -5,102 +5,92 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Badge } from "@/common/components/ui/badge";
 import { Button } from "@/common/components/ui/button";
-import {
-  Tabs,
-  TabsList,
-  TabsTrigger,
-} from "@/common/components/ui/tabs";
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-} from "@/common/components/ui/dialog";
-import {
-  Camera,
-  ChevronDown,
-  ChevronRight,
-  Expand,
-  Facebook,
-  Instagram,
-} from "lucide-react";
+import { Tabs, TabsList, TabsTrigger } from "@/common/components/ui/tabs";
+import { Dialog, DialogContent, DialogTitle } from "@/common/components/ui/dialog";
+import { Camera, ChevronDown, ChevronRight, Expand, Facebook, Instagram } from "lucide-react";
 import { FaTiktok } from "react-icons/fa";
 
-// Images data with additional metadata for filtering
+// Image data (without hardcoded categories)
 const images = [
-  { src: "/gallery/Ortliebs.webp", category: "venues" },
-  { src: "/gallery/Cheers.jpeg", category: "performances" },
-  { src: "/gallery/Bowery.jpg", category: "venues" },
-  { src: "/gallery/GregPoint.jpeg", category: "performances" },
-  { src: "/gallery/smiles.webp", category: "candid" },
-  { src: "/gallery/Looking.webp", category: "candid" },
-  { src: "/gallery/Brewers2.jpeg", category: "venues" },
-  { src: "/gallery/Waves.webp", category: "candid" },
-  { src: "/Parkways Film.jpg", category: "promotional" },
-  { src: "/gallery/DOTF.webp", category: "performances" },
-  { src: "/gallery/PointingUp.webp", category: "performances" },
-  { src: "/gallery/BackToBack.webp", category: "performances" },
-  { src: "/gallery/Brewers1.jpeg", category: "venues" },
-  { src: "/gallery/Keenans.jpeg", category: "venues" },
-  { src: "/gallery/Bowery2.jpg", category: "venues" },
-  { src: "/gallery/Ortliebs2.webp", category: "venues" },
-  { src: "/gallery/Gazing.jpeg", category: "candid" },
-  { src: "/gallery/KingsRoad2.webp", category: "venues" },
-  { src: "/gallery/eyes.webp", category: "candid" },
-  { src: "/gallery/BeatlesRooftop.webp", category: "promotional" },
-  { src: "/gallery/KingsRoad.webp", category: "venues" },
-  { src: "/gallery/Post Recording.webp", category: "studio" },
-  { src: "/gallery/CrowdFromStage.webp", category: "performances" },
-  { src: "/gallery/X.jpeg", category: "promotional" },
-  { src: "/gallery/Saxy.webp", category: "performances" },
-  { src: "/gallery/CenterShot.webp", category: "band" },
-  { src: "/gallery/Greg.webp", category: "members" },
-  { src: "/gallery/Greg2.webp", category: "members" },
-  { src: "/gallery/Group.webp", category: "band" },
-  { src: "/gallery/Group2.webp", category: "band" },
-  { src: "/gallery/Jimmy.webp", category: "members" },
-  { src: "/gallery/Mask.webp", category: "misc" },
-  { src: "/gallery/Sam.webp", category: "members" },
+  "/gallery/Ortlieb's/Ortliebs.webp",
+  "/gallery/Other/Cheers.jpeg",
+  "/gallery/Bowery Electric/Bowery.jpg",
+  "/gallery/Ortlieb's/GregPoint.jpeg",
+  "/gallery/DOTF/smiles.webp",
+  "/gallery/DOTF/Looking.webp",
+  "/gallery/Brewers/Brewers2.jpeg",
+  "/gallery/Ortlieb's/Waves.webp",
+  // "/Parkways Film.jpg",
+  "/gallery/DOTF/DOTF.webp",
+  "/gallery/DOTF/PointingUp.webp",
+  "/gallery/Ortlieb's/BackToBack.webp",
+  "/gallery/Brewers/Brewers1.jpeg",
+  "/gallery/Other/Keenans.jpeg",
+  "/gallery/Bowery Electric/Bowery2.jpg",
+  "/gallery/Ortlieb's/Ortliebs2.webp",
+  "/gallery/Kings Road/Gazing.jpeg",
+  "/gallery/Kings Road/KingsRoad2.webp",
+  "/gallery/DOTF/eyes.webp",
+  "/gallery/Kings Road/BeatlesRooftop.webp",
+  "/gallery/Kings Road/KingsRoad.webp",
+  "/gallery/Other/Post Recording.webp",
+  "/gallery/Ortlieb's/CrowdFromStage.webp",
+  "/gallery/Other/X.jpeg",
+  "/gallery/DOTF/Saxy.webp",
+  "/gallery/Pianos/CenterShot.webp",
+  "/gallery/Pianos/Greg.webp",
+  "/gallery/Kings Road/Greg2.webp",
+  "/gallery/Kings Road/Group.webp",
+  "/gallery/Kings Road/Group2.webp",
+  "/gallery/Pianos/Jimmy.webp",
+  "/gallery/Kings Road/Mask.webp",
+  "/gallery/Pianos/Sam.webp",
 ];
 
-// Define gallery categories
-const categories = [
-  { id: "all", label: "All Photos" },
-  { id: "performances", label: "Performances" },
-  { id: "venues", label: "Venues" },
-  { id: "candid", label: "Candid" },
-  { id: "studio", label: "Studio" },
-  { id: "promotional", label: "Promotional" },
-];
+// Extract categories dynamically
+const extractCategory = (path: string) => {
+  const segments = path.split("/");
+  if (segments.length >= 3 && segments[1] === "gallery") {
+    return segments[2]; // The folder name inside "/gallery/"
+  }
+  return "misc"; // Default category if no subfolder exists
+};
+
+// Process images into an object structure
+const processedImages = images.map((src) => ({
+  src,
+  category: extractCategory(src),
+}));
+
+// Get unique categories from images
+const categories = Array.from(
+  new Set(processedImages.map((img) => img.category))
+).sort();
+
+// Add "all" category at the beginning
+categories.unshift("all");
 
 export default function Photos() {
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [selectedImage, setSelectedImage] = useState<(typeof images)[0] | null>(
-    null
-  );
+  const [selectedImage, setSelectedImage] = useState<(typeof processedImages)[0] | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
-
-  const widths = [500, 1000, 1600];
-  const ratios = [2.2, 4, 6, 8];
 
   // Filter images based on selected category
   const filteredImages =
     selectedCategory === "all"
-      ? images
-      : images.filter((img) => img.category === selectedCategory);
+      ? processedImages
+      : processedImages.filter((img) => img.category === selectedCategory);
 
   // Handle scroll for parallax effect
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
+    const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Handle image click to open modal
-  const handleImageClick = useCallback((image: (typeof images)[0]) => {
+  const handleImageClick = useCallback((image: (typeof processedImages)[0]) => {
     setSelectedImage(image);
     setIsModalOpen(true);
   }, []);
@@ -112,76 +102,45 @@ export default function Photos() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/gallery/Bowery.jpg')",
+            backgroundImage: "url('/gallery/Bowery Electric/Bowery.jpg')",
             transform: `translateY(${scrollY * 0.2}px)`,
             filter: "brightness(0.4) contrast(1.1)",
           }}
         />
-
-        {/* Noise texture overlay */}
-        <div
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage: "url('/noise.webp')",
-            backgroundRepeat: "repeat",
-          }}
-        />
-
-        {/* Decorative elements */}
         <div className="absolute inset-0 opacity-30 bg-gradient-to-b from-black via-transparent to-black"></div>
-        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent"></div>
 
-        {/* Hero content */}
         <div className="relative container mx-auto px-4 z-10 text-center">
-          <Badge
-            variant="outline"
-            className="mb-6 border-primary/40 bg-black/50 backdrop-blur-sm py-2 px-4 text-primary animate-fade-in"
-          >
+          <Badge variant="outline" className="mb-6 border-primary/40 bg-black/50 py-2 px-4 text-primary">
             PHOTO GALLERY
           </Badge>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
             Memories Through the <span className="text-primary">Lens</span>
           </h1>
           <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-300 mt-4">
             Capturing The Parkways in action across venues in NJ, PA, and NY
           </p>
         </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronDown className="h-8 w-8 text-white/70" />
-        </div>
       </section>
 
       {/* Gallery Controls Section */}
       <section className="py-10 bg-zinc-950 relative">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60"></div>
-
         <div className="container mx-auto px-4">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-8">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold">
-                The Parkways <span className="text-primary">Gallery</span>
-              </h2>
-              <p className="text-gray-400 mt-1">
-                {filteredImages.length} photos in collection
-              </p>
-            </div>
+            <h2 className="text-2xl md:text-3xl font-bold">
+              The Parkways <span className="text-primary">Gallery</span>
+            </h2>
+            <p className="text-gray-400 mt-1">{filteredImages.length} photos in collection</p>
 
-            {/* Category Filter Tabs */}
-            <Tabs
-              value={selectedCategory}
-              onValueChange={setSelectedCategory}
-              className="w-full sm:w-auto"
-            >
+            {/* Dynamic Category Tabs */}
+            <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full sm:w-auto">
               <TabsList className="grid grid-cols-3 sm:grid-cols-6 gap-2 bg-transparent">
                 {categories.map((category) => (
                   <TabsTrigger
-                    key={category.id}
-                    value={category.id}
-                    className="bg-zinc-900/70 border border-white/10 data-[state=active]:bg-primary data-[state=active]:text-black data-[state=active]:shadow-inner transition-all py-1.5"
+                    key={category}
+                    value={category}
+                    className="bg-zinc-900/70 border border-white/10 data-[state=active]:bg-primary data-[state=active]:text-black transition-all py-1.5"
                   >
-                    {category.label}
+                    {category.charAt(0).toUpperCase() + category.slice(1)}
                   </TabsTrigger>
                 ))}
               </TabsList>
@@ -194,201 +153,24 @@ export default function Photos() {
       <section className="py-8 bg-black min-h-[60vh]">
         <div className="container mx-auto px-4">
           <AnimatePresence mode="wait">
-            <motion.div
-              key={selectedCategory}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
-            >
+            <motion.div key={selectedCategory} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {filteredImages.map((image, index) => (
                 <motion.div
                   key={image.src}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{
-                    opacity: 1,
-                    y: 0,
-                    transition: { delay: index * 0.05, duration: 0.3 },
-                  }}
                   className="relative group cursor-pointer"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0, transition: { delay: index * 0.05, duration: 0.3 } }}
                   onClick={() => handleImageClick(image)}
                 >
                   <div className="relative overflow-hidden rounded-lg aspect-square bg-zinc-900">
-                    <Image
-                      src={image.src}
-                      alt="Band Gallery Image"
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-
-                    {/* Overlay on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                      {/* <h3 className="font-medium text-lg">{image.title}</h3> */}
-                      <Badge
-                        variant="outline"
-                        className="mt-2 w-fit border-primary/40 text-primary"
-                      >
-                        {categories.find((c) => c.id === image.category)
-                          ?.label || image.category}
-                      </Badge>
-                    </div>
-
-                    {/* Expand icon */}
-                    <div className="absolute top-3 right-3 bg-black/60 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <Expand className="h-4 w-4 text-white" />
-                    </div>
+                    <Image src={image.src} alt="Gallery Image" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
                   </div>
                 </motion.div>
               ))}
             </motion.div>
           </AnimatePresence>
-
-          {/* Empty state if no images match the filter */}
-          {filteredImages.length === 0 && (
-            <div className="flex flex-col items-center justify-center py-20">
-              <Camera className="h-16 w-16 text-zinc-700 mb-4" />
-              <h3 className="text-xl font-bold text-white mb-2">
-                No photos found
-              </h3>
-              <p className="text-zinc-400 mb-6">
-                No photos match the current filter.
-              </p>
-              <Button
-                variant="outline"
-                onClick={() => setSelectedCategory("all")}
-              >
-                View all photos
-              </Button>
-            </div>
-          )}
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5"></div>
-
-        <div className="container mx-auto px-4 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge
-              variant="outline"
-              className="mb-6 border-secondary/40 text-secondary"
-            >
-              SPREAD THE WORD
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Have a Good Shot?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Share it with us on socials
-            </p>
-
-            <div className="flex flex-wrap gap-4 gap-y-6 justify-center">
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-white/20 hover:bg-white/5 hover:border-primary/40 group"
-                asChild
-              >
-                <a
-                  href="https://www.facebook.com/theparkways"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Facebook className="mr-2 h-5 w-5 group-hover:text-primary" />
-                  Facebook
-                </a>
-              </Button>
-
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-white/20 hover:bg-white/5 hover:border-primary/40 group"
-                asChild
-              >
-                <a
-                  href="https://www.instagram.com/theparkwaysband"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Instagram className="mr-2 h-5 w-5 group-hover:text-primary" />
-                  Instagram
-                </a>
-              </Button>
-
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-white/20 hover:bg-white/5 hover:border-primary/40 group"
-                asChild
-              >
-                <a
-                  href="https://www.tiktok.com/@the_parkways?is_from_webapp=1&sender_device=pc"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaTiktok className="mr-2 h-5 w-5 group-hover:text-primary" />
-                  TikTok
-                </a>
-              </Button>
-
-              <Button
-                asChild
-                variant="default"
-                size="lg"
-                className="bg-gradient-to-r from-primary to-secondary text-black hover:opacity-90"
-              >
-                <Link href="/bookings">
-                  Book Us Now
-                  <ChevronRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Image Modal */}
-      <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className="sm:max-w-[90vw] h-[90vh] max-h-[90vh] p-0 bg-black/95 border-zinc-800">
-          <DialogTitle>Title</DialogTitle>
-          <div className="relative w-full h-full flex items-center justify-center">
-            {selectedImage && (
-              <>
-                {/* Image */}
-                <div className="relative w-full h-full flex items-center justify-center p-4">
-                  <div className="relative max-w-full max-h-full">
-                    <Image
-                      src={selectedImage.src}
-                      alt="Gallery image"
-                      className="object-contain max-h-[80vh] rounded-md"
-                      width={1600}
-                      height={1600}
-                    />
-                  </div>
-                </div>
-
-                {/* Caption */}
-                <div className="absolute bottom-0 left-0 right-0 bg-black/80 backdrop-blur-sm p-4">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <Badge
-                        variant="outline"
-                        className="mt-1 border-primary/40 text-primary"
-                      >
-                        {categories.find((c) => c.id === selectedImage.category)
-                          ?.label || selectedImage.category}
-                      </Badge>
-                    </div>
-                  </div>
-                </div>
-              </>
-            )}
-          </div>
-        </DialogContent>
-      </Dialog>
     </main>
   );
 }
