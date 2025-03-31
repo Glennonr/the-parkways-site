@@ -162,7 +162,7 @@ export default function Home() {
       venue: "Ortlieb's",
       location: "Philadelphia, PA",
       image: "/show_images/Ortliebs2.jpeg",
-      ticketLink: "https://example.com/tickets/april-12"
+      ticketLink: "https://www.eventbrite.com/e/landline-the-parkways-the-blackouts-tickets-1307021178529?aff=oddtdtcreator"
     },
     {
       id: 4,
@@ -209,11 +209,11 @@ export default function Home() {
   // Gallery preview images
   const galleryPreviews = [
     { src: "/gallery/Bowery Electric/Bowery.jpg", rotate: 0 },
-    { src: "/gallery/Ortliebs.webp", rotate: 90 },
-    { src: "/gallery/Cheers.jpeg", rotate: 0 },
-    { src: "/gallery/BeatlesRooftop.webp", rotate: 0 },
+    { src: "/gallery/Ortlieb's/Ortliebs.webp", rotate: 0 },
+    { src: "/gallery/Other/Cheers.jpeg", rotate: 0 },
+    { src: "/gallery/Kings Road/BeatlesRooftop.webp", rotate: 0 },
     { src: "/gallery/Brewers/Brewers1.jpeg", rotate: 0 },
-    { src: "/gallery/Ortlieb's/BackToBack.webp", rotate: 90 },
+    { src: "/gallery/Ortlieb's/BackToBack.webp", rotate: 0 },
   ];
   
 
@@ -584,7 +584,7 @@ export default function Home() {
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-3">Behind The Scenes</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Glimpses of our performances and backstage moments
+              Pictures of our performances and backstage
             </p>
           </div>
           
@@ -641,7 +641,7 @@ export default function Home() {
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-3">Take The Parkways Home</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Show your support with official Parkways merchandise, available at shows
+              Official Parkways merchandise, available at shows
             </p>
           </div>
           
@@ -711,7 +711,7 @@ export default function Home() {
               </Badge>
               <h2 className="text-3xl md:text-5xl font-bold mb-4">Ready to Rock Your Event?</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                The Parkways are available for bars, breweries, private events, festivals, roadside attractions and Bar Mitzvahs throughout New Jersey, Pennsylvania, and New York.
+                The Parkways are available for bars, breweries, parties, festivals, roadside attractions, Bar Mitzvahs and beyond throughout New Jersey, Pennsylvania, and New York.
               </p>
 
 {/*               

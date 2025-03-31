@@ -59,7 +59,7 @@ const shows: Show[] = [
   {
     date: "April 12, 2025",
     venue: "Ortleib's, Philadelphia, PA",
-    ticketLink: "https://example.com/tickets/april-12",
+    ticketLink: "https://www.eventbrite.com/e/landline-the-parkways-the-blackouts-tickets-1307021178529?aff=oddtdtcreator",
     image: "/show_images/Ortliebs2.jpeg",
     headline: "Ortlieb's",
   },
