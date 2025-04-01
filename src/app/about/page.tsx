@@ -137,7 +137,7 @@ export default function AboutUs() {
               <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative aspect-square overflow-hidden rounded-lg">
                 <Image
-                  src="/Group.JPG"
+                  src="/Gallery/Kings Road/BeatlesRooftop.webp"
                   alt="The Parkways Band"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
