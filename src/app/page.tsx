@@ -713,7 +713,7 @@ export default function Home() {
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 The Parkways are available for bars, breweries, parties, festivals, roadside attractions, Bar Mitzvahs and beyond throughout New Jersey, Pennsylvania, and New York.
               </p>
-
+ 
 {/*               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
                 <div className="bg-black/30 rounded-lg p-6 backdrop-blur-sm">
