@@ -57,24 +57,24 @@ export default function AboutUs() {
       image: "/band_members/Greg.jpg",
       quote: "The heartbeat of The Parkways."
     },
-    {
-      name: "Alison Nicolosi",
-      role: "Tenor Saxophone",
-      image: "/band_members/Alison.png",
-      quote: "Adding that perfect brass flavor to our sound."
-    },
-    {
-      name: "Richie Glennon",
-      role: "Alto Saxophone",
-      image: "/band_members/Richie.JPG",
-      quote: "Jersey born, musically driven."
-    },
-    {
-      name: "Jack Flanagan",
-      role: "Keyboard",
-      image: "/band_members/Flan.png",
-      quote: "Adding the melodic layers that bring it all together."
-    },
+    // {
+    //   name: "Alison Nicolosi",
+    //   role: "Tenor Saxophone",
+    //   image: "/band_members/Alison.png",
+    //   quote: "Adding that perfect brass flavor to our sound."
+    // },
+    // {
+    //   name: "Richie Glennon",
+    //   role: "Alto Saxophone",
+    //   image: "/band_members/Richie.JPG",
+    //   quote: "Jersey born, musically driven."
+    // },
+    // {
+    //   name: "Jack Flanagan",
+    //   role: "Keyboard",
+    //   image: "/band_members/Flan.png",
+    //   quote: "Adding the melodic layers that bring it all together."
+    // },
   ];
 
   return (
