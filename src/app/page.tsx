@@ -210,9 +210,9 @@ export default function Home() {
   const galleryPreviews = [
     { src: "/gallery/Bowery Electric/Bowery.jpg", rotate: 0 },
     { src: "/gallery/Ortlieb's/Ortliebs.webp", rotate: 0 },
-    { src: "/gallery/Other/Cheers.jpeg", rotate: 0 },
+    { src: "/gallery/Other/X.jpeg", rotate: 0 },
     { src: "/gallery/Kings Road/BeatlesRooftop.webp", rotate: 0 },
-    { src: "/gallery/Brewers/Brewers1.jpeg", rotate: 0 },
+    { src: "/gallery/Pianos/CenterShot.webp", rotate: 0 },
     { src: "/gallery/Ortlieb's/BackToBack.webp", rotate: 0 },
   ];
   

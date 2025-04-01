@@ -233,10 +233,10 @@ export default function Merch() {
                     </a>
                     <span>or call:</span>
                     <a 
-                      href="tel:+18562989855" 
+                      href="tel:+19734493914" 
                       className="text-primary hover:underline inline-flex items-center"
                     >
-                      (856) 298-9855
+                      (973) 449-3914
                       <Phone className="h-3 w-3 ml-1" />
                     </a>
                   </p>

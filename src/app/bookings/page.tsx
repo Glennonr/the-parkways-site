@@ -330,10 +330,10 @@ export default function BookUs() {
                     <div>
                       <h3 className="font-medium text-white">Call Us</h3>
                       <a 
-                        href="tel:+18562989855" 
+                        href="tel:+19734493914" 
                         className="text-gray-400 hover:text-primary transition-colors duration-200"
                       >
-                        (856) 298-9855
+                        (973) 449-3914
                       </a>
                     </div>
                   </div>

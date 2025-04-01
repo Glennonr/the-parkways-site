@@ -146,9 +146,9 @@ export default function EPK() {
     "/gallery/Ortlieb's/Waves.webp", 
     "/gallery/Bowery Electric/Bowery.jpg", 
     "/gallery/Bowery Electric/Bowery2.jpg", 
-    "/gallery/DOTF/DOTF.webp",
+    "/gallery/Other/Post RecordingCrop.webp",
     "/gallery/Ortlieb's/BackToBack.webp",
-    "/gallery/DOTF/smiles.webp"
+    "/gallery/Pianos/CenterShot.webp"
   ];
 
   // Upcoming shows
@@ -226,11 +226,11 @@ export default function EPK() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Who Are <span className="text-primary">The Parkways</span>?</h2>
               <p className="text-lg text-gray-300 leading-relaxed">
                 The Parkways are a rock band from Haddonfield, NJ, the core 4 of two guitars,
-                bass, drums and often colaborate with an alto and tenor sax and piano. 
+                bass and drums.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
                 We play a mix of originals and covers from the 50's to 2020's
-                bringing a big sound and a lot of energy to every show.
+                bringing a big sound and lots of energy to every show.
               </p>
               <p className="text-lg text-primary font-semibold mt-4">
                 Our debut 5-song EP is recorded and coming out in the end of April!
@@ -240,7 +240,7 @@ export default function EPK() {
               <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative rounded-lg overflow-hidden w-full h-[350px] md:h-[400px]">
                 <Image 
-                  src="/Group.JPG" 
+                  src="/gallery/Kings Road/BeatlesRooftop.webp" 
                   alt="The Parkways band" 
                   fill 
                   className="object-cover object-top rounded-lg border border-white/10 transition-transform duration-700 group-hover:scale-105"
@@ -547,12 +547,12 @@ export default function EPK() {
               
               <div>
                 <h3 className="text-lg font-semibold text-primary border-b border-primary/30 pb-2 mb-2">
-                  Horns & Drums
+                  Drums
                 </h3>
                 <ul className="space-y-2 text-sm">
                   <li className="flex justify-between">
-                    <span className="text-gray-300">Alto & Tenor Sax</span>
-                    <span className="text-white">Clip-on or Stand Mics</span>
+                    {/* <span className="text-gray-300">Alto & Tenor Sax</span> */}
+                    {/* <span className="text-white">Clip-on or Stand Mics</span> */}
                   </li>
                   <li className="flex justify-between">
                     <span className="text-gray-300">Drums</span>

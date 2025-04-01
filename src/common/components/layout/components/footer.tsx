@@ -165,10 +165,10 @@ export default function Footer() {
                     <div>
                       <p className="font-medium text-white text-lg mb-1">Call Us</p>
                       <a 
-                        href="tel:+18562989855" 
+                        href="tel:+19734493914" 
                         className="hover:text-primary transition-colors duration-200 flex items-center group"
                       >
-                        (856) 298-9855
+                        (973) 449-3914
                         <ArrowUpRight className="h-3 w-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                       </a>
                     </div>
@@ -182,7 +182,7 @@ export default function Footer() {
                     </div>
                     <div>
                       <p className="font-medium text-white text-lg mb-1">Location</p>
-                      <p>Haddonfield, NJ / Philadelphia, PA</p>
+                      <p>Haddonfield, NJ</p>
                     </div>
                   </li>
                 </ul>
