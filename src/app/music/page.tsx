@@ -210,7 +210,7 @@ export default function Songs() {
         <div 
           className="absolute inset-0 bg-cover -top-36"
           style={{
-            backgroundImage: "url('/gallery/Brewers/Brewers1.jpeg')",
+            backgroundImage: "url('/gallery/Kings Road/Group2.webp')",
             transform: "translateY(calc(var(--scroll) * 0.3px))",
             filter: "brightness(0.4) contrast(1.1)"
           }}

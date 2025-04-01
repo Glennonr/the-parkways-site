@@ -134,7 +134,7 @@ export default function BookUs() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/gallery/Ortliebs.webp')",
+            backgroundImage: "url('/gallery/Kings Road/Group2.webp')",
             transform: "translateY(calc(var(--scroll) * 0.3px))",
             filter: "brightness(0.4) contrast(1.1)"
           }}
