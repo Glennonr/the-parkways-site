@@ -15,21 +15,21 @@ import { Badge } from "@/common/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/common/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/common/components/ui/tabs";
 import { Separator } from "@/common/components/ui/separator";
-import { 
-  FileDown, 
-  Music, 
-  Mic, 
-  Calendar, 
-  Mail, 
-  MapPin, 
-  Instagram, 
-  Facebook, 
-  Youtube, 
-  Video, 
-  Play, 
-  Pause, 
-  Quote, 
-  Download, 
+import {
+  FileDown,
+  Music,
+  Mic,
+  Calendar,
+  Mail,
+  MapPin,
+  Instagram,
+  Facebook,
+  Youtube,
+  Video,
+  Play,
+  Pause,
+  Quote,
+  Download,
   ChevronRight,
   ExternalLink,
   Clock
@@ -69,8 +69,8 @@ const quotes = [
 export default function EPK() {
   const [scrollY, setScrollY] = useState(0);
   const [isPlaying, setIsPlaying] = useState<number | null>(null);
-  const audioRefs = useRef<{[key: number]: HTMLAudioElement | null}>({});
-  
+  const audioRefs = useRef<{ [key: number]: HTMLAudioElement | null }>({});
+
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -88,9 +88,9 @@ export default function EPK() {
   // Toggle audio play/pause
   const togglePlay = (trackId: number) => {
     const audioElement = audioRefs.current[trackId];
-    
+
     if (!audioElement) return;
-    
+
     if (isPlaying === trackId) {
       audioElement.pause();
       setIsPlaying(null);
@@ -99,7 +99,7 @@ export default function EPK() {
       if (isPlaying !== null && audioRefs.current[isPlaying]) {
         audioRefs.current[isPlaying]?.pause();
       }
-      
+
       audioElement.play().catch(error => {
         console.error("Audio playback failed:", error);
       });
@@ -141,11 +141,11 @@ export default function EPK() {
 
   // Promo photos
   const promoPhotos = [
-    "/gallery/Kings Road/BeatlesRooftop.webp", 
-    "/gallery/Kings Road/KingsRoad.webp", 
-    "/gallery/Ortlieb's/Waves.webp", 
-    "/gallery/Bowery Electric/Bowery.jpg", 
-    "/gallery/Bowery Electric/Bowery2.jpg", 
+    "/gallery/Kings Road/BeatlesRooftop.webp",
+    "/gallery/Kings Road/KingsRoad.webp",
+    "/gallery/Ortlieb's/Waves.webp",
+    "/gallery/Bowery Electric/Bowery.jpg",
+    "/gallery/Bowery Electric/Bowery2.jpg",
     "/gallery/Other/Post RecordingCrop.webp",
     "/gallery/Ortlieb's/BackToBack.webp",
     "/gallery/Pianos/CenterShot.webp"
@@ -171,32 +171,32 @@ export default function EPK() {
     <main className="min-h-screen bg-black text-white pt-14 md:pt-8">
       {/* Hero Section with Parallax */}
       <section className="relative h-[40vh] md:h-[50vh] overflow-hidden flex items-center justify-center">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/gallery/Bowery Electric/Bowery.jpg')", 
+            backgroundImage: "url('/gallery/Bowery Electric/Bowery.jpg')",
             transform: `translateY(calc(${scrollY * 0.3}px))`,
             filter: "brightness(0.4) contrast(1.1)"
           }}
         />
-        
+
         {/* Noise texture overlay */}
-        <div 
+        <div
           className="absolute inset-0 opacity-30"
           style={{
             backgroundImage: "url('/noise.webp')",
             backgroundRepeat: "repeat"
           }}
         />
-        
+
         {/* Decorative elements */}
         <div className="absolute inset-0 opacity-30 bg-gradient-to-b from-black via-transparent to-black"></div>
         <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent"></div>
-        
+
         {/* Hero content */}
         <div className="relative container mx-auto px-4 z-10 text-center">
-          <Badge 
-            variant="outline" 
+          <Badge
+            variant="outline"
             className="mb-6 border-primary/40 bg-black/50 backdrop-blur-sm py-2 px-4 text-primary"
           >
             PRESS KIT
@@ -239,10 +239,10 @@ export default function EPK() {
             <div className="md:w-1/2 w-full relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative rounded-lg overflow-hidden w-full h-[350px] md:h-[400px]">
-                <Image 
-                  src="/gallery/Kings Road/BeatlesRooftop.webp" 
-                  alt="The Parkways band" 
-                  fill 
+                <Image
+                  src="/gallery/Kings Road/BeatlesRooftop.webp"
+                  alt="The Parkways band"
+                  fill
                   className="object-cover object-top rounded-lg border border-white/10 transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 50vw"
                   priority
@@ -263,17 +263,17 @@ export default function EPK() {
               Preview tracks from our upcoming EP, dropping soon on all major streaming platforms
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {featuredTracks.map(track => {
               // Generate initials for fallback
               const initials = getInitials(track.title);
-              const gradientClass = track.id % 2 === 0 
-                ? "from-primary/70 to-primary/30" 
+              const gradientClass = track.id % 2 === 0
+                ? "from-primary/70 to-primary/30"
                 : "from-secondary/70 to-secondary/30";
-                
+
               return (
-                <Card 
+                <Card
                   key={track.id}
                   className="bg-zinc-900/50 border-white/5 overflow-hidden transition-all duration-300 hover:border-secondary/30 pt-0"
                 >
@@ -283,7 +283,7 @@ export default function EPK() {
                       <span className="text-5xl md:text-6xl font-bold text-black/80">
                         {initials}
                       </span>
-                      
+
                       {/* Decorative vinyl record effect */}
                       <div className="absolute w-3/5 h-3/5 border-4 border-black/10 rounded-full flex items-center justify-center">
                         <div className="w-1/3 h-1/3 bg-black/20 rounded-full">
@@ -291,7 +291,7 @@ export default function EPK() {
                         </div>
                       </div>
                     </div>
-                    
+
                     {/* Actual image that will hide the fallback if it loads successfully */}
                     {track.coverArt ? (
                       <Image
@@ -302,11 +302,11 @@ export default function EPK() {
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                       />
                     ) : null}
-                    
+
                     <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 z-20"></div>
-                    
+
                     {/* Play button - moved to bottom right */}
-                    <button 
+                    <button
                       className="absolute bottom-3 right-3 z-30 group"
                       onClick={() => track.audioPreview ? togglePlay(track.id) : null}
                       aria-label={isPlaying === track.id ? "Pause" : "Play"}
@@ -314,8 +314,8 @@ export default function EPK() {
                       <div className={`
                         w-10 h-10 rounded-full flex items-center justify-center
                         transition-all duration-300 transform
-                        ${isPlaying === track.id 
-                          ? 'bg-primary text-black shadow-lg shadow-primary/30' 
+                        ${isPlaying === track.id
+                          ? 'bg-primary text-black shadow-lg shadow-primary/30'
                           : 'bg-black/70 group-hover:bg-primary/90 group-hover:scale-110 text-white group-hover:text-black'}
                       `}>
                         {isPlaying === track.id ? (
@@ -325,26 +325,26 @@ export default function EPK() {
                         )}
                       </div>
                     </button>
-                    
+
                     {/* Hidden audio element for preview */}
                     {track.audioPreview && (
-                      <audio 
-                        ref={el => { audioRefs.current[track.id] = el }} 
+                      <audio
+                        ref={el => { audioRefs.current[track.id] = el }}
                         src={track.audioPreview}
                         onEnded={() => setIsPlaying(null)}
                       />
                     )}
                   </div>
-                  
+
                   <CardContent className="p-4">
                     <h3 className="font-bold text-lg">{track.title}</h3>
-                    
+
                     <div className="flex items-center justify-between mt-1">
                       <span className="text-gray-400 text-sm flex items-center">
                         <Clock className="h-3.5 w-3.5 mr-1" />
                         {track.length}
                       </span>
-                      
+
                       <Badge variant="outline" className="text-secondary border-secondary/30">
                         Coming Soon
                       </Badge>
@@ -378,7 +378,7 @@ export default function EPK() {
               High-resolution images for press and promotional use
             </p>
           </div>
-          
+
           <div className="relative overflow-hidden rounded-lg">
             <Swiper
               modules={[Navigation, Pagination, Autoplay, EffectFade]}
@@ -418,33 +418,33 @@ export default function EPK() {
               See The Parkways in action with these live performance clips
             </p>
           </div>
-          
+
           <Tabs defaultValue="video1" className="max-w-4xl mx-auto">
             <TabsList className="grid w-full grid-cols-3 mb-6">
               <TabsTrigger value="video1">Take Me Out</TabsTrigger>
               <TabsTrigger value="video2">Beach Boy</TabsTrigger>
               <TabsTrigger value="video3">Dancing in the Dark</TabsTrigger>
             </TabsList>
-            
+
             <TabsContent value="video1" className="relative aspect-video rounded-lg overflow-hidden">
-              <iframe 
-                src="https://drive.google.com/file/d/1ZT-KYzJhwCZnovBF-x6cTePsf17y058f/preview" 
+              <iframe
+                src="https://drive.google.com/file/d/1ZT-KYzJhwCZnovBF-x6cTePsf17y058f/preview"
                 allow="autoplay"
                 className="w-full h-full absolute inset-0 border-0"
               ></iframe>
             </TabsContent>
-            
+
             <TabsContent value="video2" className="relative aspect-video rounded-lg overflow-hidden">
-              <iframe 
-                src="https://www.youtube.com/embed/Cwyavufm07Y" 
+              <iframe
+                src="https://www.youtube.com/embed/Cwyavufm07Y"
                 allowFullScreen
                 className="w-full h-full absolute inset-0 border-0"
               ></iframe>
             </TabsContent>
-            
+
             <TabsContent value="video3" className="relative aspect-video rounded-lg overflow-hidden">
-              <iframe 
-                src="https://drive.google.com/file/d/11dHE4k8bzHBRkdXKvB8fpyXznj_9e6Ww/preview" 
+              <iframe
+                src="https://drive.google.com/file/d/11dHE4k8bzHBRkdXKvB8fpyXznj_9e6Ww/preview"
                 allow="autoplay"
                 className="w-full h-full absolute inset-0 border-0"
               ></iframe>
@@ -461,7 +461,7 @@ export default function EPK() {
               Reviews and feedback from venues, fans and press
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
             {quotes.map((item, index) => (
               <Card key={index} className="bg-black/50 border-white/10">
@@ -482,7 +482,7 @@ export default function EPK() {
           <section className="bg-zinc-900/50 rounded-xl p-8 border border-white/5">
             <Badge variant="outline" className="mb-3 border-secondary/40 text-secondary">UPCOMING DATES</Badge>
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Live Shows</h2>
-            
+
             <div className="space-y-4 mt-6">
               {upcomingShows.map((show, index) => (
                 <div key={index} className="flex items-center border-b border-white/10 pb-4">
@@ -493,18 +493,18 @@ export default function EPK() {
                   <div>
                     <h3 className="font-semibold text-white">{show.venue}</h3>
                     <div className="flex items-center text-sm text-gray-400">
-                      <MapPin className="h-4 w-4 inline mr-1 text-secondary/70" /> 
+                      <MapPin className="h-4 w-4 inline mr-1 text-secondary/70" />
                       {show.location}
                     </div>
                   </div>
                 </div>
               ))}
             </div>
-            
+
             <div className="mt-6">
-              <Button 
+              <Button
                 asChild
-                variant="outline" 
+                variant="outline"
                 className="w-full border-primary/50 text-primary hover:bg-primary/20"
               >
                 <Link href="/shows">
@@ -519,7 +519,7 @@ export default function EPK() {
           <section className="bg-zinc-900/50 rounded-xl p-8 border border-white/5">
             <Badge variant="outline" className="mb-3 border-secondary/40 text-secondary">FOR VENUES</Badge>
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Technical Requirements</h2>
-            
+
             <div className="space-y-4 mt-6">
               <div>
                 <h3 className="text-lg font-semibold text-primary border-b border-primary/30 pb-2 mb-2">
@@ -544,7 +544,7 @@ export default function EPK() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h3 className="text-lg font-semibold text-primary border-b border-primary/30 pb-2 mb-2">
                   Drums
@@ -561,11 +561,11 @@ export default function EPK() {
                 </ul>
               </div>
             </div>
-            
+
             <div className="mt-6">
-              <Button 
+              <Button
                 asChild
-                variant="default" 
+                variant="default"
                 className="w-full bg-primary text-black hover:bg-primary/90"
               >
                 <Link href="/Stage Plot.pdf" target="_blank">
@@ -585,15 +585,15 @@ export default function EPK() {
             <p className="text-lg text-gray-300 mb-6">
               For booking inquiries, fill out the form on our booking page or contact us directly:
             </p>
-            
-            <a 
-              href="mailto:theparkwaysband@gmail.com" 
+
+            <a
+              href="mailto:theparkwaysband@gmail.com"
               className="inline-flex items-center justify-center px-6 py-3 bg-black/40 rounded-lg border border-primary/30 mb-8 hover:bg-black/60 hover:border-primary transition-all duration-300"
             >
               <Mail className="h-5 w-5 text-primary mr-3" />
               <span className="text-xl font-medium text-white">theparkwaysband@gmail.com</span>
             </a>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-lg mx-auto mb-8">
               {socialLinks.map((link, index) => (
                 <Button
@@ -603,9 +603,9 @@ export default function EPK() {
                   className="border-white/10 hover:border-primary/50 hover:bg-black/50 transition-all"
                   size="sm"
                 >
-                  <a 
-                    href={link.url} 
-                    target="_blank" 
+                  <a
+                    href={link.url}
+                    target="_blank"
                     rel="noreferrer"
                     className="flex items-center justify-center gap-2"
                   >
@@ -615,10 +615,10 @@ export default function EPK() {
                 </Button>
               ))}
             </div>
-            
-            <Button 
+
+            <Button
               asChild
-              variant="default" 
+              variant="default"
               size="lg"
               className="bg-gradient-to-r from-primary to-secondary text-black hover:opacity-90"
             >

@@ -36,16 +36,8 @@ import {
 } from "@/common/components/ui/carousel";
 import { Input } from "@/common/components/ui/input";
 import { Separator } from "@/common/components/ui/separator";
+import { shows, Show } from "@/common/data/shows";
 
-// Types for our data
-type UpcomingShow = {
-  id: number;
-  date: string;
-  venue: string;
-  location: string;
-  image: string;
-  ticketLink?: string;
-};
 
 type FeaturedTrack = {
   id: number;
@@ -139,40 +131,7 @@ export default function Home() {
     },
   ];
 
-  // Upcoming shows data
-  const upcomingShows: UpcomingShow[] = [
-    // {
-    //   id: 1,
-    //   date: "March 9, 2025",
-    //   venue: "Gold Sounds",
-    //   location: "Brooklyn, NY",
-    //   image: "/show_images/gold_march_9.avif",
-    //   ticketLink: "https://dice.fm/event/7dndp9-mary-hail-the-parkways-metasin-9th-mar-gold-sounds-new-york-tickets?lng=en-US"
-    // },
-    // {
-    //   id: 2,
-    //   date: "March 15, 2025",
-    //   venue: "Kings Road Brewery",
-    //   location: "Haddonfield, NJ", 
-    //   image: "/show_images/kingsRoad.webp"
-    // },
-    {
-      id: 3,
-      date: "April 12, 2025",
-      venue: "Ortlieb's",
-      location: "Philadelphia, PA",
-      image: "/show_images/Ortliebs2.jpeg",
-      ticketLink: "https://www.eventbrite.com/e/landline-the-parkways-the-blackouts-tickets-1307021178529?aff=oddtdtcreator"
-    },
-    {
-      id: 4,
-      date: "August 2, 2025",
-      venue: "Musikfest",
-      location: "Bethlehem, PA",
-      image: "/show_images/musikfest.jpeg",
-      ticketLink: ""
-    }
-  ];
+
 
   // Get initials from track title for placeholder
   const getInitials = (title: string): string => {
@@ -354,12 +313,12 @@ export default function Home() {
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-3">Upcoming Shows</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Catch The Parkways live at venues across New Jersey, New York, and Pennsylvania
+              Catch The Parkways live across New Jersey, New York, and Pennsylvania
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {upcomingShows.map(show => {
+            {shows.map(show => {
               // Extract date parts
               const date = new Date(show.date);
               const day = date.toLocaleDateString('en-US', { day: 'numeric' });

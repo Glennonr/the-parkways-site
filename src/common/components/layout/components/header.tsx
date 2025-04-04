@@ -122,9 +122,9 @@ export default function Header() {
                 </Link>
               ))}
             </nav>
-            
+
             {/* Book Now Button */}
-            <Button 
+            <Button
               asChild
               className="bg-primary hover:bg-primary/90 text-black font-bold py-2 px-6 rounded-md transition-all duration-300 shadow-md shadow-primary/20"
             >
@@ -148,7 +148,7 @@ export default function Header() {
                 <Menu className="h-6 w-6 transition-transform group-hover:scale-110" />
               </Button>
             </SheetTrigger>
-            
+
             {/* Mobile Navigation Menu */}
             <SheetContent
               side="right"
@@ -175,7 +175,7 @@ export default function Header() {
                 </div>
 
                 <nav className="flex-1 px-3 pt-1 pb-6 space-y-1.5 overflow-y-auto">
-                {routes.map((route) => (
+                  {routes.map((route) => (
                     <Link
                       key={route.name}
                       href={route.href}
@@ -198,7 +198,7 @@ export default function Header() {
                       {route.name}
                     </Link>
                   ))}
-                  
+
                   {/* Mobile Book Now Button */}
                   <Link
                     href="/bookings"

@@ -7,10 +7,10 @@ import { Button } from "@/common/components/ui/button";
 
 // Social media link component with proper Next.js external link handling
 const SocialLink = ({ href, icon, label }: { href: string; icon: React.ReactNode; label: string }) => (
-  <Link 
+  <Link
     href={href}
-    target="_blank" 
-    rel="noopener noreferrer" 
+    target="_blank"
+    rel="noopener noreferrer"
     className="flex items-center justify-center w-11 h-11 rounded-full bg-zinc-900 hover:bg-primary text-gray-300 hover:text-black transition-all duration-300 shadow-sm shadow-black/20"
     aria-label={label}
   >
@@ -49,7 +49,7 @@ export default function Footer() {
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary via-secondary to-transparent opacity-60"></div>
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
-      
+
       {/* Main footer content */}
       <div className="container mx-auto px-4 pt-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -60,10 +60,10 @@ export default function Footer() {
               <Link href="/" className="inline-flex items-center gap-4 group transition-all duration-300">
                 <div className="relative w-16 h-16 overflow-hidden rounded-lg transform group-hover:scale-105 transition-transform">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
-                  <Image 
-                    src="/logo.png" 
-                    alt="The Parkways Logo" 
-                    fill 
+                  <Image
+                    src="/logo.png"
+                    alt="The Parkways Logo"
+                    fill
                     className="object-contain p-1"
                     sizes="(max-width: 640px) 48px, 64px"
                   />
@@ -75,17 +75,17 @@ export default function Footer() {
                   <span className="text-xs md:text-sm text-gray-400 tracking-widest">SOUTH JERSEY ROCK & ROLL</span>
                 </div>
               </Link>
-              
+
               {/* Description */}
               {/* <p className="text-gray-300 leading-relaxed">
                 South Jersey's premier rock and alternative cover band bringing energy and passion to every performance. 
                 Available for bookings at venues, private events, and festivals throughout the region.
               </p> */}
-              
+
               {/* Social icons */}
               <div className="flex flex-wrap gap-4">
                 {socialLinks.map((social) => (
-                  <SocialLink 
+                  <SocialLink
                     key={social.label}
                     href={social.href}
                     icon={social.icon}
@@ -95,7 +95,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          
+
           {/* Secondary content */}
           <div className="lg:col-span-7">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -117,8 +117,8 @@ export default function Footer() {
                       { name: "Electronic Press Kit", href: "/EPK" },
                     ].map((link) => (
                       <li key={link.name} className="col-span-1">
-                        <Link 
-                          href={link.href} 
+                        <Link
+                          href={link.href}
                           className="text-gray-300 hover:text-primary transition-colors duration-200 flex items-center group text-base md:text-lg"
                         >
                           <span className="w-0 h-0.5 bg-primary mr-0 group-hover:w-2 group-hover:mr-2 transition-all duration-300"></span>
@@ -129,16 +129,16 @@ export default function Footer() {
                   </ul>
                 </nav>
               </div>
-              
+
               {/* Contact section */}
               <div className="flex flex-col space-y-6">
                 <h3 className="text-xl font-bold text-white mb-8 flex items-center">
                   <div className="h-5 w-1.5 bg-primary mr-3 rounded-sm"></div>
                   GET IN TOUCH
                 </h3>
-                
+
                 <ul className="space-y-6">
-                <li className="flex text-gray-300 group">
+                  <li className="flex text-gray-300 group">
                     <div className="mt-0.5 mr-4">
                       <div className="p-2 rounded-full bg-zinc-900 text-primary group-hover:bg-primary/10 transition-colors">
                         <Mail className="h-5 w-5" />
@@ -146,8 +146,8 @@ export default function Footer() {
                     </div>
                     <div>
                       <p className="font-medium text-white text-lg mb-1">Email</p>
-                      <a 
-                        href="mailto:theparkwaysband@gmail.com" 
+                      <a
+                        href="mailto:theparkwaysband@gmail.com"
                         className="hover:text-primary transition-colors duration-200 flex items-center group"
                       >
                         theparkwaysband@gmail.com
@@ -164,8 +164,8 @@ export default function Footer() {
                     </div>
                     <div>
                       <p className="font-medium text-white text-lg mb-1">Call Us</p>
-                      <a 
-                        href="tel:+19734493914" 
+                      <a
+                        href="tel:+19734493914"
                         className="hover:text-primary transition-colors duration-200 flex items-center group"
                       >
                         (973) 449-3914
@@ -173,7 +173,7 @@ export default function Footer() {
                       </a>
                     </div>
                   </li>
-                  
+
                   <li className="flex text-gray-300 group">
                     <div className="mt-0.5 mr-4">
                       <div className="p-2 rounded-full bg-zinc-900 text-primary group-hover:bg-primary/10 transition-colors">
@@ -190,13 +190,13 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        
+
         {/* Book now call-to-action */}
         <div className="mt-6 pt-8 pb-6 border-t border-white/5 flex flex-col md:flex-row items-center justify-start gap-6">
           <p className="text-lg text-white font-medium my-auto">
             Ready to book <span className="text-primary">The Parkways</span> for your next event?
           </p>
-          <Button 
+          <Button
             asChild
             className="bg-primary hover:bg-primary/90 text-black font-bold py-2 px-6 rounded-md transition-all duration-300 shadow-md shadow-primary/20"
           >
@@ -206,7 +206,7 @@ export default function Footer() {
             </Link>
           </Button>
         </div>
-        
+
         {/* Copyright & Developer Credit */}
         <div className="pt-6 border-t border-white/5">
           <div className="flex flex-col md:flex-row justify-between items-center">
