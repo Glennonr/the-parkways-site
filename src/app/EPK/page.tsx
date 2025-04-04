@@ -260,7 +260,7 @@ export default function EPK() {
             <Badge variant="outline" className="mb-3 border-secondary/40 text-secondary">OUR MUSIC</Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-3">Listen to Our Demos</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Preview tracks from our upcoming EP, dropping soon on all major streaming platforms
+              Preview demos off our upcoming EP, dropping soon on all major streaming platforms
             </p>
           </div>
 
@@ -413,10 +413,7 @@ export default function EPK() {
         <section className="mb-20 max-w-6xl mx-auto">
           <div className="text-center mb-8">
             <Badge variant="outline" className="mb-3 border-secondary/40 text-secondary">LIVE PERFORMANCES</Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">Watch Us Live</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              See The Parkways in action with these live performance clips
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">Parkways in Action</h2>
           </div>
 
           <Tabs defaultValue="video1" className="max-w-4xl mx-auto">
@@ -534,30 +531,31 @@ export default function EPK() {
                     <span className="text-gray-300">Guitar 1 & 2</span>
                     <span className="text-white">Amp Mics</span>
                   </li>
-                  <li className="flex justify-between">
+                  {/* <li className="flex justify-between">
                     <span className="text-gray-300">Keyboard</span>
                     <span className="text-white">DI</span>
-                  </li>
+                  </li> */}
                   <li className="flex justify-between">
                     <span className="text-gray-300">Bass</span>
                     <span className="text-white">DI Box preferred</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold text-primary border-b border-primary/30 pb-2 mb-2">
-                  Drums
-                </h3>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex justify-between">
-                    {/* <span className="text-gray-300">Alto & Tenor Sax</span> */}
-                    {/* <span className="text-white">Clip-on or Stand Mics</span> */}
                   </li>
                   <li className="flex justify-between">
                     <span className="text-gray-300">Drums</span>
                     <span className="text-white">Kick, Snare, OH</span>
                   </li>
+                </ul>
+              </div>
+
+              <div>
+                {/* <h3 className="text-lg font-semibold text-primary border-b border-primary/30 pb-2 mb-2">
+                  Drums
+                </h3> */}
+                <ul className="space-y-2 text-sm">
+                  <li className="flex justify-between">
+                    {/* <span className="text-gray-300">Alto & Tenor Sax</span> */}
+                    {/* <span className="text-white">Clip-on or Stand Mics</span> */}
+                  </li>
+
                 </ul>
               </div>
             </div>

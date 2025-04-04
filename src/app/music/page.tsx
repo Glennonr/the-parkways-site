@@ -23,14 +23,8 @@ import {
   TabsTrigger 
 } from "@/common/components/ui/tabs";
 import { ScrollArea } from "@/common/components/ui/scroll-area";
+import { epTracks, Track } from "@/common/data/epTracks";
 
-type Track = {
-  id: number;
-  title: string;
-  length: string;
-  coverArt?: string;
-  audioPreview?: string;
-};
 
 // Cover song type for better organization
 type CoverSongCategory = {
@@ -120,12 +114,6 @@ export default function Songs() {
       length: "3:33",
       audioPreview: "/audio/Zynnie-Demo.mp3"
     },
-    // {
-    //   id: 6,
-    //   title: "Gotta Be Taken",
-    //   length: "2:59",
-    //   audioPreview: "/audio/Gotta-Be-Taken-Demo.mp3"
-    // }
   ];
 
   // YouTube videos

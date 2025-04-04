@@ -37,6 +37,8 @@ import {
 import { Input } from "@/common/components/ui/input";
 import { Separator } from "@/common/components/ui/separator";
 import { shows, Show } from "@/common/data/shows";
+import { epTracks, Track } from "@/common/data/epTracks";
+
 
 
 type FeaturedTrack = {
@@ -144,26 +146,7 @@ export default function Home() {
   };
 
   // Featured tracks data
-  const featuredTracks: FeaturedTrack[] = [
-    {
-      id: 1,
-      title: "Gotta Be Taken (Demo)",
-      length: "2:59",
-      audioPreview: "/audio/Gotta-Be-Taken-Demo.mp3"
-    },
-    {
-      id: 2,
-      title: "Waiting Again (Demo)",
-      length: "2:38",
-      audioPreview: "/audio/Waiting-Again-Demo.mp3"
-    },
-    {
-      id: 3,
-      title: "Middle Distance Baby (Demo)",
-      length: "3:07",
-      audioPreview: "/audio/Middle-Distance-Baby-Demo.mp3"
-    }
-  ];
+  const featuredTracks: FeaturedTrack[] = epTracks
 
   // Gallery preview images
   const galleryPreviews = [
@@ -418,11 +401,11 @@ export default function Home() {
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-3">Featured Tracks</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Preview tracks from our upcoming EP, dropping soon on all major streaming platforms
+              Preview songs from our upcoming EP, dropping soon on all major streaming platforms
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredTracks.map(track => {
               // Generate initials for fallback
               const initials = getInitials(track.title);

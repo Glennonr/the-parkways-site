@@ -134,7 +134,7 @@ export default function Shows() {
           <div className="max-w-3xl mx-auto mb-12 text-center">
             <p className="text-lg text-gray-300">
               New shows are always being added—check back soon for more dates or
-              <Link href="/contact" className="text-primary hover:text-primary/80 hover:underline mx-1">
+              <Link href="/bookings" className="text-primary hover:text-primary/80 hover:underline mx-1">
                 contact us
               </Link>
               for booking inquiries.
@@ -279,7 +279,7 @@ export default function Shows() {
                   variant="default"
                   className="bg-primary hover:bg-primary/90 text-black"
                 >
-                  <Link href="/contact">
+                  <Link href="/booking">
                     Contact for Booking
                   </Link>
                 </Button>

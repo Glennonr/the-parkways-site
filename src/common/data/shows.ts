@@ -1,3 +1,6 @@
+// **Editing the list of shows here will update the Shows page and the home page**
+
+
 export type Show = {
     id: number;
     date: string;
