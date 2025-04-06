@@ -12,20 +12,16 @@ import 'swiper/css/effect-fade';
 
 import { Button } from "@/common/components/ui/button";
 import { Badge } from "@/common/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/common/components/ui/card";
+import { Card, CardContent } from "@/common/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/common/components/ui/tabs";
-import { Separator } from "@/common/components/ui/separator";
 import {
-  FileDown,
   Music,
-  Mic,
   Calendar,
   Mail,
   MapPin,
   Instagram,
   Facebook,
   Youtube,
-  Video,
   Play,
   Pause,
   Quote,
@@ -34,7 +30,7 @@ import {
   ExternalLink,
   Clock
 } from "lucide-react";
-import { FaTiktok, FaSpotify } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
 
 type AudioTrack = {
   id: number;
@@ -477,8 +473,8 @@ export default function EPK() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-20 max-w-6xl mx-auto">
           {/* Show Dates Section */}
           <section className="bg-zinc-900/50 rounded-xl p-8 border border-white/5">
-            <Badge variant="outline" className="mb-3 border-secondary/40 text-secondary">UPCOMING DATES</Badge>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Live Shows</h2>
+            {/* <Badge variant="outline" className="mb-3 border-secondary/40 text-secondary">Recent and Upcoming</Badge> */}
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Recent and Upcoming Shows</h2>
 
             <div className="space-y-4 mt-6">
               {upcomingShows.map((show, index) => (
@@ -531,10 +527,6 @@ export default function EPK() {
                     <span className="text-gray-300">Guitar 1 & 2</span>
                     <span className="text-white">Amp Mics</span>
                   </li>
-                  {/* <li className="flex justify-between">
-                    <span className="text-gray-300">Keyboard</span>
-                    <span className="text-white">DI</span>
-                  </li> */}
                   <li className="flex justify-between">
                     <span className="text-gray-300">Bass</span>
                     <span className="text-white">DI Box preferred</span>
@@ -543,19 +535,6 @@ export default function EPK() {
                     <span className="text-gray-300">Drums</span>
                     <span className="text-white">Kick, Snare, OH</span>
                   </li>
-                </ul>
-              </div>
-
-              <div>
-                {/* <h3 className="text-lg font-semibold text-primary border-b border-primary/30 pb-2 mb-2">
-                  Drums
-                </h3> */}
-                <ul className="space-y-2 text-sm">
-                  <li className="flex justify-between">
-                    {/* <span className="text-gray-300">Alto & Tenor Sax</span> */}
-                    {/* <span className="text-white">Clip-on or Stand Mics</span> */}
-                  </li>
-
                 </ul>
               </div>
             </div>

@@ -1,55 +1,13 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Badge } from "@/common/components/ui/badge";
-import { Button } from "@/common/components/ui/button";
 import { Tabs, TabsList, TabsTrigger } from "@/common/components/ui/tabs";
 import { Dialog, DialogContent, DialogTitle } from "@/common/components/ui/dialog";
-import { Camera, ChevronDown, ChevronRight, Expand, Facebook, Instagram } from "lucide-react";
-import { FaTiktok } from "react-icons/fa";
-// import { X } from "lucide-react";
-// import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import { ChevronDown } from "lucide-react";
+import { images } from "@/common/data/galleryPhotos";
 
-
-
-
-// Image data (without hardcoded categories)
-const images = [
-  '/gallery/Kings Road/BeatlesRooftop.webp',
-  '/gallery/Pianos/Greg.webp',
-  '/gallery/DOTF/DOTF.webp',
-  '/gallery/Bowery Electric/Bowery2.jpg',
-  '/gallery/Kings Road/Group.webp',
-  '/gallery/Kings Road/KingsRoad.webp',
-  '/gallery/DOTF/Looking.webp',
-  "/gallery/Ortlieb's/BackToBack.webp",
-  '/gallery/Other/Cheers.jpeg',
-  "/gallery/Ortlieb's/GregPoint.jpeg",
-  '/gallery/Kings Road/Group2.webp',
-  '/gallery/Pianos/CenterShot.webp',
-  '/gallery/Kings Road/KingsRoad2.webp',
-  '/gallery/Brewers/Brewers1.jpeg',
-  '/gallery/Bowery Electric/Bowery.jpg',
-  "/gallery/Ortlieb's/Ortliebs.webp",
-  '/gallery/Brewers/Brewers2.jpeg',
-  "/gallery/Ortlieb's/Waves.webp",
-  '/gallery/DOTF/PointingUp.webp',
-  '/gallery/Other/Post Recording.webp',
-  '/gallery/Other/X.jpeg',
-  '/gallery/DOTF/smiles.webp',
-  '/gallery/Other/Keenans.jpeg',
-  '/gallery/Pianos/Jimmy.webp',
-  '/gallery/Kings Road/Greg2.webp',
-  "/gallery/Ortlieb's/Ortliebs2.webp",
-  '/gallery/Kings Road/Gazing.jpeg',
-  '/gallery/Kings Road/Mask.webp',
-  '/gallery/DOTF/Saxy.webp',
-  "/gallery/Ortlieb's/CrowdFromStage.webp",
-  '/gallery/DOTF/eyes.webp',
-  '/gallery/Pianos/Sam.webp',
-];
 
 
 // Extract categories dynamically
@@ -211,7 +169,7 @@ export default function Photos() {
             {/* <X className="w-6 h-6 text-white" /> */}
           </button>
           {/* <VisuallyHidden> */}
-            <DialogTitle>Gallery Image</DialogTitle>
+          <DialogTitle>Gallery Image</DialogTitle>
           {/* </VisuallyHidden> */}
           {selectedImage && (
             <div className="relative w-full h-[60vh]">

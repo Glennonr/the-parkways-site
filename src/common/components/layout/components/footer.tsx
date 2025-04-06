@@ -75,13 +75,6 @@ export default function Footer() {
                   <span className="text-xs md:text-sm text-gray-400 tracking-widest">SOUTH JERSEY ROCK & ROLL</span>
                 </div>
               </Link>
-
-              {/* Description */}
-              {/* <p className="text-gray-300 leading-relaxed">
-                South Jersey's premier rock and alternative cover band bringing energy and passion to every performance. 
-                Available for bookings at venues, private events, and festivals throughout the region.
-              </p> */}
-
               {/* Social icons */}
               <div className="flex flex-wrap gap-4">
                 {socialLinks.map((social) => (

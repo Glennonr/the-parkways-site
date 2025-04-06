@@ -1,4 +1,5 @@
 // **Editing the list of songs here will update the Songs page and the home page**
+// **Be sure to add any audio files into 
 
 export type Track = {
     id: number;

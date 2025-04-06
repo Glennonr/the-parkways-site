@@ -219,10 +219,6 @@ export default function Shows() {
                               {show.time}
                             </div>
                           )}
-
-                          {/* <div className="text-sm text-gray-300">
-                            <p>Join us for a night of rock and roll at {show.headline.split(' at ')[0]}!</p>
-                          </div> */}
                         </CardContent>
 
                         <CardFooter className="pt-0">

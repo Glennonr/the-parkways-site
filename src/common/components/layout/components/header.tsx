@@ -13,8 +13,6 @@ import {
 } from "@/common/components/ui/sheet";
 import {
   Menu,
-  X,
-  Music,
   Home,
   Calendar,
   Image as ImageIcon,
@@ -209,12 +207,6 @@ export default function Header() {
                     Book Now
                   </Link>
                 </nav>
-
-                {/* <div className="p-6 border-t border-white/10">
-                  <p className="text-sm text-gray-500 text-center">
-                    © {new Date().getFullYear()} The Parkways
-                  </p>
-                </div> */}
               </div>
             </SheetContent>
           </Sheet>
