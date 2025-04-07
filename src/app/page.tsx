@@ -487,7 +487,7 @@ export default function Home() {
                       </span>
                       
                       <Badge variant="outline" className="text-secondary border-secondary/30">
-                        Coming Soon
+                        Demo
                       </Badge>
                     </div>
                   </CardContent>
