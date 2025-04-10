@@ -31,4 +31,11 @@ export const images = [
   "/gallery/Ortlieb's/CrowdFromStage.webp",
   '/gallery/DOTF/eyes.webp',
   '/gallery/Pianos/Sam.webp',
+  '/gallery/Kings Road/60620022.jpeg',
+  '/gallery/Kings Road/IMG_9947.jpeg',
+  '/gallery/Kings Road/60620011.jpeg',
+  '/gallery/Pianos/60640030.jpeg',
+  '/gallery/Pianos/60640018.jpeg'
 ];
+
+

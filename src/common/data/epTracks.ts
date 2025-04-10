@@ -14,20 +14,22 @@ export type Track = {
     {
       id: 1,
       title: "Waiting Again",
-      length: "2:38",
-      audioPreview: "/audio/Waiting-Again-Demo.mp3"
+      length: "2:40",
+      audioPreview: "/audio/Waiting Again Mix 3.mp3"
+      
+      
     },
     {
       id: 2,
       title: "Middle Distance Baby",
       length: "3:07",
-      audioPreview: "/audio/Middle-Distance-Baby-Demo.mp3"
+      audioPreview: "/audio/Middle Distance Mix 1.mp3"
     },
     {
       id: 3,
       title: "Any Other Way (Spin)",
-      length: "2:16",
-      audioPreview: "/audio/Spin-Demo.mp3"
+      length: "2:13",
+      audioPreview: "/audio/Spin Mix 3.mp3"
     },
     {
       id: 4,
