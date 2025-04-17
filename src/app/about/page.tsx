@@ -55,7 +55,7 @@ export default function AboutUs() {
   ];
 
   return (
-    <main className="min-h-screen bg-black text-white pt-14 md:pt-8">
+    <main className="min-h-screen bg-black text-white pt-18 md:pt-8">
       {/* Hero Section with Parallax */}
       <section className="relative h-[40vh] md:h-[50vh] overflow-hidden flex items-center justify-center">
         <div
@@ -100,7 +100,7 @@ export default function AboutUs() {
       </section>
 
       {/* About Section */}
-      <section className="relative py-20 bg-zinc-950">
+      <section className="relative py-10 bg-zinc-950">
         {/* Decorative accent */}
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60"></div>
 
@@ -196,7 +196,7 @@ export default function AboutUs() {
       </section>
 
       {/* Band Members Section */}
-      <section className="py-20 bg-gradient-to-b from-zinc-950 to-black relative">
+      <section className="pb-10 relative">
         {/* Decorative elements */}
         <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-primary/5 to-transparent"></div>
         <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-secondary/5 to-transparent"></div>
@@ -212,7 +212,7 @@ export default function AboutUs() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Meet The Band</h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
             {bandMembers.map((member, index) => (
               <Card
                 key={member.name}
