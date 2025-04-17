@@ -15,30 +15,35 @@ export const epTracks: Track[] = [
     id: 1,
     title: "Waiting Again",
     length: "2:40",
-    audioPreview: "/audio/Waiting Again Mix 3.mp3"
+    audioPreview: "/audio/Waiting Again Mix 3.mp3",
+    coverArt: "/QuickHitters.webp"
   },
   {
     id: 2,
     title: "Middle Distance Baby",
     length: "3:07",
-    audioPreview: "/audio/Middle Distance Mix 1.mp3"
+    audioPreview: "/audio/Middle Distance Mix 1.mp3",
+    coverArt: "/QuickHitters.webp"
   },
   {
     id: 3,
     title: "Any Other Way (Spin)",
     length: "2:13",
-    audioPreview: "/audio/Spin Mix 3.mp3"
+    audioPreview: "/audio/Spin Mix 3.mp3",
+    coverArt: "/QuickHitters.webp"
   },
   {
     id: 4,
     title: "Avaline",
     length: "2:50",
-    audioPreview: "/audio/Avaline-Demo.mp3"
+    audioPreview: "/audio/Avaline-Demo.mp3",
+    coverArt: "/QuickHitters.webp"
   },
   {
     id: 5,
     title: "Zynnie",
     length: "3:33",
-    audioPreview: "/audio/Zynnie-Demo.mp3"
+    audioPreview: "/audio/Zynnie-Demo.mp3",
+    coverArt: "/QuickHitters.webp"
   },
 ];

@@ -267,7 +267,7 @@ export default function Shows() {
               </div>
               <h3 className="text-2xl font-bold mb-2">No upcoming shows</h3>
               <p className="text-gray-400 max-w-md mx-auto">
-                We're currently planning our next tour dates. Please check back soon or subscribe to our newsletter.
+                We're currently planning our next dates. Please check back soon.
               </p>
               <div className="mt-8">
                 <Button

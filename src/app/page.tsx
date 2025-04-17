@@ -545,7 +545,7 @@ export default function Home() {
         </section>
 
         {/* Merchandise Section */}
-        <section className="w-full bg-zinc-950 py-20 relative overflow-hidden">
+        <section className="w-full bg-zinc-950 pt-10 relative overflow-hidden">
           {/* Decorative elements */}
           <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-secondary/5 to-transparent"></div>
           <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-primary/5 to-transparent"></div>
@@ -564,7 +564,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
               {merchItems.map(item => (
                 <Card
                   key={item.id}
@@ -580,9 +580,9 @@ export default function Home() {
                     />
                   </div>
 
-                  <CardContent className="p-4 text-center">
+                  <CardContent className=" text-center">
                     <h3 className="font-bold text-lg mb-1">{item.name}</h3>
-                    <p className="text-secondary font-medium">{item.price}</p>
+                    {/* <p className="text-secondary font-medium">{item.price}</p> */}
                   </CardContent>
                 </Card>
               ))}
