@@ -234,7 +234,7 @@ export default function Songs() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {epTracks.map(track => {
               // Generate initials for fallback
               const initials = getInitials(track.title);
@@ -322,7 +322,7 @@ export default function Songs() {
                           variant="secondary"
                           className="text-black border-secondary/30"
                         >
-                          Demo Available
+                          Demo
                         </Badge>
                       ) : (
                         <Badge
