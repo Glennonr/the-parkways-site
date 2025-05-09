@@ -125,13 +125,13 @@ export default function EPK() {
       id: 2,
       title: "Waiting Again (Demo)",
       length: "2:38",
-      audioPreview: "/audio/Waiting-Again-Demo.mp3"
+      audioPreview: "/audio/Waiting Again Mix 3.mp3"
     },
     {
       id: 3,
       title: "Middle Distance Baby (Demo)",
       length: "3:07",
-      audioPreview: "/audio/Middle-Distance-Baby-Demo.mp3"
+      audioPreview: "/audio/Middle Distance Mix 1.mp3"
     }
   ];
 
@@ -139,12 +139,14 @@ export default function EPK() {
   const promoPhotos = [
     "/gallery/Kings Road/BeatlesRooftop.webp",
     "/gallery/Kings Road/KingsRoad.webp",
+    "/gallery/Kings Road/IMG_9947.jpeg",
     "/gallery/Ortlieb's/Waves.webp",
     "/gallery/Bowery Electric/Bowery.jpg",
     "/gallery/Bowery Electric/Bowery2.jpg",
     "/gallery/Other/Post RecordingCrop.webp",
     "/gallery/Ortlieb's/BackToBack.webp",
-    "/gallery/Pianos/CenterShot.webp"
+    "/gallery/Pianos/CenterShot.webp",
+    "/gallery/Pianos/60640018.jpeg"
   ];
 
   // Upcoming shows

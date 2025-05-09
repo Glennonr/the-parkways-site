@@ -203,12 +203,19 @@ export default function Songs() {
 
             <div className="relative z-10 text-center">
               <Badge className="bg-secondary text-black mb-4">Coming Soon</Badge>
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">Our EP (Name Pending)</h2>
-              <p className="text-xl text-gray-200 mb-6">Coming Out End of April?</p>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">Quick Hitters</h2>
+              <Image
+                src="/QuickHitters.webp" // Replace with actual path
+                alt="Quick Hitters EP Cover"
+                width={300}
+                height={300}
+                className="mx-auto mb-6 rounded-lg shadow-lg"
+              />
+              <p className="text-xl text-gray-200 mb-6">5 Song EP Coming Out End of April</p>
+              {/* <p className="text-lg text-gray-300 max-w-2xl mx-auto">
                 Check back in to see it here and on all streaming platforms! Our debut EP features five original songs
                 that capture variety in The Parkways sound.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
@@ -227,7 +234,7 @@ export default function Songs() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {epTracks.map(track => {
               // Generate initials for fallback
               const initials = getInitials(track.title);
@@ -315,7 +322,7 @@ export default function Songs() {
                           variant="secondary"
                           className="text-black border-secondary/30"
                         >
-                          Demo Available
+                          Demo
                         </Badge>
                       ) : (
                         <Badge
