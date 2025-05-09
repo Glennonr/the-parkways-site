@@ -152,7 +152,7 @@ export default function EPK() {
     { date: "March 9, 2025", venue: "Gold Sound", location: "Brooklyn, NY" },
     { date: "March 15, 2025", venue: "Kings Road Brewery", location: "Haddonfield, NJ" },
     { date: "April 12, 2025", venue: "Ortlieb's", location: "Philadelphia, PA" },
-    { date: "August 2, 2025", venue: "Musikfest (Plaza Tropical)", location: "Bethlehem, PA" }
+    // { date: "August 2, 2025", venue: "Musikfest (Plaza Tropical)", location: "Bethlehem, PA" }
   ];
 
   // Social links

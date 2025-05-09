@@ -32,26 +32,26 @@ export default function AboutUs() {
 
   // Band members data
   const bandMembers: BandMember[] = [
-    // {
-    //   name: "John Dwyer",
-    //   role: "Lead Vocals and Guitar",
-    //   image: "/band_members/John2.jpeg"
-    // },
+    {
+      name: "John Dwyer",
+      role: "Lead Vocals and Guitar",
+      image: "/band_members/John2.jpeg"
+    },
     {
       name: "Jimmy Peterman",
       role: "Bass",
       image: "/band_members/Jimmy.jpg"
     },
-    // {
-    //   name: "Sam Decencio",
-    //   role: "Guitar",
-    //   image: "/band_members/Sam.jpg"
-    // },
-    // {
-    //   name: "Greg Eisenhower",
-    //   role: "Drums",
-    //   image: "/band_members/Greg.jpg"
-    // },
+    {
+      name: "Sam Decencio",
+      role: "Guitar",
+      image: "/band_members/Sam.jpg"
+    },
+    {
+      name: "Greg Eisenhower",
+      role: "Drums",
+      image: "/band_members/Greg.jpg"
+    },
   ];
 
   return (
@@ -111,8 +111,8 @@ export default function AboutUs() {
               <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative aspect-square overflow-hidden rounded-lg">
                 <Image
-                  // src="/gallery/Kings Road/BeatlesRooftop.webp"
-                  src="/band_members/Jimmy.jpg"
+                  src="/gallery/Kings Road/BeatlesRooftop.webp"
+                  // src="/band_members/Jimmy.jpg"
                   alt="The Parkways Band"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
