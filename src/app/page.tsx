@@ -378,7 +378,7 @@ export default function Home() {
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-3">Featured Tracks</h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                Preview songs from our upcoming EP, dropping soon on all major streaming platforms
+                Preview songs from our new EP, available on all major streaming platforms
               </p>
             </div>
 

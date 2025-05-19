@@ -258,7 +258,7 @@ export default function EPK() {
             <Badge variant="outline" className="mb-3 border-secondary/40 text-secondary">OUR MUSIC</Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-3">Listen to Our Demos</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Preview demos off our upcoming EP, dropping soon on all major streaming platforms
+              Preview demos off our debut EP, out on all major streaming platforms
             </p>
           </div>
 
