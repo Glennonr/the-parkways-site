@@ -27,7 +27,7 @@ export const epTracks: Track[] = [
   },
   {
     id: 3,
-    title: "Any Other Way (Spin)",
+    title: "Spin",
     length: "2:13",
     audioPreview: "/audio/Spin Mix 3.mp3",
     coverArt: "/QuickHitters.webp"
