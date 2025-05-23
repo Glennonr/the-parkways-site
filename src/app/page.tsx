@@ -45,15 +45,6 @@ export default function Home() {
     };
   }, []);
 
-  const handleComingSoon = (platform: string) => {
-    setMessage(`${platform} coming soon!`);
-    setActiveButton(platform);
-    setTimeout(() => {
-      setMessage("");
-      setActiveButton(null);
-    }, 2000);
-  };
-
   // Toggle audio play/pause
   const togglePlay = (trackId: number) => {
     const audioElement = audioRefs.current[trackId];
@@ -84,12 +75,12 @@ export default function Home() {
     },
     {
       name: "Spotify",
-      action: () => handleComingSoon("Spotify"),
+      link: "https://open.spotify.com/artist/7dL6IcjgLQtu94eWEaO7Y9?si=rh2ye4DWTVGOnwJ13ZyK5A",
       icon: <FaSpotify className="h-5 w-5 mr-2" />
     },
     {
       name: "Apple Music",
-      action: () => handleComingSoon("Apple Music"),
+      link: "https://music.apple.com/us/artist/the-parkways/1814033080",
       icon: <FaApple className="h-5 w-5 mr-2" />
     },
     {
@@ -672,7 +663,7 @@ export default function Home() {
                 ) : (
                   <div key={social.name} className="relative">
                     <button
-                      onClick={social.action}
+                      // onClick={social.action}
                       className="flex items-center justify-center w-full px-4 py-3 bg-zinc-900 hover:bg-zinc-800 text-white border border-white/10 rounded-md shadow-md hover:shadow-primary/20 transition-all duration-300 group"
                     >
                       <span className="group-hover:text-primary transition-colors duration-300">

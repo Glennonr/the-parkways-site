@@ -344,7 +344,7 @@ export default function EPK() {
                       </span>
 
                       <Badge variant="outline" className="text-secondary border-secondary/30">
-                        Coming Soon
+                        Out now
                       </Badge>
                     </div>
                   </CardContent>
