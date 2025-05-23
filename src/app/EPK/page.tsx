@@ -140,10 +140,10 @@ export default function EPK() {
     "/gallery/Kings Road/BeatlesRooftop.webp",
     "/gallery/Kings Road/KingsRoad.webp",
     "/gallery/Kings Road/IMG_9947.jpeg",
-    "/gallery/Ortlieb's/Waves.webp",
+    "/gallery/Promotional photo 1.jpeg",
     "/gallery/Bowery Electric/Bowery.jpg",
-    "/gallery/Bowery Electric/Bowery2.jpg",
-    "/gallery/Other/Post RecordingCrop.webp",
+    "/gallery/Promotional photo 3.jpeg",
+    "/gallery/Promotional photo 4.jpeg",
     "/gallery/Ortlieb's/BackToBack.webp",
     "/gallery/Pianos/CenterShot.webp",
     "/gallery/Pianos/60640018.jpeg"
@@ -151,10 +151,10 @@ export default function EPK() {
 
   // Upcoming shows
   const upcomingShows = [
-    { date: "March 9, 2025", venue: "Gold Sound", location: "Brooklyn, NY" },
-    { date: "March 15, 2025", venue: "Kings Road Brewery", location: "Haddonfield, NJ" },
-    { date: "April 12, 2025", venue: "Ortlieb's", location: "Philadelphia, PA" },
-    { date: "August 2, 2025", venue: "Musikfest (Plaza Tropical)", location: "Bethlehem, PA" }
+    // { date: "March 9, 2025", venue: "Gold Sound", location: "Brooklyn, NY" },
+    // { date: "March 15, 2025", venue: "Kings Road Brewery", location: "Haddonfield, NJ" },
+    { date: "May 20, 2025", venue: "Ortlieb's", location: "Philadelphia, PA" },
+    // { date: "August 2, 2025", venue: "Musikfest (Plaza Tropical)", location: "Bethlehem, PA" }
   ];
 
   // Social links
@@ -172,7 +172,7 @@ export default function EPK() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/gallery/Bowery Electric/Bowery.jpg')",
+            backgroundImage: "url('/gallery/Group.png')",
             transform: `translateY(calc(${scrollY * 0.3}px))`,
             filter: "brightness(0.4) contrast(1.1)"
           }}

@@ -31,6 +31,21 @@ export default function Home() {
   const [isPlaying, setIsPlaying] = useState<number | null>(null);
   const audioRefs = useRef<{ [key: number]: HTMLAudioElement | null }>({});
 
+  const [bgImage, setBgImage] = useState("/gallery/Group.png")
+
+  useEffect(() => {
+    const checkBreakpoint = () => {
+      if (window.innerWidth < 1024) {
+        setBgImage("/gallery/Expanded.png")
+      } else {
+        setBgImage("/gallery/Group.png")
+      }
+    }
+        checkBreakpoint()
+    window.addEventListener('resize', checkBreakpoint)
+    return () => window.removeEventListener('resize', checkBreakpoint)
+  }, [])
+
   // Set the scroll variable only on the client side
   useEffect(() => {
     const handleScroll = () => {
@@ -147,6 +162,7 @@ export default function Home() {
       price: "Free with Purchase"
     }
   ];
+  
 
   return (
     <>
@@ -185,16 +201,16 @@ export default function Home() {
       </Head>
       <main className="flex flex-col items-center justify-center min-h-screen">
         {/* Hero Section with Parallax Effect */}
-        <section className="relative w-full h-screen overflow-hidden">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-fixed"
-            style={{
-              backgroundImage: "url('/gallery/Bowery Electric/Bowery.jpg')",
-              transform: "translateY(calc(var(--scroll) * 0.5px))",
-              transition: "transform 0.1s linear",
-              filter: "brightness(0.6) contrast(1.1)"
-            }}
-          />
+    <section className="relative w-full h-screen overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-fixed"
+        style={{
+          backgroundImage: `url('${bgImage}')`,
+          transform: "translateY(calc(var(--scroll) * 0.5px))",
+          transition: "transform 0.1s linear",
+          filter: "brightness(0.6) contrast(1.1)"
+        }}
+      />
 
           {/* Overlay with noise texture */}
           <div

@@ -61,7 +61,7 @@ export default function AboutUs() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/gallery/Bowery Electric/Bowery.jpg')",
+            backgroundImage: "url('/gallery/Group.png')",
             transform: "translateY(calc(var(--scroll) * 0.3px))",
             filter: "brightness(0.4) contrast(1.1)"
           }}
@@ -130,17 +130,14 @@ export default function AboutUs() {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">About The Parkways</h2>
                 <div className="space-y-4">
                   <p className="text-lg text-gray-300 leading-relaxed">
-                    Think of The Parkways as <span className="text-primary font-medium">Springsteen + The Killers + Pork Roll + Egg + Cheese.
-                      A little Strokesy and a little Oasish.</span>
+                    The Parkways are four long time friends who look to honor and expand upon Rock and Roll's great tradition.
                   </p>
                   <p className="text-lg text-gray-300 leading-relaxed">
-                    Our setlists span all decades of rock from the 50s to today—check out our songs page to see for yourself.
-                    Plus, our debut 5-song EP is out now!
+                    The band quickly gained notoriety for their energetic and frenzied performances of original music alongside classic dive bar staples.
+Making their bones in the clubs of New York, Philadelphia, and New Jersey, the Parkways will continue to party with great deliberateness and intention.
                   </p>
                   <p className="text-lg text-gray-300 leading-relaxed">
-                    We love playing bars and venues that know how to have a good time. If you're looking for a band
-                    to bring the energy and keep the crowd engaged, The Parkways are ready to take the stage.
-                    Let's make it a night to remember!
+                    Their Debut EP Quick Hitters was recorded in February of 2025, featuring five staples of The Parkways set that showcases their dynamic sound.
                   </p>
                 </div>
               </div>
@@ -210,7 +207,7 @@ export default function AboutUs() {
             >
               The Team
             </Badge> */}
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Meet The Band</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Come Take a Ride</h2>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">

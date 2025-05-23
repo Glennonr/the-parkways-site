@@ -65,7 +65,7 @@ export default function Photos() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/gallery/Bowery Electric/Bowery.jpg')",
+            backgroundImage: "url('/gallery/Group.png')",
             transform: `translateY(${scrollY * 0.2}px)`,
             filter: "brightness(0.4) contrast(1.1)",
           }}

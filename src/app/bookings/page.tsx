@@ -194,7 +194,7 @@ export default function BookUs() {
                     variant="default"
                     className="bg-gradient-to-r from-primary to-secondary text-black font-bold"
                   >
-                    <Link href="/EPK">
+                    <Link href="/EPK.pdf">
                       <FileText className="mr-2 h-5 w-5" />
                       View Our EPK
                       <ExternalLink className="ml-2 h-4 w-4" />

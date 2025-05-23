@@ -84,7 +84,7 @@ export default function Shows() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/gallery/Bowery Electric/Bowery.jpg')",
+            backgroundImage: "url('/gallery/Group.png')",
             transform: `translateY(calc(${scrollY * 0.3}px))`,
             filter: "brightness(0.4) contrast(1.1)"
           }}
