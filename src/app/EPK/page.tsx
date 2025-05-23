@@ -125,13 +125,13 @@ export default function EPK() {
       id: 2,
       title: "Waiting Again (Demo)",
       length: "2:38",
-      audioPreview: "/audio/Waiting-Again-Demo.mp3"
+      audioPreview: "/audio/Waiting Again Mix 3.mp3"
     },
     {
       id: 3,
       title: "Middle Distance Baby (Demo)",
       length: "3:07",
-      audioPreview: "/audio/Middle-Distance-Baby-Demo.mp3"
+      audioPreview: "/audio/Middle Distance Mix 1.mp3"
     }
   ];
 
@@ -139,19 +139,21 @@ export default function EPK() {
   const promoPhotos = [
     "/gallery/Kings Road/BeatlesRooftop.webp",
     "/gallery/Kings Road/KingsRoad.webp",
-    "/gallery/Ortlieb's/Waves.webp",
+    "/gallery/Kings Road/IMG_9947.jpeg",
+    "/gallery/Promotional photo 1.jpeg",
     "/gallery/Bowery Electric/Bowery.jpg",
-    "/gallery/Bowery Electric/Bowery2.jpg",
-    "/gallery/Other/Post RecordingCrop.webp",
+    "/gallery/Promotional photo 3.jpeg",
+    "/gallery/Promotional photo 4.jpeg",
     "/gallery/Ortlieb's/BackToBack.webp",
-    "/gallery/Pianos/CenterShot.webp"
+    "/gallery/Pianos/CenterShot.webp",
+    "/gallery/Pianos/60640018.jpeg"
   ];
 
   // Upcoming shows
   const upcomingShows = [
-    { date: "March 9, 2025", venue: "Gold Sound", location: "Brooklyn, NY" },
-    { date: "March 15, 2025", venue: "Kings Road Brewery", location: "Haddonfield, NJ" },
-    { date: "April 12, 2025", venue: "Ortlieb's", location: "Philadelphia, PA" },
+    // { date: "March 9, 2025", venue: "Gold Sound", location: "Brooklyn, NY" },
+    // { date: "March 15, 2025", venue: "Kings Road Brewery", location: "Haddonfield, NJ" },
+    { date: "May 20, 2025", venue: "Ortlieb's", location: "Philadelphia, PA" },
     // { date: "August 2, 2025", venue: "Musikfest (Plaza Tropical)", location: "Bethlehem, PA" }
   ];
 
@@ -170,7 +172,7 @@ export default function EPK() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/gallery/Bowery Electric/Bowery.jpg')",
+            backgroundImage: "url('/gallery/Group.png')",
             transform: `translateY(calc(${scrollY * 0.3}px))`,
             filter: "brightness(0.4) contrast(1.1)"
           }}
@@ -256,7 +258,7 @@ export default function EPK() {
             <Badge variant="outline" className="mb-3 border-secondary/40 text-secondary">OUR MUSIC</Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-3">Listen to Our Demos</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Preview demos off our upcoming EP, dropping soon on all major streaming platforms
+              Preview demos off our debut EP, out on all major streaming platforms
             </p>
           </div>
 
@@ -342,7 +344,7 @@ export default function EPK() {
                       </span>
 
                       <Badge variant="outline" className="text-secondary border-secondary/30">
-                        Coming Soon
+                        Out now
                       </Badge>
                     </div>
                   </CardContent>

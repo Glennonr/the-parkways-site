@@ -31,6 +31,21 @@ export default function Home() {
   const [isPlaying, setIsPlaying] = useState<number | null>(null);
   const audioRefs = useRef<{ [key: number]: HTMLAudioElement | null }>({});
 
+  const [bgImage, setBgImage] = useState("/gallery/Group.png")
+
+  useEffect(() => {
+    const checkBreakpoint = () => {
+      if (window.innerWidth < 1024) {
+        setBgImage("/gallery/Expanded.png")
+      } else {
+        setBgImage("/gallery/Group.png")
+      }
+    }
+        checkBreakpoint()
+    window.addEventListener('resize', checkBreakpoint)
+    return () => window.removeEventListener('resize', checkBreakpoint)
+  }, [])
+
   // Set the scroll variable only on the client side
   useEffect(() => {
     const handleScroll = () => {
@@ -44,15 +59,6 @@ export default function Home() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const handleComingSoon = (platform: string) => {
-    setMessage(`${platform} coming soon!`);
-    setActiveButton(platform);
-    setTimeout(() => {
-      setMessage("");
-      setActiveButton(null);
-    }, 2000);
-  };
 
   // Toggle audio play/pause
   const togglePlay = (trackId: number) => {
@@ -84,12 +90,12 @@ export default function Home() {
     },
     {
       name: "Spotify",
-      action: () => handleComingSoon("Spotify"),
+      link: "https://open.spotify.com/artist/7dL6IcjgLQtu94eWEaO7Y9?si=rh2ye4DWTVGOnwJ13ZyK5A",
       icon: <FaSpotify className="h-5 w-5 mr-2" />
     },
     {
       name: "Apple Music",
-      action: () => handleComingSoon("Apple Music"),
+      link: "https://music.apple.com/us/artist/the-parkways/1814033080",
       icon: <FaApple className="h-5 w-5 mr-2" />
     },
     {
@@ -156,6 +162,7 @@ export default function Home() {
       price: "Free with Purchase"
     }
   ];
+  
 
   return (
     <>
@@ -194,16 +201,16 @@ export default function Home() {
       </Head>
       <main className="flex flex-col items-center justify-center min-h-screen">
         {/* Hero Section with Parallax Effect */}
-        <section className="relative w-full h-screen overflow-hidden">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-fixed"
-            style={{
-              backgroundImage: "url('/gallery/Bowery Electric/Bowery.jpg')",
-              transform: "translateY(calc(var(--scroll) * 0.5px))",
-              transition: "transform 0.1s linear",
-              filter: "brightness(0.6) contrast(1.1)"
-            }}
-          />
+    <section className="relative w-full h-screen overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-fixed"
+        style={{
+          backgroundImage: `url('${bgImage}')`,
+          transform: "translateY(calc(var(--scroll) * 0.5px))",
+          transition: "transform 0.1s linear",
+          filter: "brightness(0.6) contrast(1.1)"
+        }}
+      />
 
           {/* Overlay with noise texture */}
           <div
@@ -378,7 +385,7 @@ export default function Home() {
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-3">Featured Tracks</h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                Preview songs from our upcoming EP, dropping soon on all major streaming platforms
+                Preview songs from our new EP, available on all major streaming platforms
               </p>
             </div>
 
@@ -545,7 +552,7 @@ export default function Home() {
         </section>
 
         {/* Merchandise Section */}
-        <section className="w-full bg-zinc-950 py-20 relative overflow-hidden">
+        <section className="w-full bg-zinc-950 pt-10 relative overflow-hidden">
           {/* Decorative elements */}
           <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-secondary/5 to-transparent"></div>
           <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-primary/5 to-transparent"></div>
@@ -564,7 +571,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
               {merchItems.map(item => (
                 <Card
                   key={item.id}
@@ -580,9 +587,9 @@ export default function Home() {
                     />
                   </div>
 
-                  <CardContent className="p-4 text-center">
+                  <CardContent className=" text-center">
                     <h3 className="font-bold text-lg mb-1">{item.name}</h3>
-                    <p className="text-secondary font-medium">{item.price}</p>
+                    {/* <p className="text-secondary font-medium">{item.price}</p> */}
                   </CardContent>
                 </Card>
               ))}
@@ -672,7 +679,7 @@ export default function Home() {
                 ) : (
                   <div key={social.name} className="relative">
                     <button
-                      onClick={social.action}
+                      // onClick={social.action}
                       className="flex items-center justify-center w-full px-4 py-3 bg-zinc-900 hover:bg-zinc-800 text-white border border-white/10 rounded-md shadow-md hover:shadow-primary/20 transition-all duration-300 group"
                     >
                       <span className="group-hover:text-primary transition-colors duration-300">

@@ -65,7 +65,7 @@ export default function Photos() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/gallery/Bowery Electric/Bowery.jpg')",
+            backgroundImage: "url('/gallery/Group.png')",
             transform: `translateY(${scrollY * 0.2}px)`,
             filter: "brightness(0.4) contrast(1.1)",
           }}
@@ -143,7 +143,7 @@ export default function Photos() {
       <section className="py-8 bg-black min-h-[60vh]">
         <div className="container mx-auto px-4">
           <AnimatePresence mode="wait">
-            <motion.div key={selectedCategory} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <motion.div key={selectedCategory} className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {filteredImages.map((image, index) => (
                 <motion.div
                   key={image.src}

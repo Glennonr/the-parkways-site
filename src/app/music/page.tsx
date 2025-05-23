@@ -23,14 +23,8 @@ import {
   TabsTrigger
 } from "@/common/components/ui/tabs";
 import { epTracks } from "@/common/data/epTracks";
+import { coverSongCategories } from "@/common/data/coverSongs";
 
-
-// Cover song type for better organization
-type CoverSongCategory = {
-  name: string;
-  description: string;
-  songs: string[];
-};
 
 export default function Songs() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -96,67 +90,6 @@ export default function Songs() {
     }
   ];
 
-  // Cover song categories
-  const coverSongCategories: CoverSongCategory[] = [
-    {
-      name: "Classic Rock Anthems",
-      description: "Timeless rock classics that get everyone singing",
-      songs: [
-        "American Girl – Tom Petty",
-        "Dancing in the Dark – Bruce Springsteen",
-        "Hungry Heart – Bruce Springsteen",
-        "Gimme Three Steps – Lynyrd Skynyrd",
-        "The Boys Are Back in Town – Thin Lizzy",
-        "Lido Shuffle – Boz Skaggs",
-        "Talk to Me - Southside Johnny"
-      ]
-    },
-    {
-      name: "Indie & Alternative Favorites",
-      description: "Modern rock and indie classics with attitude",
-      songs: [
-        "Don't Look Back in Anger – Oasis",
-        "She's Electric – Oasis",
-        "Slide Away – Oasis",
-        "Is This It – The Strokes",
-        "Last Nite – The Strokes",
-        "There She Goes – The La's",
-        "Take Me Out – Franz Ferdinand",
-        "Boys Don't Cry – The Cure",
-        "My Type - Saint Motel"
-      ]
-    },
-    {
-      name: "High-Energy Party Starters",
-      description: "Songs guaranteed to get the crowd moving",
-      songs: [
-        "Valerie – Amy Winehouse",
-        "Everybody Talks – Neon Trees",
-        "Kilby Girl – The Backseat Lovers",
-        "Build Me Up Buttercup - The Foundations",
-        "What I Like About You – The Romantics",
-        "I Wanna Be Sedated – The Ramones",
-        "Scotty Doesn't Know – Lustra",
-        "Chelsea Dagger – The Fratellis",
-        "All Apologies – Nirvana",
-        "Bad Habit - Steve Lacy"
-      ]
-    },
-    {
-      name: "50s & 60s Classics",
-      description: "Vintage hits from the golden era of rock",
-      songs: [
-        "Come Together – The Beatles",
-        "Got to Get You Into My Life – The Beatles",
-        "Saw Her Standing There – The Beatles",
-        "Twist and Shout – The Beatles",
-        "Blackbird - The Beatles",
-        "Lucille - Little Richard",
-        "Runaround Sue - Dion"
-      ]
-    }
-  ];
-
   return (
     <main className="min-h-screen bg-black text-white pt-14 md:pt-8">
       {/* Hero Section with Parallax */}
@@ -202,32 +135,39 @@ export default function Songs() {
             <div className="absolute -top-10 -left-10 w-32 h-32 rounded-full bg-primary/10 blur-3xl"></div>
 
             <div className="relative z-10 text-center">
-              <Badge className="bg-secondary text-black mb-4">Coming Soon</Badge>
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">Our EP (Name Pending)</h2>
-              <p className="text-xl text-gray-200 mb-6">Coming Out End of April?</p>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              <Badge className="bg-secondary text-black mb-4">New Release</Badge>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">Quick Hitters</h2>
+              <Image
+                src="/QuickHitters.webp"
+                alt="Quick Hitters EP Cover"
+                width={300}
+                height={300}
+                className="mx-auto mb-6 rounded-lg shadow-lg"
+              />
+              <p className="text-xl text-gray-200 mb-6">5 Song EP Out Now!</p>
+              {/* <p className="text-lg text-gray-300 max-w-2xl mx-auto">
                 Check back in to see it here and on all streaming platforms! Our debut EP features five original songs
                 that capture variety in The Parkways sound.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
       </section>
 
       {/* EP Preview Section */}
-      <section className="py-16 bg-black">
+      <section className="py-1 bg-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <Badge variant="outline" className="mb-2 border-primary/40 text-primary">
               ORIGINAL MUSIC
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">EP Tracks</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">Preview tracks from our EP</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Preview demos for our upcoming EP tracks
+              Also available on streaming 
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {epTracks.map(track => {
               // Generate initials for fallback
               const initials = getInitials(track.title);
@@ -315,7 +255,7 @@ export default function Songs() {
                           variant="secondary"
                           className="text-black border-secondary/30"
                         >
-                          Demo Available
+                          Demo
                         </Badge>
                       ) : (
                         <Badge
